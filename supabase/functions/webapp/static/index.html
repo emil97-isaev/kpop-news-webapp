@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>K-pop News</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--tg-theme-bg-color, #fff);
+            color: var(--tg-theme-text-color, #000);
+        }
+
+        .tag-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag-card {
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .tag-card.subscribed {
+            background: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #fff);
+        }
+
+        .tag-card:active {
+            opacity: 0.7;
+        }
+
+        .search {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            color: var(--tg-theme-text-color, #000);
+            margin-bottom: 20px;
+        }
+
+        .search::placeholder {
+            color: var(--tg-theme-hint-color, #999);
+        }
+
+        #feed {
+            margin-top: 20px;
+        }
+
+        .post-card {
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .post-tag {
+            background: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #fff);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body style="visibility: hidden">
+    <input type="text" class="search" placeholder="Поиск тегов...">
+    <div class="tag-grid"></div>
+    <div id="feed"></div>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        let userId = tg.initDataUnsafe?.user?.id;
+        let subscriptions = new Set();
+        
+        // API endpoints
+        const API_URL = 'https://bsivriajgsginlnuyxny.supabase.co/functions/v1/api';
+        
+        // Initialize app
+        async function init() {
+            try {
+                // Load tags
+                const tagsResponse = await fetch(`${API_URL}?action=getTags`);
+                const tags = await tagsResponse.json();
+                
+                // Load user subscriptions
+                if (userId) {
+                    const subsResponse = await fetch(`${API_URL}?action=getSubscriptions&userId=${userId}`);
+                    const subs = await subsResponse.json();
+                    subscriptions = new Set(subs.map(s => s.tag_id));
+                }
+                
+                renderTags(tags);
+                document.body.style.visibility = '';
+            } catch (error) {
+                console.error('Failed to initialize:', error);
+                tg.showPopup({
+                    title: 'Ошибка',
+                    message: 'Не удалось загрузить данные: ' + error.message
+                });
+            }
+        }
+        
+        // Render tags grid
+        function renderTags(tags) {
+            const grid = document.querySelector('.tag-grid');
+            grid.innerHTML = tags.map(tag => `
+                <div class="tag-card ${subscriptions.has(tag.id) ? 'subscribed' : ''}" 
+                     onclick="toggleSubscription(${tag.id}, this)">
+                    ${tag.name}
+                </div>
+            `).join('');
+        }
+        
+        // Toggle tag subscription
+        async function toggleSubscription(tagId, element) {
+            try {
+                const action = subscriptions.has(tagId) ? 'unsubscribe' : 'subscribe';
+                const response = await fetch(`${API_URL}?action=${action}&tagId=${tagId}&userId=${userId}`, {
+                    method: 'POST'
+                });
+                
+                if (!response.ok) throw new Error('Failed to update subscription');
+                
+                if (action === 'subscribe') {
+                    subscriptions.add(tagId);
+                    element.classList.add('subscribed');
+                } else {
+                    subscriptions.delete(tagId);
+                    element.classList.remove('subscribed');
+                }
+            } catch (error) {
+                console.error('Failed to toggle subscription:', error);
+                tg.showPopup({
+                    title: 'Ошибка',
+                    message: 'Не удалось обновить подписку: ' + error.message
+                });
+            }
+        }
+        
+        // Search functionality
+        document.querySelector('.search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.tag-card').forEach(card => {
+                const tagName = card.textContent.trim().toLowerCase();
+                card.style.display = tagName.includes(query) ? '' : 'none';
+            });
+        });
+        
+        // Initialize Telegram WebApp
+        tg.ready();
+        tg.expand();
+        
+        // Start the app
+        init();
+    </script>
+</body>
+</html> 

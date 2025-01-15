@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop News Reader</title>
+    
+    <!-- Telegram Web App -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Экран подписок -->
+    <section id="subscribeView" class="view fade-in">
+        <div class="container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="tagSearch" 
+                    placeholder="Поиск по тегам..."
+                    aria-label="Поиск по тегам"
+                >
+            </div>
+            
+            <div class="tags-grid" id="tagsGrid">
+                <!-- Теги будут добавлены динамически -->
+            </div>
+            
+            <button id="showFeedBtn" class="primary-button">
+                Перейти к ленте
+            </button>
+        </div>
+    </section>
+
+    <!-- Экран ленты -->
+    <section id="feedView" class="view hidden">
+        <div class="container">
+            <div class="feed-header">
+                <h2>Ваша лента</h2>
+                <button id="backToTagsBtn" class="secondary-button">
+                    Управление подписками
+                </button>
+            </div>
+            
+            <div class="feed-content" id="feedContent">
+                <!-- Статьи будут добавлены динамически -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Скрипты -->
+    <script src="js/api.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 

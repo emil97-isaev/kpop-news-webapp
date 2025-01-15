@@ -1,0 +1,12 @@
+{
+  "name": "telegram-webapp-server",
+  "version": "1.0.0",
+  "description": "Simple server for Telegram WebApp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

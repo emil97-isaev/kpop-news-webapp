@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop News</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--tg-theme-text-color, #000000);
+            background: var(--tg-theme-bg-color, #ffffff);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            padding-bottom: 60px; /* Место для таб-бара */
+        }
+
+        /* Стили для таб-бара */
+        .tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .tab {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--tg-theme-hint-color, #999999);
+            text-decoration: none;
+            font-size: 12px;
+            gap: 4px;
+        }
+
+        .tab.active {
+            color: var(--tg-theme-button-color, #2481cc);
+        }
+
+        .tab-icon {
+            font-size: 20px;
+        }
+
+        /* Стили для экранов */
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        /* Стили для фильтров в ленте */
+        .filters {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 8px 0;
+            margin: 0 -16px;
+            padding: 8px 16px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .filters::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-tag {
+            padding: 6px 12px;
+            border-radius: 16px;
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            color: var(--tg-theme-text-color, #000000);
+            font-size: 14px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .filter-tag.active {
+            background: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+        }
+
+        /* Остальные стили остаются теми же */
+        .post-card {
+            margin-bottom: 16px;
+            padding: 16px;
+            border-radius: 8px;
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+        }
+
+        .post-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: var(--tg-theme-text-color, #000000);
+        }
+
+        .post-card p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .post-tags {
+            margin: 8px 0;
+            font-size: 0.9em;
+            color: var(--tg-theme-hint-color, #999999);
+        }
+
+        .source-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--tg-theme-link-color, #2481cc);
+            text-decoration: none;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        .post-date {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.8em;
+            color: var(--tg-theme-hint-color, #999999);
+        }
+
+        #posts {
+            margin-top: 24px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: none;
+            border-radius: 8px;
+            background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+        }
+
+        .button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        .post-content {
+            margin: 16px 0;
+        }
+
+        .post-content p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .post-tags {
+            margin: 16px 0;
+        }
+
+        .post-tags .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            margin: 0 4px 4px 0;
+            border-radius: 4px;
+            background: var(--tg-theme-link-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+            font-size: 0.9em;
+        }
+
+        .post-stats {
+            margin: 16px 0;
+            display: flex;
+            gap: 16px;
+            color: var(--tg-theme-hint-color, #999999);
+        }
+
+        .post-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .post-images.single-image {
+            display: block;
+            max-height: none;
+        }
+
+        .post-images.single-image .post-image {
+            padding-bottom: 75%;
+            margin: 0;
+            width: 100%;
+        }
+
+        /* Стили для мобильных устройств */
+        @media screen and (max-width: 480px) {
+            .post-images:not(.single-image) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+
+            .post-images.single-image .post-image {
+                padding-bottom: 75%;
+            }
+            
+            .container {
+                padding: 8px;
+            }
+            
+            .post-card {
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .post-image {
+            position: relative;
+            padding-bottom: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .post-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .post-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+            cursor: pointer;
+        }
+
+        .modal img {
+            display: block;
+            max-width: 100%;
+            max-height: 90vh;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        /* Стили для карусели */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .carousel-container {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            width: 33.333%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+        }
+
+        .carousel-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-dot.active {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Экран ленты -->
+        <div id="feedScreen" class="screen active">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <!-- Слайды будут добавлены через JavaScript -->
+                </div>
+                <div class="carousel-dots">
+                    <div class="carousel-dot active"></div>
+                    <div class="carousel-dot"></div>
+                    <div class="carousel-dot"></div>
+                </div>
+            </div>
+            <div class="filters" id="feedFilters">
+                <!-- Фильтры будут добавлены через JavaScript -->
+            </div>
+            <div id="feedPosts"></div>
+        </div>
+
+        <!-- Экран трендов -->
+        <div id="trendsScreen" class="screen">
+            <h2>Trending News</h2>
+            <div id="trendsPosts"></div>
+        </div>
+
+        <!-- Экран подписок -->
+        <div id="subscriptionsScreen" class="screen">
+            <h2>Your Subscriptions</h2>
+            <div id="subscriptionsPosts"></div>
+        </div>
+    </div>
+
+    <!-- Таб-бар -->
+    <div class="tab-bar">
+        <a href="#feed" class="tab active" data-screen="feedScreen">
+            <span class="tab-icon">📰</span>
+            <span>Feed</span>
+        </a>
+        <a href="#trends" class="tab" data-screen="trendsScreen">
+            <span class="tab-icon">🔥</span>
+            <span>Trends</span>
+        </a>
+        <a href="#subscriptions" class="tab" data-screen="subscriptionsScreen">
+            <span class="tab-icon">⭐</span>
+            <span>Subscriptions</span>
+        </a>
+    </div>
+
+    <!-- Модальное окно для изображений -->
+    <div id="imageModal" class="modal">
+        <img id="modalImage" src="" alt="Full size image">
+    </div>
+
+    <script>
+        class KpopNewsAPI {
+            constructor(userId) {
+                this.userId = userId;
+                this.isTestMode = !window.Telegram || !window.Telegram.WebApp;
+                this.tgHash = window.Telegram?.WebApp?.initData || '';
+                console.log('API initialized:', { userId: this.userId, isTestMode: this.isTestMode, tgHash: this.tgHash });
+            }
+
+            buildUrl(endpoint, params = {}) {
+                const url = new URL(`https://bsivriajgsginlnuyxny.functions.supabase.co/functions/v1/${endpoint}`);
+                
+                // Добавляем все параметры в URL
+                const allParams = {
+                    userId: this.userId,
+                    tg_data: this.tgHash,
+                    ...params
+                };
+
+                // Фильтруем пустые значения
+                Object.entries(allParams).forEach(([key, value]) => {
+                    if (value) {
+                        url.searchParams.set(key, value);
+                    }
+                });
+
+                console.log('Built URL:', url.toString());
+                return url.toString();
+            }
+
+            async getTags() {
+                try {
+                    console.log('Getting tags');
+                    const response = await fetch(this.buildUrl('get-tags'));
+                    
+                    if (!response.ok) {
+                        const error = await response.json();
+                        console.error('Tags error:', error);
+                        throw new Error(error.error || 'Failed to load tags');
+                    }
+
+                    const tags = await response.json();
+                    console.log('Tags loaded:', tags);
+                    return tags;
+                } catch (error) {
+                    console.error('Error loading tags:', error);
+                    throw error;
+                }
+            }
+
+            async getFeed(tag = '') {
+                try {
+                    console.log('Getting feed', tag ? `for tag: ${tag}` : 'without tag');
+                    const response = await fetch(this.buildUrl('get-feed', tag ? { tag } : {}))
+                    
+                    if (!response.ok) {
+                        const error = await response.json()
+                        throw new Error(error.message || 'Failed to load feed')
+                    }
+
+                    const posts = await response.json()
+                    console.log('Received posts:', posts)
+
+                    // Форматируем посты для отображения
+                    return posts.map(post => {
+                        // Разбиваем строку с фото на массив по https://
+                        const photoLinks = post.photo_links 
+                            ? post.photo_links
+                                .split('https://')
+                                .filter(Boolean) // Убираем пустые строки
+                                .map(url => {
+                                    // Удаляем запятую и пробелы в конце URL
+                                    const cleanUrl = url.replace(/,\s*$/, '').trim();
+                                    return 'https://' + cleanUrl;
+                                })
+                            : [];
+                        
+                        return {
+                            id: post.id,
+                            title: post.text?.split('\n')[0] || 'No title',
+                            content: post.text || '',
+                            photoLinks: photoLinks,
+                            createdAt: post.post_datetime,
+                            stats: {
+                                views: post.views || 0,
+                                likes: post.likes || 0,
+                                comments: post.comments || 0,
+                                reposts: post.reposts || 0
+                            },
+                            entities: post.main_entity_group ? post.main_entity_group.split(', ') : []
+                        };
+                    });
+                } catch (error) {
+                    console.error('Error getting feed:', error)
+                    throw error
+                }
+            }
+
+            async getTrendingPosts() {
+                try {
+                    console.log('Getting trending posts');
+                    const response = await fetch(this.buildUrl('get-trending-posts'));
+                    
+                    if (!response.ok) {
+                        const error = await response.json();
+                        console.error('Trending posts error:', error);
+                        throw new Error(error.error || 'Failed to load trending posts');
+                    }
+
+                    const posts = await response.json();
+                    console.log('Trending posts loaded:', posts.length, 'posts');
+                    return posts;
+                } catch (error) {
+                    console.error('Error loading trending posts:', error);
+                    throw error;
+                }
+            }
+        }
+
+        class KpopNewsApp {
+            constructor() {
+                this.isTelegram = window.Telegram && window.Telegram.WebApp;
+                this.tg = this.isTelegram ? window.Telegram.WebApp : null;
+                
+                if (this.isTelegram) {
+                    this.tg.ready();
+                    this.tg.expand();
+                }
+                
+                this.userId = this.isTelegram && this.tg.initDataUnsafe?.user?.id?.toString() || '12345';
+                this.api = new KpopNewsAPI(this.userId);
+                
+                // Инициализация UI элементов
+                this.modal = document.getElementById('imageModal');
+                this.modalImage = document.getElementById('modalImage');
+                
+                // Привязка обработчиков
+                this.handleTabClick = this.handleTabClick.bind(this);
+                this.handleFilterClick = this.handleFilterClick.bind(this);
+                
+                // Состояние приложения
+                this.activeScreen = 'feedScreen';
+                this.activeFilters = new Set();
+                
+                // Закрытие модального окна
+                this.modal.addEventListener('click', () => {
+                    this.modal.classList.remove('active');
+                });
+
+                // Добавляем состояние для карусели
+                this.currentSlide = 0;
+                this.carouselInterval = null;
+            }
+
+            async init() {
+                try {
+                    // Инициализация табов
+                    document.querySelectorAll('.tab').forEach(tab => {
+                        tab.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            this.handleTabClick(tab);
+                        });
+                    });
+
+                    // Инициализация карусели
+                    await this.initializeCarousel();
+
+                    // Загрузка фильтров для ленты
+                    const tags = await this.api.getTags();
+                    this.initializeFilters(tags);
+
+                    // Загрузка начального контента
+                    await this.loadFeedContent();
+
+                } catch (error) {
+                    console.error('Initialization error:', error);
+                    alert('Error initializing app: ' + error.message);
+                }
+            }
+
+            handleTabClick(tab) {
+                // Обновляем активный таб
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Показываем соответствующий экран
+                const screenId = tab.dataset.screen;
+                document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+                document.getElementById(screenId).classList.add('active');
+
+                // Обновляем активный экран
+                this.activeScreen = screenId;
+
+                // Загружаем контент для экрана
+                switch(screenId) {
+                    case 'feedScreen':
+                        this.loadFeedContent();
+                        break;
+                    case 'trendsScreen':
+                        this.loadTrendsContent();
+                        break;
+                    case 'subscriptionsScreen':
+                        this.loadSubscriptionsContent();
+                        break;
+                }
+            }
+
+            initializeFilters(tags) {
+                const filtersContainer = document.getElementById('feedFilters');
+                filtersContainer.innerHTML = '';
+
+                tags.forEach(tag => {
+                    const filterTag = document.createElement('div');
+                    filterTag.className = 'filter-tag';
+                    filterTag.textContent = tag.name;
+                    filterTag.addEventListener('click', () => this.handleFilterClick(filterTag, tag.name));
+                    filtersContainer.appendChild(filterTag);
+                });
+            }
+
+            handleFilterClick(filterElement, tag) {
+                filterElement.classList.toggle('active');
+                
+                if (filterElement.classList.contains('active')) {
+                    this.activeFilters.add(tag);
+                } else {
+                    this.activeFilters.delete(tag);
+                }
+
+                this.loadFeedContent();
+            }
+
+            async loadFeedContent() {
+                try {
+                    const container = document.getElementById('feedPosts');
+                    container.innerHTML = '';
+
+                    if (this.activeFilters.size === 0) {
+                        // Загружаем все посты без фильтрации
+                        const posts = await this.api.getFeed();
+                        this.renderPosts(posts, container);
+                    } else {
+                        // Загружаем посты для каждого выбранного тега
+                        for (const tag of this.activeFilters) {
+                            const posts = await this.api.getFeed(tag);
+                            this.renderPosts(posts, container);
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error loading feed:', error);
+                    document.getElementById('feedPosts').innerHTML = 
+                        `<div class="error">Error loading feed: ${error.message}</div>`;
+                }
+            }
+
+            async loadTrendsContent() {
+                // TODO: Implement trends loading
+                document.getElementById('trendsPosts').innerHTML = 
+                    '<p>Trending posts will be available soon</p>';
+            }
+
+            async loadSubscriptionsContent() {
+                // TODO: Implement subscriptions loading
+                document.getElementById('subscriptionsPosts').innerHTML = 
+                    '<p>Your subscriptions will be available soon</p>';
+            }
+
+            renderPosts(posts, container) {
+                posts.forEach(post => {
+                    const postCard = document.createElement('div');
+                    postCard.className = 'post-card';
+                    
+                    // Safely get the first line as title or use a default
+                    const title = post.text ? post.text.split('\n')[0] : 'Untitled Post';
+                    
+                    // Safely format content
+                    const formattedContent = post.text 
+                        ? post.text
+                            .split('\n')
+                            .filter(line => line.trim())
+                            .map(line => `<p>${line}</p>`)
+                            .join('')
+                        : '';
+                    
+                    let content = `
+                        <h3>${title}</h3>
+                        <div class="post-content">${formattedContent}</div>
+                    `;
+
+                    // Safely handle photo links
+                    if (post.photo_links) {
+                        const photoLinks = post.photo_links
+                            .split('https://')
+                            .filter(Boolean)
+                            .map(url => {
+                                const cleanUrl = url.replace(/,\s*$/, '').trim();
+                                return 'https://' + cleanUrl;
+                            });
+
+                        if (photoLinks.length > 0) {
+                            const isSingleImage = photoLinks.length === 1;
+                            content += `<div class="post-images ${isSingleImage ? 'single-image' : ''}">`;
+                            photoLinks.forEach(url => {
+                                content += `
+                                    <div class="post-image">
+                                        <img src="${url}" alt="Post image" loading="lazy" data-full-url="${url}">
+                                    </div>
+                                `;
+                            });
+                            content += `</div>`;
+                        }
+                    }
+
+                    // Safely handle entities/tags
+                    if (post.main_entity_group) {
+                        const entities = post.main_entity_group.split(',').map(e => e.trim());
+                        if (entities.length > 0) {
+                            content += `
+                                <div class="post-tags">
+                                    ${entities.map(entity => `<span class="tag">${entity}</span>`).join(' ')}
+                                </div>
+                            `;
+                        }
+                    }
+
+                    // Add stats if they exist
+                    content += `
+                        <div class="post-stats">
+                            <span>👁️ ${post.stats.views || 0}</span>
+                            <span>❤️ ${post.stats.likes || 0}</span>
+                            <span>💬 ${post.stats.comments || 0}</span>
+                            <span>🔄 ${post.stats.reposts || 0}</span>
+                        </div>
+                        <div class="post-date">
+                            ${new Date(post.createdAt).toLocaleString()}
+                        </div>
+                    `;
+
+                    postCard.innerHTML = content;
+
+                    // Add image click handlers
+                    const images = postCard.querySelectorAll('.post-image img');
+                    images.forEach(img => {
+                        img.addEventListener('click', () => {
+                            const fullUrl = img.getAttribute('data-full-url');
+                            if (fullUrl) {
+                                this.modalImage.src = fullUrl;
+                                this.modal.classList.add('active');
+                            }
+                        });
+                    });
+
+                    container.appendChild(postCard);
+                });
+            }
+
+            async initializeCarousel() {
+                try {
+                    console.log('Initializing carousel...');
+                    const trendingPosts = await this.api.getTrendingPosts();
+                    console.log('Trending posts for carousel:', trendingPosts);
+                    
+                    const container = document.querySelector('.carousel-container');
+                    console.log('Carousel container:', container);
+                    
+                    if (!trendingPosts || trendingPosts.length === 0) {
+                        console.log('No trending posts available');
+                        const carousel = document.querySelector('.carousel');
+                        if (carousel) {
+                            carousel.style.display = 'none';
+                        }
+                        return;
+                    }
+                    
+                    container.innerHTML = ''; // Очищаем контейнер перед добавлением слайдов
+                    
+                    // Обновляем точки навигации
+                    const dotsContainer = document.querySelector('.carousel-dots');
+                    dotsContainer.innerHTML = trendingPosts.map((_, index) => 
+                        `<div class="carousel-dot ${index === 0 ? 'active' : ''}"></div>`
+                    ).join('');
+                    
+                    trendingPosts.forEach((post, index) => {
+                        console.log(`Processing post ${index}:`, post);
+                        
+                        // Получаем первую фотографию из поста
+                        const imageUrl = post.photoLinks?.[0];
+                        console.log('Image URL for slide:', imageUrl);
+                        
+                        if (!imageUrl) {
+                            console.log(`No image URL for post ${index}`);
+                            return;
+                        }
+
+                        const slide = document.createElement('div');
+                        slide.className = 'carousel-slide';
+                        slide.innerHTML = `
+                            <img src="${imageUrl}" alt="${post.title || 'Trending post'}" onerror="this.style.display='none'">
+                            <div class="carousel-content">
+                                <h3>${post.title || 'Trending post'}</h3>
+                            </div>
+                        `;
+                        container.appendChild(slide);
+                        console.log(`Slide ${index} added to carousel`);
+                    });
+
+                    // Обновляем стили контейнера в зависимости от количества слайдов
+                    const slideCount = container.children.length;
+                    if (slideCount > 0) {
+                        container.style.width = `${slideCount * 100}%`;
+                        Array.from(container.children).forEach(slide => {
+                            slide.style.width = `${100 / slideCount}%`;
+                        });
+                        console.log(`Carousel initialized with ${slideCount} slides`);
+                        this.startCarousel();
+                    } else {
+                        console.log('No valid slides created, hiding carousel');
+                        const carousel = document.querySelector('.carousel');
+                        if (carousel) {
+                            carousel.style.display = 'none';
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error initializing carousel:', error);
+                    const carousel = document.querySelector('.carousel');
+                    if (carousel) {
+                        carousel.style.display = 'none';
+                    }
+                }
+            }
+
+            startCarousel() {
+                if (this.carouselInterval) {
+                    clearInterval(this.carouselInterval);
+                }
+                
+                const container = document.querySelector('.carousel-container');
+                const slideCount = container.children.length;
+                
+                this.carouselInterval = setInterval(() => {
+                    this.currentSlide = (this.currentSlide + 1) % slideCount;
+                    this.updateCarousel();
+                }, 5000);
+            }
+
+            updateCarousel() {
+                const container = document.querySelector('.carousel-container');
+                const dots = document.querySelectorAll('.carousel-dot');
+                const slideWidth = 100 / container.children.length;
+                
+                container.style.transform = `translateX(-${this.currentSlide * slideWidth}%)`;
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+        }
+
+        // Инициализация приложения
+        window.addEventListener('DOMContentLoaded', () => {
+            const app = new KpopNewsApp();
+            app.init();
+        });
+    </script>
+</body>
+</html> 

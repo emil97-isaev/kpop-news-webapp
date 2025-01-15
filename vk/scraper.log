@@ -1,0 +1,3074 @@
+2025-01-12 01:47:30.853 | INFO     | __main__:main:302 - Starting to analyze: https://m.pann.nate.com/talk/373662639
+2025-01-12 01:47:32.651 | INFO     | __main__:fetch_page:88 - Saved raw HTML to page.html
+2025-01-12 01:47:32.680 | INFO     | __main__:main:314 - 
+Analyzing page structure...
+2025-01-12 01:47:32.681 | INFO     | __main__:main:317 - 
+Main content elements:
+2025-01-12 01:47:32.684 | INFO     | __main__:main:324 - Content element: div with classes ['content']
+2025-01-12 01:47:32.684 | INFO     | __main__:main:327 - 
+Looking for comment sections:
+2025-01-12 01:47:32.687 | INFO     | __main__:main:331 - Found element div with classes: ['nHide']
+2025-01-12 01:47:32.687 | INFO     | __main__:main:331 - Found element div with classes: ['wrap']
+2025-01-12 01:47:32.690 | INFO     | __main__:main:331 - Found element div with classes: ['gnbWrap']
+2025-01-12 01:47:32.690 | INFO     | __main__:main:331 - Found element div with classes: ['gnb']
+2025-01-12 01:47:32.691 | INFO     | __main__:main:331 - Found element div with classes: ['relsvc']
+2025-01-12 01:47:32.691 | INFO     | __main__:main:331 - Found element div with classes: ['searchWrap']
+2025-01-12 01:47:32.691 | INFO     | __main__:main:331 - Found element div with classes: ['lnb']
+2025-01-12 01:47:32.692 | INFO     | __main__:main:331 - Found element div with classes: ['lnbContainer']
+2025-01-12 01:47:32.692 | INFO     | __main__:main:331 - Found element div with classes: ['lnb_sub']
+2025-01-12 01:47:32.692 | INFO     | __main__:main:331 - Found element div with classes: ['btn_bookmark']
+2025-01-12 01:47:32.693 | INFO     | __main__:main:331 - Found element div with classes: ['btn_top_float']
+2025-01-12 01:47:32.693 | INFO     | __main__:main:331 - Found element div with classes: ['layer_pop']
+2025-01-12 01:47:32.694 | INFO     | __main__:main:331 - Found element div with classes: ['dimm']
+2025-01-12 01:47:32.694 | INFO     | __main__:main:331 - Found element div with classes: ['layer_wrap', 'bmset', 'viewset']
+2025-01-12 01:47:32.694 | INFO     | __main__:main:331 - Found element div with classes: ['ltit']
+2025-01-12 01:47:32.695 | INFO     | __main__:main:331 - Found element div with classes: ['lsub']
+2025-01-12 01:47:32.695 | INFO     | __main__:main:331 - Found element div with classes: ['sltgroup']
+2025-01-12 01:47:32.695 | INFO     | __main__:main:331 - Found element div with classes: ['layerBtn']
+2025-01-12 01:47:32.696 | INFO     | __main__:main:331 - Found element div with classes: ['layer_pop']
+2025-01-12 01:47:32.696 | INFO     | __main__:main:331 - Found element div with classes: ['dimm']
+2025-01-12 01:47:32.697 | INFO     | __main__:main:331 - Found element div with classes: ['layer_wrap', 'bmcomp']
+2025-01-12 01:47:32.697 | INFO     | __main__:main:331 - Found element div with classes: ['bmCont']
+2025-01-12 01:47:32.697 | INFO     | __main__:main:331 - Found element div with classes: ['layer_pop']
+2025-01-12 01:47:32.698 | INFO     | __main__:main:331 - Found element div with classes: ['dimm']
+2025-01-12 01:47:32.698 | INFO     | __main__:main:331 - Found element div with classes: ['layer_wrap', 'bmcomp', 'bmclear']
+2025-01-12 01:47:32.698 | INFO     | __main__:main:331 - Found element div with classes: ['bmCont']
+2025-01-12 01:47:32.698 | INFO     | __main__:main:331 - Found element div with classes: ['view-wrap', 'talk']
+2025-01-12 01:47:32.699 | INFO     | __main__:main:331 - Found element div with classes: ['float-adv-wrap']
+2025-01-12 01:47:32.699 | INFO     | __main__:main:331 - Found element div with classes: ['adv']
+2025-01-12 01:47:32.699 | INFO     | __main__:main:331 - Found element div with classes: ['adv-temp']
+2025-01-12 01:47:32.700 | INFO     | __main__:main:331 - Found element div with classes: ['view_cate', 'no_ch']
+2025-01-12 01:47:32.700 | INFO     | __main__:main:331 - Found element div with classes: ['pann-title']
+2025-01-12 01:47:32.700 | INFO     | __main__:main:331 - Found element div with classes: ['writer']
+2025-01-12 01:47:32.701 | INFO     | __main__:main:331 - Found element div with classes: ['sub']
+2025-01-12 01:47:32.701 | INFO     | __main__:main:331 - Found element div with classes: ['sub']
+2025-01-12 01:47:32.701 | INFO     | __main__:main:331 - Found element div with classes: ['con_info']
+2025-01-12 01:47:32.701 | INFO     | __main__:main:331 - Found element div with classes: ['sBox']
+2025-01-12 01:47:32.702 | INFO     | __main__:main:331 - Found element div with classes: ['dropdown']
+2025-01-12 01:47:32.702 | INFO     | __main__:main:331 - Found element div with classes: ['content']
+2025-01-12 01:47:32.702 | INFO     | __main__:main:331 - Found element div with classes: ['updown']
+2025-01-12 01:47:32.702 | INFO     | __main__:main:331 - Found element div with classes: ['btnbox', 'up']
+2025-01-12 01:47:32.703 | INFO     | __main__:main:331 - Found element div with classes: ['btnbox', 'down']
+2025-01-12 01:47:32.703 | INFO     | __main__:main:331 - Found element div with classes: ['social_area']
+2025-01-12 01:47:32.703 | INFO     | __main__:main:331 - Found element ul with classes: ['social_send']
+2025-01-12 01:47:32.704 | INFO     | __main__:main:331 - Found element div with classes: ['bannerNate', 'btm']
+2025-01-12 01:47:32.704 | INFO     | __main__:main:331 - Found element div with classes: ['reply-list', 'view-best']
+2025-01-12 01:47:32.705 | INFO     | __main__:main:335 - 
+Found potential comment section:
+2025-01-12 01:47:32.705 | INFO     | __main__:main:336 - Full element structure:
+2025-01-12 01:47:32.706 | INFO     | __main__:main:337 - <div class="reply-list view-best"><!-- 뷰페이지내 베플// -->
+		<dl class="best">
+
+			<dt><em class="best">베플</em><span>ㅇㅇ</span><span class="bar">|</span><em>2024.12.21 15:57</em></dt>
+			
+			<dd class="userText">
+
+				님이 출근하면 여자친구가 하긴 한대요? 저런 사람 집안일 밀려도 못본척 안 할 것 같은데.							</dd>
+		</dl><dl class="best">
+
+			<dt><em class="best">베플</em><span>ㅇㅇ</span><span class="bar">|</span><em>2024.12.21 15:01</em></dt>
+			
+			<dd class="userText">
+
+				누가 맞고 틀리고를 떠나서 둘이 안맞고요, 제가 극 T성향이라 말씀드리자면 그냥 다른 사람 만나요...결혼까지 하면 님이 매사 감정강요 공감강요에 시달리고, 상대는 자기 하고 싶은거 하고다니며 현실적인 문제는 님만 발동동 구르며 해결하며 돌아다녀야할듯...							</dd>
+		</dl><dl class="best">
+
+			<dt><em class="best">베플</em><span>ㅇㅇ</span><span class="bar">|</span><em>2024.12.21 16:52</em></dt>
+			
+			<dd class="userText">
+
+				여자 너무 미성숙하다							</dd>
+		</dl><dl class="best">
+
+			<dt><em class="best">베플</em><span>ㅇㅇ</span><span class="bar">|</span><em>2024.12.21 18:22</em></dt>
+			
+			<dd class="userText">
+
+				하루빨리 그여자 접어요.   더 나이들고 뜨거운 후회의 눈물 안흘릴라면.   술처먹는여자는 처다도 보
+2025-01-12 01:47:32.708 | INFO     | __main__:main:331 - Found element div with classes: ['navi-btn-bot']
+2025-01-12 01:47:32.709 | INFO     | __main__:main:331 - Found element div with classes: ['navi-btn']
+2025-01-12 01:47:32.709 | INFO     | __main__:main:331 - Found element div with classes: ['view-plus']
+2025-01-12 01:47:32.709 | INFO     | __main__:main:331 - Found element div with classes: ['view_cate', 'no_ch']
+2025-01-12 01:47:32.710 | INFO     | __main__:main:331 - Found element div with classes: ['listBoard']
+2025-01-12 01:47:32.710 | INFO     | __main__:main:331 - Found element div with classes: ['btn']
+2025-01-12 01:47:32.710 | INFO     | __main__:main:331 - Found element div with classes: ['ad_area']
+2025-01-12 01:47:32.710 | INFO     | __main__:main:331 - Found element div with classes: ['wrap_view_bottom']
+2025-01-12 01:47:32.711 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'best_poptalk']
+2025-01-12 01:47:32.711 | INFO     | __main__:main:331 - Found element div with classes: ['poptalk-best-flick']
+2025-01-12 01:47:32.712 | INFO     | __main__:main:331 - Found element div with classes: ['swiper', 'pBestSwiper']
+2025-01-12 01:47:32.712 | INFO     | __main__:main:331 - Found element div with classes: ['swiper-wrapper']
+2025-01-12 01:47:32.713 | INFO     | __main__:main:331 - Found element div with classes: ['pBestSwiper-nav']
+2025-01-12 01:47:32.713 | INFO     | __main__:main:331 - Found element div with classes: ['swiper-button-prev']
+2025-01-12 01:47:32.713 | INFO     | __main__:main:331 - Found element div with classes: ['swiper-pagination']
+2025-01-12 01:47:32.714 | INFO     | __main__:main:331 - Found element div with classes: ['swiper-button-next']
+2025-01-12 01:47:32.714 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'ch_best']
+2025-01-12 01:47:32.714 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'bestofbest', 'has_thumb_list']
+2025-01-12 01:47:32.714 | INFO     | __main__:main:331 - Found element div with classes: ['thumb']
+2025-01-12 01:47:32.715 | INFO     | __main__:main:331 - Found element div with classes: ['con']
+2025-01-12 01:47:32.715 | INFO     | __main__:main:331 - Found element div with classes: ['tit']
+2025-01-12 01:47:32.715 | INFO     | __main__:main:331 - Found element div with classes: ['con_sum']
+2025-01-12 01:47:32.715 | INFO     | __main__:main:331 - Found element div with classes: ['thumb']
+2025-01-12 01:47:32.716 | INFO     | __main__:main:331 - Found element div with classes: ['con']
+2025-01-12 01:47:32.716 | INFO     | __main__:main:331 - Found element div with classes: ['tit']
+2025-01-12 01:47:32.716 | INFO     | __main__:main:331 - Found element div with classes: ['con_sum']
+2025-01-12 01:47:32.716 | INFO     | __main__:main:331 - Found element div with classes: ['thumb']
+2025-01-12 01:47:32.716 | INFO     | __main__:main:331 - Found element div with classes: ['con']
+2025-01-12 01:47:32.717 | INFO     | __main__:main:331 - Found element div with classes: ['tit']
+2025-01-12 01:47:32.717 | INFO     | __main__:main:331 - Found element div with classes: ['con_sum']
+2025-01-12 01:47:32.717 | INFO     | __main__:main:331 - Found element div with classes: ['thumb']
+2025-01-12 01:47:32.717 | INFO     | __main__:main:331 - Found element div with classes: ['con']
+2025-01-12 01:47:32.718 | INFO     | __main__:main:331 - Found element div with classes: ['tit']
+2025-01-12 01:47:32.718 | INFO     | __main__:main:331 - Found element div with classes: ['con_sum']
+2025-01-12 01:47:32.718 | INFO     | __main__:main:331 - Found element div with classes: ['thumb']
+2025-01-12 01:47:32.718 | INFO     | __main__:main:331 - Found element div with classes: ['con']
+2025-01-12 01:47:32.719 | INFO     | __main__:main:331 - Found element div with classes: ['tit']
+2025-01-12 01:47:32.719 | INFO     | __main__:main:331 - Found element div with classes: ['con_sum']
+2025-01-12 01:47:32.719 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'recomm_list', 'line1_list', 'tab_type_list', 'tab_btn2']
+2025-01-12 01:47:32.720 | INFO     | __main__:main:331 - Found element ul with classes: ['list']
+2025-01-12 01:47:32.720 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'new_beple']
+2025-01-12 01:47:32.720 | INFO     | __main__:main:331 - Found element ul with classes: ['default_list', 'link2_list']
+2025-01-12 01:47:32.721 | INFO     | __main__:main:331 - Found element div with classes: ['ad_box_text']
+2025-01-12 01:47:32.721 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'nate_ssul']
+2025-01-12 01:47:32.722 | INFO     | __main__:main:331 - Found element div with classes: ['ssul-list']
+2025-01-12 01:47:32.722 | INFO     | __main__:main:331 - Found element div with classes: ['flickCover']
+2025-01-12 01:47:32.722 | INFO     | __main__:main:331 - Found element div with classes: ['pageNav2']
+2025-01-12 01:47:32.723 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'bannerNate', 'mid']
+2025-01-12 01:47:32.723 | INFO     | __main__:main:331 - Found element div with classes: ['view_bottom_list', 'emotion']
+2025-01-12 01:47:32.723 | INFO     | __main__:main:331 - Found element div with classes: ['emotion-list']
+2025-01-12 01:47:32.724 | INFO     | __main__:main:331 - Found element div with classes: ['flickCover']
+2025-01-12 01:47:32.724 | INFO     | __main__:main:331 - Found element div with classes: ['pageNav2']
+2025-01-12 01:47:32.724 | INFO     | __main__:main:331 - Found element div with classes: ['layer_liveTalk']
+2025-01-12 01:47:32.724 | INFO     | __main__:main:331 - Found element div with classes: ['title']
+2025-01-12 01:47:32.725 | INFO     | __main__:main:331 - Found element div with classes: ['layer_pop', 'fantalk']
+2025-01-12 01:47:32.725 | INFO     | __main__:main:331 - Found element div with classes: ['dimm']
+2025-01-12 01:47:32.725 | INFO     | __main__:main:331 - Found element div with classes: ['layer_wrap', 'sns_layer', 'wrap_radius']
+2025-01-12 01:47:32.726 | INFO     | __main__:main:331 - Found element div with classes: ['lay_head']
+2025-01-12 01:47:32.726 | INFO     | __main__:main:331 - Found element div with classes: ['sns_btns']
+2025-01-12 01:47:32.726 | INFO     | __main__:main:331 - Found element div with classes: ['bannerNate', 'mid']
+2025-01-12 01:47:32.726 | INFO     | __main__:main:331 - Found element div with classes: ['bannerBtm']
+2025-01-12 01:47:32.727 | INFO     | __main__:main:331 - Found element div with classes: ['shopBox']
+2025-01-12 01:47:32.727 | INFO     | __main__:main:331 - Found element div with classes: ['mallBox']
+2025-01-12 01:47:32.727 | INFO     | __main__:main:331 - Found element div with classes: ['ml']
+2025-01-12 01:47:32.727 | INFO     | __main__:main:331 - Found element div with classes: ['ml']
+2025-01-12 01:47:32.728 | INFO     | __main__:main:331 - Found element div with classes: ['footer']
+2025-01-12 01:47:32.728 | INFO     | __main__:main:331 - Found element div with classes: ['svcBtn']
+2025-01-12 01:47:32.728 | INFO     | __main__:main:331 - Found element div with classes: ['svcInfo']
+2025-01-12 01:47:32.728 | INFO     | __main__:main:331 - Found element div with classes: ['copyright']
+2025-01-12 01:47:32.731 | INFO     | __main__:main:348 - 
+Saved full HTML to page.html for analysis
+2025-01-12 01:47:53.782 | INFO     | __main__:main:302 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:47:55.179 | INFO     | __main__:fetch_page:88 - Saved raw HTML to page.html
+2025-01-12 01:47:55.210 | DEBUG    | __main__:parse_article:209 - HTML content length: 73905
+2025-01-12 01:47:55.216 | ERROR    | __main__:parse_article:223 - Could not find essential elements
+2025-01-12 01:47:55.217 | ERROR    | __main__:main:317 - Failed to parse article
+2025-01-12 01:48:20.890 | INFO     | __main__:main:304 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:48:22.112 | INFO     | __main__:fetch_page:88 - Saved raw HTML to page.html
+2025-01-12 01:48:22.143 | DEBUG    | __main__:parse_article:209 - HTML content length: 73905
+2025-01-12 01:48:22.145 | DEBUG    | __main__:parse_article:230 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 161,836 |추천 631
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:48:22.160 | INFO     | __main__:parse_comments:198 - Total comments found: 0
+2025-01-12 01:48:22.161 | DEBUG    | __main__:parse_article:286 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:48:22.174 | INFO     | __main__:parse_comments:198 - Total comments found: 0
+2025-01-12 01:48:22.175 | DEBUG    | __main__:parse_article:287 - Found 0 comments
+2025-01-12 01:48:22.175 | DEBUG    | __main__:parse_article:288 - Metadata: views=0, likes=631, comment_count=131
+2025-01-12 01:48:22.176 | INFO     | __main__:main:308 - Successfully parsed article:
+2025-01-12 01:48:22.176 | INFO     | __main__:main:309 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:48:22.176 | INFO     | __main__:main:310 - Views: 0
+2025-01-12 01:48:22.176 | INFO     | __main__:main:311 - Likes: 631
+2025-01-12 01:48:22.177 | INFO     | __main__:main:312 - Dislikes: 9
+2025-01-12 01:48:22.177 | INFO     | __main__:main:313 - Comments: 0
+2025-01-12 01:48:22.179 | INFO     | __main__:main:317 - Saved article data to article_data.json
+2025-01-12 01:48:51.665 | INFO     | __main__:main:305 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:48:53.137 | INFO     | __main__:fetch_page:88 - Saved raw HTML to page.html
+2025-01-12 01:48:53.167 | DEBUG    | __main__:parse_article:209 - HTML content length: 73905
+2025-01-12 01:48:53.167 | DEBUG    | __main__:parse_article:230 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 161,836 |추천 631
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:48:53.183 | INFO     | __main__:parse_comments:198 - Total comments found: 0
+2025-01-12 01:48:53.184 | DEBUG    | __main__:parse_article:287 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:48:53.196 | INFO     | __main__:parse_comments:198 - Total comments found: 0
+2025-01-12 01:48:53.196 | DEBUG    | __main__:parse_article:288 - Found 0 comments
+2025-01-12 01:48:53.196 | DEBUG    | __main__:parse_article:289 - Metadata: views=161836, likes=631, comment_count=131
+2025-01-12 01:48:53.197 | INFO     | __main__:main:309 - Successfully parsed article:
+2025-01-12 01:48:53.197 | INFO     | __main__:main:310 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:48:53.198 | INFO     | __main__:main:311 - Views: 161836
+2025-01-12 01:48:53.198 | INFO     | __main__:main:312 - Likes: 631
+2025-01-12 01:48:53.198 | INFO     | __main__:main:313 - Dislikes: 9
+2025-01-12 01:48:53.198 | INFO     | __main__:main:314 - Comments: 0
+2025-01-12 01:48:53.200 | INFO     | __main__:main:318 - Saved article data to article_data.json
+2025-01-12 01:54:42.452 | INFO     | __main__:main:310 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:54:43.694 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 01:54:43.724 | DEBUG    | __main__:parse_article:214 - HTML content length: 73905
+2025-01-12 01:54:43.726 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 162,057 |추천 632
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:54:43.740 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:54:43.741 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:54:43.753 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:54:43.754 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 01:54:43.754 | DEBUG    | __main__:parse_article:294 - Metadata: views=162057, likes=632, comment_count=131
+2025-01-12 01:54:43.755 | INFO     | __main__:main:314 - Successfully parsed article:
+2025-01-12 01:54:43.755 | INFO     | __main__:main:315 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:54:43.756 | INFO     | __main__:main:316 - Views: 162057
+2025-01-12 01:54:43.756 | INFO     | __main__:main:317 - Likes: 632
+2025-01-12 01:54:43.756 | INFO     | __main__:main:318 - Dislikes: 9
+2025-01-12 01:54:43.757 | INFO     | __main__:main:319 - Comments: 0
+2025-01-12 01:54:43.758 | INFO     | __main__:main:323 - Saved article data to article_data.json
+2025-01-12 01:55:07.712 | INFO     | __main__:main:310 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:55:09.257 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 01:55:09.288 | DEBUG    | __main__:parse_article:214 - HTML content length: 73905
+2025-01-12 01:55:09.290 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 162,057 |추천 632
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:55:09.305 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:55:09.306 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:55:09.318 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:55:09.319 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 01:55:09.319 | DEBUG    | __main__:parse_article:294 - Metadata: views=162057, likes=632, comment_count=131
+2025-01-12 01:55:09.320 | INFO     | __main__:main:314 - Successfully parsed article:
+2025-01-12 01:55:09.320 | INFO     | __main__:main:315 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:55:09.320 | INFO     | __main__:main:316 - Views: 162057
+2025-01-12 01:55:09.321 | INFO     | __main__:main:317 - Likes: 632
+2025-01-12 01:55:09.322 | INFO     | __main__:main:318 - Dislikes: 9
+2025-01-12 01:55:09.322 | INFO     | __main__:main:319 - Comments: 0
+2025-01-12 01:55:09.324 | INFO     | __main__:main:323 - Saved article data to article_data.json
+2025-01-12 01:55:33.315 | INFO     | __main__:main:336 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:55:34.692 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 01:55:34.723 | DEBUG    | __main__:parse_article:214 - HTML content length: 73905
+2025-01-12 01:55:34.724 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 162,057 |추천 632
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:55:34.739 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:55:34.740 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:55:34.752 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:55:34.752 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 01:55:34.752 | DEBUG    | __main__:parse_article:294 - Metadata: views=162057, likes=632, comment_count=131
+2025-01-12 01:55:34.753 | INFO     | __main__:main:340 - Successfully parsed article:
+2025-01-12 01:55:34.753 | INFO     | __main__:main:341 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:55:34.753 | INFO     | __main__:main:342 - Views: 162057
+2025-01-12 01:55:34.754 | INFO     | __main__:main:343 - Likes: 632
+2025-01-12 01:55:34.754 | INFO     | __main__:main:344 - Dislikes: 9
+2025-01-12 01:55:34.754 | INFO     | __main__:main:345 - Comments: 0
+2025-01-12 01:55:34.756 | INFO     | __main__:main:349 - Saved article data to article_data.json
+2025-01-12 01:55:35.259 | ERROR    | __main__:save_to_supabase:329 - Error saving to Supabase: {'code': '42501', 'details': None, 'hint': None, 'message': 'new row violates row-level security policy for table "articles"'}
+2025-01-12 01:55:35.261 | ERROR    | __main__:main:355 - Failed to save article to Supabase
+2025-01-12 01:56:05.503 | INFO     | __main__:main:336 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:56:06.903 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 01:56:06.936 | DEBUG    | __main__:parse_article:214 - HTML content length: 73905
+2025-01-12 01:56:06.937 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 162,110 |추천 632
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:56:06.953 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:56:06.953 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:56:06.966 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:56:06.966 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 01:56:06.966 | DEBUG    | __main__:parse_article:294 - Metadata: views=162110, likes=632, comment_count=131
+2025-01-12 01:56:06.967 | INFO     | __main__:main:340 - Successfully parsed article:
+2025-01-12 01:56:06.967 | INFO     | __main__:main:341 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:56:06.968 | INFO     | __main__:main:342 - Views: 162110
+2025-01-12 01:56:06.968 | INFO     | __main__:main:343 - Likes: 632
+2025-01-12 01:56:06.968 | INFO     | __main__:main:344 - Dislikes: 9
+2025-01-12 01:56:06.968 | INFO     | __main__:main:345 - Comments: 0
+2025-01-12 01:56:06.971 | INFO     | __main__:main:349 - Saved article data to article_data.json
+2025-01-12 01:56:07.413 | ERROR    | __main__:save_to_supabase:329 - Error saving to Supabase: {'code': '42501', 'details': None, 'hint': None, 'message': 'new row violates row-level security policy for table "articles"'}
+2025-01-12 01:56:07.415 | ERROR    | __main__:main:355 - Failed to save article to Supabase
+2025-01-12 01:57:15.596 | INFO     | __main__:main:336 - Starting to scrape article: https://m.pann.nate.com/talk/373785506
+2025-01-12 01:57:17.354 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 01:57:17.385 | DEBUG    | __main__:parse_article:214 - HTML content length: 73905
+2025-01-12 01:57:17.386 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 17:21
+		
+		
+			조회 162,154 |추천 632
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 131
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 01:57:17.403 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:57:17.404 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:57:17.417 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 01:57:17.417 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 01:57:17.418 | DEBUG    | __main__:parse_article:294 - Metadata: views=162154, likes=632, comment_count=131
+2025-01-12 01:57:17.418 | INFO     | __main__:main:340 - Successfully parsed article:
+2025-01-12 01:57:17.418 | INFO     | __main__:main:341 - Title: 개찐따 졸업식 후기 ㅎㅎ
+2025-01-12 01:57:17.418 | INFO     | __main__:main:342 - Views: 162154
+2025-01-12 01:57:17.419 | INFO     | __main__:main:343 - Likes: 632
+2025-01-12 01:57:17.419 | INFO     | __main__:main:344 - Dislikes: 9
+2025-01-12 01:57:17.419 | INFO     | __main__:main:345 - Comments: 0
+2025-01-12 01:57:17.421 | INFO     | __main__:main:349 - Saved article data to article_data.json
+2025-01-12 01:57:17.863 | INFO     | __main__:main:353 - Successfully saved article to Supabase
+2025-01-12 02:03:34.849 | INFO     | __main__:get_article_links:345 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 02:03:36.266 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:36.280 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:03:36.280 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:03:36.281 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:03:36.281 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:03:36.282 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:03:36.282 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785506
+2025-01-12 02:03:36.282 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:03:36.283 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:03:36.283 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:03:36.283 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:03:36.284 | INFO     | __main__:get_article_links:370 - Found 10 unique articles so far
+2025-01-12 02:03:37.958 | INFO     | __main__:get_article_links:345 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 02:03:38.283 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:38.297 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:03:38.298 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:03:38.298 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:03:38.298 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:03:38.299 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:03:38.299 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:03:38.299 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:03:38.300 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:03:38.300 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:03:38.300 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:03:38.301 | INFO     | __main__:get_article_links:370 - Found 20 unique articles so far
+2025-01-12 02:03:40.206 | INFO     | __main__:get_article_links:345 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 02:03:40.552 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:40.566 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:03:40.567 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:03:40.567 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:03:40.567 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:03:40.568 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:03:40.568 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:03:40.569 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:03:40.569 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:03:40.570 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:03:40.570 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:03:40.571 | INFO     | __main__:get_article_links:370 - Found 23 unique articles so far
+2025-01-12 02:03:42.335 | INFO     | __main__:get_article_links:345 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 02:03:42.686 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:42.704 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:03:42.705 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:03:42.705 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:03:42.706 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:03:42.706 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:03:42.706 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:03:42.707 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:03:42.707 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:03:42.707 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:03:42.708 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:03:42.708 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:03:42.708 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:03:42.710 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:03:42.710 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:03:42.711 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:03:42.711 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:03:42.711 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:03:42.712 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:03:42.712 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:03:42.712 | DEBUG    | __main__:get_article_links:368 - Found article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:03:42.713 | INFO     | __main__:get_article_links:370 - Found 39 unique articles so far
+2025-01-12 02:03:43.825 | INFO     | __main__:main:395 - Found 39 unique articles to scrape
+2025-01-12 02:03:44.425 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:03:46.762 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:46.795 | DEBUG    | __main__:parse_article:214 - HTML content length: 73901
+2025-01-12 02:03:46.796 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 22:14
+		
+		
+			조회 139,833 |추천 1,078
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 252
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:03:46.812 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:46.813 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 천주교가 하는짓이래요..
+2025-01-12 02:03:46.825 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:46.826 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:03:46.826 | DEBUG    | __main__:parse_article:294 - Metadata: views=139833, likes=1, comment_count=252
+2025-01-12 02:03:46.826 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:03:46.827 | INFO     | __main__:main:414 - Title: 천주교가 하는짓이래요..
+2025-01-12 02:03:46.827 | INFO     | __main__:main:415 - Views: 139833
+2025-01-12 02:03:46.827 | INFO     | __main__:main:416 - Likes: 1
+2025-01-12 02:03:46.827 | INFO     | __main__:main:417 - Dislikes: 276
+2025-01-12 02:03:46.828 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:03:46.829 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:03:47.011 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:03:47.156 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:03:48.913 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:48.943 | DEBUG    | __main__:parse_article:214 - HTML content length: 73595
+2025-01-12 02:03:48.943 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 14:54
+		
+		
+			조회 23,008 |추천 4
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 72
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:03:48.960 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:48.961 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 냉면때문에 남친한테 ㅈㄴ 혼남
+2025-01-12 02:03:48.973 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:48.974 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:03:48.974 | DEBUG    | __main__:parse_article:294 - Metadata: views=23008, likes=4, comment_count=72
+2025-01-12 02:03:48.975 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:03:48.975 | INFO     | __main__:main:414 - Title: 냉면때문에 남친한테 ㅈㄴ 혼남
+2025-01-12 02:03:48.975 | INFO     | __main__:main:415 - Views: 23008
+2025-01-12 02:03:48.976 | INFO     | __main__:main:416 - Likes: 4
+2025-01-12 02:03:48.976 | INFO     | __main__:main:417 - Dislikes: 192
+2025-01-12 02:03:48.976 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:03:48.977 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:03:49.126 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:03:49.310 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:03:52.495 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:52.526 | DEBUG    | __main__:parse_article:214 - HTML content length: 73798
+2025-01-12 02:03:52.527 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 15:09
+		
+		
+			조회 110,551 |추천 224
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 193
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:03:52.543 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:52.543 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 서울이랑 지방이랑 격차 ㄹㅇ 크구나
+2025-01-12 02:03:52.556 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:52.556 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:03:52.556 | DEBUG    | __main__:parse_article:294 - Metadata: views=110551, likes=224, comment_count=193
+2025-01-12 02:03:52.557 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:03:52.557 | INFO     | __main__:main:414 - Title: 서울이랑 지방이랑 격차 ㄹㅇ 크구나
+2025-01-12 02:03:52.557 | INFO     | __main__:main:415 - Views: 110551
+2025-01-12 02:03:52.558 | INFO     | __main__:main:416 - Likes: 224
+2025-01-12 02:03:52.558 | INFO     | __main__:main:417 - Dislikes: 210
+2025-01-12 02:03:52.558 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:03:52.559 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:03:52.764 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:03:52.901 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:03:56.041 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:56.070 | DEBUG    | __main__:parse_article:214 - HTML content length: 73109
+2025-01-12 02:03:56.072 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 23:59
+		
+		
+			조회 30,202 |추천 10
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 101
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:03:56.086 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:56.087 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 강아지 때리는 남편 정상인가요?
+2025-01-12 02:03:56.099 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:56.099 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:03:56.100 | DEBUG    | __main__:parse_article:294 - Metadata: views=30202, likes=10, comment_count=101
+2025-01-12 02:03:56.100 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:03:56.100 | INFO     | __main__:main:414 - Title: 강아지 때리는 남편 정상인가요?
+2025-01-12 02:03:56.101 | INFO     | __main__:main:415 - Views: 30202
+2025-01-12 02:03:56.101 | INFO     | __main__:main:416 - Likes: 10
+2025-01-12 02:03:56.101 | INFO     | __main__:main:417 - Dislikes: 185
+2025-01-12 02:03:56.101 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:03:56.103 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:03:56.320 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:03:56.500 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:03:58.212 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:03:58.243 | DEBUG    | __main__:parse_article:214 - HTML content length: 74656
+2025-01-12 02:03:58.244 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 22:03
+		
+		
+			조회 33,732 |추천 112
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 49
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:03:58.259 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:58.260 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 윈터 첫사랑니 도입부
+2025-01-12 02:03:58.273 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:03:58.273 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:03:58.273 | DEBUG    | __main__:parse_article:294 - Metadata: views=33732, likes=112, comment_count=49
+2025-01-12 02:03:58.274 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:03:58.274 | INFO     | __main__:main:414 - Title: 윈터 첫사랑니 도입부
+2025-01-12 02:03:58.274 | INFO     | __main__:main:415 - Views: 33732
+2025-01-12 02:03:58.275 | INFO     | __main__:main:416 - Likes: 112
+2025-01-12 02:03:58.275 | INFO     | __main__:main:417 - Dislikes: 39
+2025-01-12 02:03:58.275 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:03:58.276 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:03:58.416 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:03:58.598 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:04:01.160 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:01.191 | DEBUG    | __main__:parse_article:214 - HTML content length: 74822
+2025-01-12 02:04:01.192 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㄱㄸ
+			|2025.01.10 15:35
+		
+		
+			조회 78,514 |추천 464
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 99
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:01.208 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:01.209 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 일하지 않아도 전국민 월4백씩
+2025-01-12 02:04:01.222 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:01.223 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:01.223 | DEBUG    | __main__:parse_article:294 - Metadata: views=78514, likes=464, comment_count=99
+2025-01-12 02:04:01.224 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:01.224 | INFO     | __main__:main:414 - Title: 일하지 않아도 전국민 월4백씩
+2025-01-12 02:04:01.225 | INFO     | __main__:main:415 - Views: 78514
+2025-01-12 02:04:01.225 | INFO     | __main__:main:416 - Likes: 464
+2025-01-12 02:04:01.225 | INFO     | __main__:main:417 - Dislikes: 178
+2025-01-12 02:04:01.225 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:01.227 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:01.320 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:01.581 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:04:03.476 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:03.509 | DEBUG    | __main__:parse_article:214 - HTML content length: 76172
+2025-01-12 02:04:03.510 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 14:24
+		
+		
+			조회 25,158 |추천 362
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 160
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:03.526 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:03.527 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 민주당이 국민의 카톡을 검열한다고 하네요.
+2025-01-12 02:04:03.540 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:03.541 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:03.541 | DEBUG    | __main__:parse_article:294 - Metadata: views=25158, likes=362, comment_count=160
+2025-01-12 02:04:03.541 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:03.542 | INFO     | __main__:main:414 - Title: 민주당이 국민의 카톡을 검열한다고 하네요.
+2025-01-12 02:04:03.542 | INFO     | __main__:main:415 - Views: 25158
+2025-01-12 02:04:03.542 | INFO     | __main__:main:416 - Likes: 362
+2025-01-12 02:04:03.543 | INFO     | __main__:main:417 - Dislikes: 154
+2025-01-12 02:04:03.543 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:03.544 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:03.679 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:03.820 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:04:06.105 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:06.136 | DEBUG    | __main__:parse_article:214 - HTML content length: 73832
+2025-01-12 02:04:06.137 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 09:40
+		
+		
+			조회 13,858 |추천 2
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 69
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:06.154 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:06.155 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 제가 잘못한건가요?
+2025-01-12 02:04:06.167 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:06.167 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:06.167 | DEBUG    | __main__:parse_article:294 - Metadata: views=13858, likes=2, comment_count=69
+2025-01-12 02:04:06.168 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:06.168 | INFO     | __main__:main:414 - Title: 제가 잘못한건가요?
+2025-01-12 02:04:06.168 | INFO     | __main__:main:415 - Views: 13858
+2025-01-12 02:04:06.169 | INFO     | __main__:main:416 - Likes: 2
+2025-01-12 02:04:06.169 | INFO     | __main__:main:417 - Dislikes: 182
+2025-01-12 02:04:06.169 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:06.170 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:06.273 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:06.481 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:04:09.194 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:09.225 | DEBUG    | __main__:parse_article:214 - HTML content length: 76228
+2025-01-12 02:04:09.226 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 23:09
+		
+		
+			조회 108,624 |추천 679
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 306
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:09.242 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:09.242 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 카톡 검열을 어떻게 하겠다는 거임?
+2025-01-12 02:04:09.256 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:09.256 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:09.257 | DEBUG    | __main__:parse_article:294 - Metadata: views=108624, likes=679, comment_count=306
+2025-01-12 02:04:09.257 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:09.258 | INFO     | __main__:main:414 - Title: 카톡 검열을 어떻게 하겠다는 거임?
+2025-01-12 02:04:09.258 | INFO     | __main__:main:415 - Views: 108624
+2025-01-12 02:04:09.258 | INFO     | __main__:main:416 - Likes: 679
+2025-01-12 02:04:09.258 | INFO     | __main__:main:417 - Dislikes: 173
+2025-01-12 02:04:09.259 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:09.260 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:09.349 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:09.538 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:04:11.043 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:11.074 | DEBUG    | __main__:parse_article:214 - HTML content length: 73154
+2025-01-12 02:04:11.077 | ERROR    | __main__:parse_article:228 - Could not find essential elements
+2025-01-12 02:04:11.077 | ERROR    | __main__:parse_article:229 - Title found: False
+2025-01-12 02:04:11.077 | ERROR    | __main__:parse_article:230 - Content found: True
+2025-01-12 02:04:11.078 | ERROR    | __main__:main:430 - Failed to parse article
+2025-01-12 02:04:11.292 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:04:13.421 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:13.456 | DEBUG    | __main__:parse_article:214 - HTML content length: 79301
+2025-01-12 02:04:13.457 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 08:47
+		
+		
+			조회 230,944 |추천 1,398
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 368
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:13.476 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:13.477 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 와 서울대 이거 진짜에요???
+2025-01-12 02:04:13.491 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:13.491 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:13.491 | DEBUG    | __main__:parse_article:294 - Metadata: views=230944, likes=1, comment_count=368
+2025-01-12 02:04:13.492 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:13.492 | INFO     | __main__:main:414 - Title: 와 서울대 이거 진짜에요???
+2025-01-12 02:04:13.493 | INFO     | __main__:main:415 - Views: 230944
+2025-01-12 02:04:13.493 | INFO     | __main__:main:416 - Likes: 1
+2025-01-12 02:04:13.494 | INFO     | __main__:main:417 - Dislikes: 375
+2025-01-12 02:04:13.494 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:13.495 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:13.587 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:13.766 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:04:17.046 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:17.102 | DEBUG    | __main__:parse_article:214 - HTML content length: 74257
+2025-01-12 02:04:17.104 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 16:21
+		
+		
+			조회 32,212 |추천 234
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 39
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:17.119 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:17.120 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 친구 자녀한테 이정도 말도 하면 안되는건가요?
+2025-01-12 02:04:17.133 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:17.134 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:17.134 | DEBUG    | __main__:parse_article:294 - Metadata: views=32212, likes=234, comment_count=39
+2025-01-12 02:04:17.135 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:17.135 | INFO     | __main__:main:414 - Title: 친구 자녀한테 이정도 말도 하면 안되는건가요?
+2025-01-12 02:04:17.136 | INFO     | __main__:main:415 - Views: 32212
+2025-01-12 02:04:17.136 | INFO     | __main__:main:416 - Likes: 234
+2025-01-12 02:04:17.137 | INFO     | __main__:main:417 - Dislikes: 2
+2025-01-12 02:04:17.137 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:17.138 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:17.236 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:17.442 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:04:20.620 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:20.652 | DEBUG    | __main__:parse_article:214 - HTML content length: 74392
+2025-01-12 02:04:20.652 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 22:27
+		
+		
+			조회 14,480 |추천 139
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 10
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:20.669 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:20.670 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 먹방유튜버 만났는데 진짜 짜증났어요..
+2025-01-12 02:04:20.683 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:20.684 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:20.685 | DEBUG    | __main__:parse_article:294 - Metadata: views=14480, likes=139, comment_count=10
+2025-01-12 02:04:20.685 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:20.686 | INFO     | __main__:main:414 - Title: 먹방유튜버 만났는데 진짜 짜증났어요..
+2025-01-12 02:04:20.686 | INFO     | __main__:main:415 - Views: 14480
+2025-01-12 02:04:20.686 | INFO     | __main__:main:416 - Likes: 139
+2025-01-12 02:04:20.687 | INFO     | __main__:main:417 - Dislikes: 1
+2025-01-12 02:04:20.687 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:20.689 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:20.784 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:20.980 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:04:23.943 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:23.974 | DEBUG    | __main__:parse_article:214 - HTML content length: 73937
+2025-01-12 02:04:23.975 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 13:45
+		
+		
+			조회 28,490 |추천 194
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 16
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:23.991 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:23.991 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 아일릿 이거 뭐야?
+2025-01-12 02:04:24.004 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:24.004 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:24.005 | DEBUG    | __main__:parse_article:294 - Metadata: views=28490, likes=194, comment_count=16
+2025-01-12 02:04:24.005 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:24.005 | INFO     | __main__:main:414 - Title: 아일릿 이거 뭐야?
+2025-01-12 02:04:24.006 | INFO     | __main__:main:415 - Views: 28490
+2025-01-12 02:04:24.006 | INFO     | __main__:main:416 - Likes: 194
+2025-01-12 02:04:24.006 | INFO     | __main__:main:417 - Dislikes: 7
+2025-01-12 02:04:24.007 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:24.008 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:24.210 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:24.392 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:04:27.757 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:27.791 | DEBUG    | __main__:parse_article:214 - HTML content length: 74252
+2025-01-12 02:04:27.792 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 12:56
+		
+		
+			조회 93,293 |추천 243
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 122
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:27.807 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:27.808 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 장원영 특유의 억텐
+2025-01-12 02:04:27.821 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:27.821 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:27.822 | DEBUG    | __main__:parse_article:294 - Metadata: views=93293, likes=243, comment_count=122
+2025-01-12 02:04:27.822 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:27.822 | INFO     | __main__:main:414 - Title: 장원영 특유의 억텐
+2025-01-12 02:04:27.822 | INFO     | __main__:main:415 - Views: 93293
+2025-01-12 02:04:27.823 | INFO     | __main__:main:416 - Likes: 243
+2025-01-12 02:04:27.823 | INFO     | __main__:main:417 - Dislikes: 357
+2025-01-12 02:04:27.823 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:27.824 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:28.009 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:28.198 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:04:31.256 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:31.287 | DEBUG    | __main__:parse_article:214 - HTML content length: 73947
+2025-01-12 02:04:31.288 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 13:23
+		
+		
+			조회 45,750 |추천 251
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 52
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:31.304 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:31.305 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 하이브가 아일릿 광고 한개도 없대
+2025-01-12 02:04:31.317 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:31.318 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:31.318 | DEBUG    | __main__:parse_article:294 - Metadata: views=45750, likes=251, comment_count=52
+2025-01-12 02:04:31.319 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:31.319 | INFO     | __main__:main:414 - Title: 하이브가 아일릿 광고 한개도 없대
+2025-01-12 02:04:31.319 | INFO     | __main__:main:415 - Views: 45750
+2025-01-12 02:04:31.319 | INFO     | __main__:main:416 - Likes: 251
+2025-01-12 02:04:31.320 | INFO     | __main__:main:417 - Dislikes: 11
+2025-01-12 02:04:31.320 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:31.321 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:31.508 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:31.689 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:04:34.552 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:34.581 | DEBUG    | __main__:parse_article:214 - HTML content length: 73384
+2025-01-12 02:04:34.582 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 17:57
+		
+		
+			조회 72,250 |추천 102
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 37
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:34.598 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:34.599 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 닝닝은 이빨 보이면 안되겠다
+2025-01-12 02:04:34.611 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:34.612 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:34.612 | DEBUG    | __main__:parse_article:294 - Metadata: views=72250, likes=102, comment_count=37
+2025-01-12 02:04:34.612 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:34.612 | INFO     | __main__:main:414 - Title: 닝닝은 이빨 보이면 안되겠다
+2025-01-12 02:04:34.613 | INFO     | __main__:main:415 - Views: 72250
+2025-01-12 02:04:34.613 | INFO     | __main__:main:416 - Likes: 102
+2025-01-12 02:04:34.613 | INFO     | __main__:main:417 - Dislikes: 177
+2025-01-12 02:04:34.614 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:34.615 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:34.803 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:34.990 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:04:36.997 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:37.028 | DEBUG    | __main__:parse_article:214 - HTML content length: 76881
+2025-01-12 02:04:37.029 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 20:49
+		
+		
+			조회 13,077 |추천 71
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 52
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:37.045 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:37.046 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 이거 저 맥이려는거 맞죠?
+2025-01-12 02:04:37.059 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:37.060 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:37.060 | DEBUG    | __main__:parse_article:294 - Metadata: views=13077, likes=71, comment_count=52
+2025-01-12 02:04:37.061 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:37.061 | INFO     | __main__:main:414 - Title: 이거 저 맥이려는거 맞죠?
+2025-01-12 02:04:37.061 | INFO     | __main__:main:415 - Views: 13077
+2025-01-12 02:04:37.062 | INFO     | __main__:main:416 - Likes: 71
+2025-01-12 02:04:37.062 | INFO     | __main__:main:417 - Dislikes: 67
+2025-01-12 02:04:37.062 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:37.063 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:37.174 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:37.325 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:04:40.293 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:40.334 | DEBUG    | __main__:parse_article:214 - HTML content length: 109124
+2025-01-12 02:04:40.336 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇ
+			|2025.01.10 13:05
+		
+		
+			조회 90,633 |추천 553
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 121
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:40.357 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:40.357 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 당신이 몰랐던 중국의 사진 25장
+2025-01-12 02:04:40.372 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:40.372 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:40.373 | DEBUG    | __main__:parse_article:294 - Metadata: views=90633, likes=553, comment_count=121
+2025-01-12 02:04:40.373 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:40.374 | INFO     | __main__:main:414 - Title: 당신이 몰랐던 중국의 사진 25장
+2025-01-12 02:04:40.374 | INFO     | __main__:main:415 - Views: 90633
+2025-01-12 02:04:40.375 | INFO     | __main__:main:416 - Likes: 553
+2025-01-12 02:04:40.375 | INFO     | __main__:main:417 - Dislikes: 62
+2025-01-12 02:04:40.375 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:40.377 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:40.472 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:40.661 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:04:42.508 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:42.539 | DEBUG    | __main__:parse_article:214 - HTML content length: 75309
+2025-01-12 02:04:42.540 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 09:30
+		
+		
+			조회 88,554 |추천 50
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 105
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:42.556 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:42.556 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 와 욕 ㅈㄴ 먹었네
+2025-01-12 02:04:42.569 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:42.570 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:42.571 | DEBUG    | __main__:parse_article:294 - Metadata: views=88554, likes=50, comment_count=105
+2025-01-12 02:04:42.572 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:42.572 | INFO     | __main__:main:414 - Title: 와 욕 ㅈㄴ 먹었네
+2025-01-12 02:04:42.572 | INFO     | __main__:main:415 - Views: 88554
+2025-01-12 02:04:42.572 | INFO     | __main__:main:416 - Likes: 50
+2025-01-12 02:04:42.573 | INFO     | __main__:main:417 - Dislikes: 187
+2025-01-12 02:04:42.573 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:42.574 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:42.698 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:42.907 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:04:45.252 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:45.282 | DEBUG    | __main__:parse_article:214 - HTML content length: 74442
+2025-01-12 02:04:45.283 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			아
+			|2025.01.10 11:26
+		
+		
+			조회 88,147 |추천 582
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 122
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:45.299 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:45.299 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 돌잔치 초대 안했으면 좋겠어요..
+2025-01-12 02:04:45.312 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:45.313 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:45.313 | DEBUG    | __main__:parse_article:294 - Metadata: views=88147, likes=582, comment_count=122
+2025-01-12 02:04:45.313 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:45.314 | INFO     | __main__:main:414 - Title: 돌잔치 초대 안했으면 좋겠어요..
+2025-01-12 02:04:45.314 | INFO     | __main__:main:415 - Views: 88147
+2025-01-12 02:04:45.314 | INFO     | __main__:main:416 - Likes: 582
+2025-01-12 02:04:45.314 | INFO     | __main__:main:417 - Dislikes: 41
+2025-01-12 02:04:45.315 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:45.316 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:45.409 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:45.590 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:04:48.426 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:48.459 | DEBUG    | __main__:parse_article:214 - HTML content length: 75210
+2025-01-12 02:04:48.460 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			짜증난다
+			|2025.01.10 12:56
+		
+		
+			조회 39,086 |추천 6
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 73
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:48.476 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:48.477 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 셋이 살고 있는 기분이 듭니다
+2025-01-12 02:04:48.490 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:48.491 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:48.491 | DEBUG    | __main__:parse_article:294 - Metadata: views=39086, likes=6, comment_count=73
+2025-01-12 02:04:48.493 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:48.493 | INFO     | __main__:main:414 - Title: 셋이 살고 있는 기분이 듭니다
+2025-01-12 02:04:48.493 | INFO     | __main__:main:415 - Views: 39086
+2025-01-12 02:04:48.493 | INFO     | __main__:main:416 - Likes: 6
+2025-01-12 02:04:48.494 | INFO     | __main__:main:417 - Dislikes: 310
+2025-01-12 02:04:48.494 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:48.495 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:48.591 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:48.832 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:04:51.197 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:51.229 | DEBUG    | __main__:parse_article:214 - HTML content length: 76152
+2025-01-12 02:04:51.230 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 10:39
+		
+		
+			조회 37,470 |추천 87
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 50
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:51.248 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:51.248 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 추)애데리고 시댁쪽으로 와서 살라는데요
+2025-01-12 02:04:51.262 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:51.262 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:51.263 | DEBUG    | __main__:parse_article:294 - Metadata: views=37470, likes=87, comment_count=50
+2025-01-12 02:04:51.263 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:51.263 | INFO     | __main__:main:414 - Title: 추)애데리고 시댁쪽으로 와서 살라는데요
+2025-01-12 02:04:51.264 | INFO     | __main__:main:415 - Views: 37470
+2025-01-12 02:04:51.264 | INFO     | __main__:main:416 - Likes: 87
+2025-01-12 02:04:51.264 | INFO     | __main__:main:417 - Dislikes: 15
+2025-01-12 02:04:51.264 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:51.266 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:51.365 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:51.546 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:04:53.647 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:53.676 | DEBUG    | __main__:parse_article:214 - HTML content length: 73404
+2025-01-12 02:04:53.677 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 09:43
+		
+		
+			조회 59,213 |추천 111
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 56
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:53.693 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:53.694 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 원희 화장 너무잘한당
+2025-01-12 02:04:53.706 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:53.707 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:53.707 | DEBUG    | __main__:parse_article:294 - Metadata: views=59213, likes=111, comment_count=56
+2025-01-12 02:04:53.707 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:53.708 | INFO     | __main__:main:414 - Title: 원희 화장 너무잘한당
+2025-01-12 02:04:53.708 | INFO     | __main__:main:415 - Views: 59213
+2025-01-12 02:04:53.708 | INFO     | __main__:main:416 - Likes: 111
+2025-01-12 02:04:53.708 | INFO     | __main__:main:417 - Dislikes: 134
+2025-01-12 02:04:53.709 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:53.710 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:53.899 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:54.103 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:04:57.368 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:04:57.398 | DEBUG    | __main__:parse_article:214 - HTML content length: 74081
+2025-01-12 02:04:57.399 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 14:14
+		
+		
+			조회 14,768 |추천 43
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 44
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:04:57.415 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:57.415 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 명절 제사 퇴치법좀 알려주세요.
+2025-01-12 02:04:57.428 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:04:57.428 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:04:57.429 | DEBUG    | __main__:parse_article:294 - Metadata: views=14768, likes=43, comment_count=44
+2025-01-12 02:04:57.429 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:04:57.429 | INFO     | __main__:main:414 - Title: 명절 제사 퇴치법좀 알려주세요.
+2025-01-12 02:04:57.430 | INFO     | __main__:main:415 - Views: 14768
+2025-01-12 02:04:57.430 | INFO     | __main__:main:416 - Likes: 43
+2025-01-12 02:04:57.430 | INFO     | __main__:main:417 - Dislikes: 3
+2025-01-12 02:04:57.431 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:04:57.432 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:04:57.523 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:04:57.709 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:05:00.285 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:00.317 | DEBUG    | __main__:parse_article:214 - HTML content length: 75498
+2025-01-12 02:05:00.318 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 23:27
+		
+		
+			조회 31,482 |추천 108
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 59
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:00.334 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:00.335 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 헐 지디 하나은행 광고 스포뜸
+2025-01-12 02:05:00.348 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:00.348 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:00.349 | DEBUG    | __main__:parse_article:294 - Metadata: views=31482, likes=108, comment_count=59
+2025-01-12 02:05:00.349 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:00.350 | INFO     | __main__:main:414 - Title: 헐 지디 하나은행 광고 스포뜸
+2025-01-12 02:05:00.350 | INFO     | __main__:main:415 - Views: 31482
+2025-01-12 02:05:00.350 | INFO     | __main__:main:416 - Likes: 108
+2025-01-12 02:05:00.351 | INFO     | __main__:main:417 - Dislikes: 18
+2025-01-12 02:05:00.351 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:00.352 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:00.540 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:00.743 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:05:03.393 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:03.454 | DEBUG    | __main__:parse_article:214 - HTML content length: 76349
+2025-01-12 02:05:03.456 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 09:52
+		
+		
+			조회 18,143 |추천 114
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 32
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:03.471 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:03.472 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 고변호사가 민희진의 패배로 귀결될 가능성 더 높아졌대
+2025-01-12 02:05:03.486 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:03.487 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:03.487 | DEBUG    | __main__:parse_article:294 - Metadata: views=18143, likes=114, comment_count=32
+2025-01-12 02:05:03.487 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:03.488 | INFO     | __main__:main:414 - Title: 고변호사가 민희진의 패배로 귀결될 가능성 더 높아졌대
+2025-01-12 02:05:03.488 | INFO     | __main__:main:415 - Views: 18143
+2025-01-12 02:05:03.489 | INFO     | __main__:main:416 - Likes: 114
+2025-01-12 02:05:03.489 | INFO     | __main__:main:417 - Dislikes: 99
+2025-01-12 02:05:03.489 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:03.490 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:03.677 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:03.879 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:05:05.427 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:05.459 | DEBUG    | __main__:parse_article:214 - HTML content length: 73574
+2025-01-12 02:05:05.461 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 17:10
+		
+		
+			조회 20,058 |추천 246
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 26
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:05.476 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:05.476 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 몰카범 잡던 유튜버 여초에서 다시 살렸다ㅋㅋㅋ
+2025-01-12 02:05:05.489 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:05.489 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:05.490 | DEBUG    | __main__:parse_article:294 - Metadata: views=20058, likes=246, comment_count=26
+2025-01-12 02:05:05.490 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:05.490 | INFO     | __main__:main:414 - Title: 몰카범 잡던 유튜버 여초에서 다시 살렸다ㅋㅋㅋ
+2025-01-12 02:05:05.491 | INFO     | __main__:main:415 - Views: 20058
+2025-01-12 02:05:05.491 | INFO     | __main__:main:416 - Likes: 246
+2025-01-12 02:05:05.491 | INFO     | __main__:main:417 - Dislikes: 3
+2025-01-12 02:05:05.492 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:05.493 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:05.686 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:05.835 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:05:07.960 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:07.990 | DEBUG    | __main__:parse_article:214 - HTML content length: 72741
+2025-01-12 02:05:07.991 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 08:51
+		
+		
+			조회 73,404 |추천 11
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 85
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:08.006 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:08.007 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 이렇게 입는 여자 뭔 생각 듦
+2025-01-12 02:05:08.019 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:08.020 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:08.020 | DEBUG    | __main__:parse_article:294 - Metadata: views=73404, likes=11, comment_count=85
+2025-01-12 02:05:08.021 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:08.021 | INFO     | __main__:main:414 - Title: 이렇게 입는 여자 뭔 생각 듦
+2025-01-12 02:05:08.021 | INFO     | __main__:main:415 - Views: 73404
+2025-01-12 02:05:08.021 | INFO     | __main__:main:416 - Likes: 11
+2025-01-12 02:05:08.022 | INFO     | __main__:main:417 - Dislikes: 37
+2025-01-12 02:05:08.022 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:08.023 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:08.211 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:08.365 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:05:09.928 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:09.960 | DEBUG    | __main__:parse_article:214 - HTML content length: 73461
+2025-01-12 02:05:09.961 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 19:00
+		
+		
+			조회 40,983 |추천 62
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 71
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:09.977 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:09.978 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 에셈연습생 얘 잘생겼네
+2025-01-12 02:05:09.991 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:09.991 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:09.992 | DEBUG    | __main__:parse_article:294 - Metadata: views=40983, likes=62, comment_count=71
+2025-01-12 02:05:09.993 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:09.993 | INFO     | __main__:main:414 - Title: 에셈연습생 얘 잘생겼네
+2025-01-12 02:05:09.993 | INFO     | __main__:main:415 - Views: 40983
+2025-01-12 02:05:09.993 | INFO     | __main__:main:416 - Likes: 62
+2025-01-12 02:05:09.994 | INFO     | __main__:main:417 - Dislikes: 60
+2025-01-12 02:05:09.994 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:09.995 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:10.187 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:10.376 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:05:11.951 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:11.983 | DEBUG    | __main__:parse_article:214 - HTML content length: 73930
+2025-01-12 02:05:11.984 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 14:25
+		
+		
+			조회 39,584 |추천 248
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 82
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:11.999 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:12.000 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 진지하게 남돌은 이렇게만 생겨도 빨아주는데
+2025-01-12 02:05:12.013 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:12.014 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:12.014 | DEBUG    | __main__:parse_article:294 - Metadata: views=39584, likes=248, comment_count=82
+2025-01-12 02:05:12.015 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:12.015 | INFO     | __main__:main:414 - Title: 진지하게 남돌은 이렇게만 생겨도 빨아주는데
+2025-01-12 02:05:12.015 | INFO     | __main__:main:415 - Views: 39584
+2025-01-12 02:05:12.015 | INFO     | __main__:main:416 - Likes: 248
+2025-01-12 02:05:12.016 | INFO     | __main__:main:417 - Dislikes: 70
+2025-01-12 02:05:12.016 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:12.017 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:12.214 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:12.354 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:05:15.720 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:15.751 | DEBUG    | __main__:parse_article:214 - HTML content length: 73969
+2025-01-12 02:05:15.752 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 15:05
+		
+		
+			조회 168,431 |추천 658
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 66
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:15.768 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:15.769 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 나솔 24기 옥순 학교폭력 논란이라네요
+2025-01-12 02:05:15.782 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:15.782 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:15.783 | DEBUG    | __main__:parse_article:294 - Metadata: views=168431, likes=658, comment_count=66
+2025-01-12 02:05:15.783 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:15.784 | INFO     | __main__:main:414 - Title: 나솔 24기 옥순 학교폭력 논란이라네요
+2025-01-12 02:05:15.784 | INFO     | __main__:main:415 - Views: 168431
+2025-01-12 02:05:15.784 | INFO     | __main__:main:416 - Likes: 658
+2025-01-12 02:05:15.785 | INFO     | __main__:main:417 - Dislikes: 13
+2025-01-12 02:05:15.785 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:15.786 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:15.976 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:16.169 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:05:19.032 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:19.071 | DEBUG    | __main__:parse_article:214 - HTML content length: 90420
+2025-01-12 02:05:19.073 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			이윤희
+			|2025.01.11 10:30
+		
+		
+			조회 121,470 |추천 1,202
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 57
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:19.093 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:19.094 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 제 여동생을 찾습니다. 제발 도와주세요!!!
+2025-01-12 02:05:19.109 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:19.110 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:19.110 | DEBUG    | __main__:parse_article:294 - Metadata: views=121470, likes=1, comment_count=57
+2025-01-12 02:05:19.111 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:19.111 | INFO     | __main__:main:414 - Title: 제 여동생을 찾습니다. 제발 도와주세요!!!
+2025-01-12 02:05:19.111 | INFO     | __main__:main:415 - Views: 121470
+2025-01-12 02:05:19.112 | INFO     | __main__:main:416 - Likes: 1
+2025-01-12 02:05:19.112 | INFO     | __main__:main:417 - Dislikes: 10
+2025-01-12 02:05:19.112 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:19.114 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:19.228 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:19.372 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:05:21.986 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:22.019 | DEBUG    | __main__:parse_article:214 - HTML content length: 74191
+2025-01-12 02:05:22.020 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 19:43
+		
+		
+			조회 75,392 |추천 536
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 159
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:22.036 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:22.037 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 엘리베이터 질서 문제로 남편과 언쟁
+2025-01-12 02:05:22.050 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:22.051 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:22.051 | DEBUG    | __main__:parse_article:294 - Metadata: views=75392, likes=536, comment_count=159
+2025-01-12 02:05:22.052 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:22.052 | INFO     | __main__:main:414 - Title: 엘리베이터 질서 문제로 남편과 언쟁
+2025-01-12 02:05:22.052 | INFO     | __main__:main:415 - Views: 75392
+2025-01-12 02:05:22.053 | INFO     | __main__:main:416 - Likes: 536
+2025-01-12 02:05:22.053 | INFO     | __main__:main:417 - Dislikes: 18
+2025-01-12 02:05:22.053 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:22.055 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:22.157 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:22.350 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:05:25.806 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:25.841 | DEBUG    | __main__:parse_article:214 - HTML content length: 77589
+2025-01-12 02:05:25.841 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 22:28
+		
+		
+			조회 52,736 |추천 359
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 171
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:25.858 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:25.859 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 윤석열 1.9 대국민 호소문
+2025-01-12 02:05:25.872 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:25.873 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:25.873 | DEBUG    | __main__:parse_article:294 - Metadata: views=52736, likes=359, comment_count=171
+2025-01-12 02:05:25.874 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:25.874 | INFO     | __main__:main:414 - Title: 윤석열 1.9 대국민 호소문
+2025-01-12 02:05:25.874 | INFO     | __main__:main:415 - Views: 52736
+2025-01-12 02:05:25.874 | INFO     | __main__:main:416 - Likes: 359
+2025-01-12 02:05:25.875 | INFO     | __main__:main:417 - Dislikes: 348
+2025-01-12 02:05:25.875 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:25.876 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:26.055 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:26.246 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:05:28.375 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:28.406 | DEBUG    | __main__:parse_article:214 - HTML content length: 74051
+2025-01-12 02:05:28.407 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 23:13
+		
+		
+			조회 88,043 |추천 204
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 275
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:28.423 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:28.423 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 카리나도 화교야?
+2025-01-12 02:05:28.436 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:28.437 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:28.437 | DEBUG    | __main__:parse_article:294 - Metadata: views=88043, likes=204, comment_count=275
+2025-01-12 02:05:28.438 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:28.438 | INFO     | __main__:main:414 - Title: 카리나도 화교야?
+2025-01-12 02:05:28.438 | INFO     | __main__:main:415 - Views: 88043
+2025-01-12 02:05:28.439 | INFO     | __main__:main:416 - Likes: 204
+2025-01-12 02:05:28.439 | INFO     | __main__:main:417 - Dislikes: 317
+2025-01-12 02:05:28.439 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:28.440 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:28.623 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:28.808 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:05:30.409 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:30.439 | DEBUG    | __main__:parse_article:214 - HTML content length: 75792
+2025-01-12 02:05:30.440 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.11 13:55
+		
+		
+			조회 18,249 |추천 84
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 43
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:30.456 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:30.457 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 혐주의) bj뽀구미 얼굴로 악기 만든거 봄?
+2025-01-12 02:05:30.470 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:30.470 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:30.471 | DEBUG    | __main__:parse_article:294 - Metadata: views=18249, likes=84, comment_count=43
+2025-01-12 02:05:30.471 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:30.471 | INFO     | __main__:main:414 - Title: 혐주의) bj뽀구미 얼굴로 악기 만든거 봄?
+2025-01-12 02:05:30.472 | INFO     | __main__:main:415 - Views: 18249
+2025-01-12 02:05:30.472 | INFO     | __main__:main:416 - Likes: 84
+2025-01-12 02:05:30.472 | INFO     | __main__:main:417 - Dislikes: 3
+2025-01-12 02:05:30.473 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:30.474 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:30.661 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:30.845 | INFO     | __main__:main:406 - Starting to scrape article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:05:32.637 | INFO     | __main__:fetch_page:93 - Saved raw HTML to page.html
+2025-01-12 02:05:32.668 | DEBUG    | __main__:parse_article:214 - HTML content length: 75120
+2025-01-12 02:05:32.669 | DEBUG    | __main__:parse_article:235 - Author info text: 
+		
+			ㅇㅇ
+			|2025.01.10 16:11
+		
+		
+			조회 33,208 |추천 243
+		
+			
+				
+					톡 공유하기
+				
+			
+
+			
+				댓글 60
+				댓글쓰기
+				
+					기능 더보기
+					
+						
+							
+								크게보기							
+							신고하기
+						
+					
+				
+			
+		
+	
+2025-01-12 02:05:32.685 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:32.686 | DEBUG    | __main__:parse_article:292 - Successfully parsed article: 왠지 민희진 재판 질거같음
+2025-01-12 02:05:32.698 | INFO     | __main__:parse_comments:203 - Total comments found: 0
+2025-01-12 02:05:32.699 | DEBUG    | __main__:parse_article:293 - Found 0 comments
+2025-01-12 02:05:32.699 | DEBUG    | __main__:parse_article:294 - Metadata: views=33208, likes=243, comment_count=60
+2025-01-12 02:05:32.699 | INFO     | __main__:main:413 - Successfully parsed article:
+2025-01-12 02:05:32.700 | INFO     | __main__:main:414 - Title: 왠지 민희진 재판 질거같음
+2025-01-12 02:05:32.700 | INFO     | __main__:main:415 - Views: 33208
+2025-01-12 02:05:32.700 | INFO     | __main__:main:416 - Likes: 243
+2025-01-12 02:05:32.701 | INFO     | __main__:main:417 - Dislikes: 284
+2025-01-12 02:05:32.701 | INFO     | __main__:main:418 - Comments: 0
+2025-01-12 02:05:32.702 | INFO     | __main__:main:422 - Saved article data to article_data.json
+2025-01-12 02:05:32.895 | INFO     | __main__:main:426 - Successfully saved article to Supabase
+2025-01-12 02:05:33.081 | INFO     | __main__:main:403 - Article 373785506 already exists in database, skipping
+2025-01-12 02:08:27.739 | INFO     | __main__:get_article_links:363 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 02:08:28.892 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:08:28.907 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:08:28.907 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:08:28.908 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:08:28.908 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:08:28.909 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:08:28.909 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785506
+2025-01-12 02:08:28.909 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:08:28.910 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:08:28.910 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:08:28.910 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:08:28.911 | INFO     | __main__:get_article_links:388 - Found 10 unique articles so far
+2025-01-12 02:08:30.164 | INFO     | __main__:get_article_links:363 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 02:08:30.453 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:08:30.467 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:08:30.469 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:08:30.469 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:08:30.469 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:08:30.470 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:08:30.470 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:08:30.471 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:08:30.471 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:08:30.471 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:08:30.472 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:08:30.472 | INFO     | __main__:get_article_links:388 - Found 20 unique articles so far
+2025-01-12 02:08:32.401 | INFO     | __main__:get_article_links:363 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 02:08:32.884 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:08:32.899 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:08:32.900 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:08:32.900 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:08:32.901 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:08:32.901 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:08:32.901 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:08:32.902 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:08:32.902 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:08:32.903 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:08:32.903 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:08:32.903 | INFO     | __main__:get_article_links:388 - Found 23 unique articles so far
+2025-01-12 02:08:34.533 | INFO     | __main__:get_article_links:363 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 02:08:34.864 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:08:34.881 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:08:34.882 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:08:34.882 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:08:34.882 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:08:34.883 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:08:34.883 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:08:34.884 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:08:34.884 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:08:34.884 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:08:34.885 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:08:34.885 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:08:34.885 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:08:34.886 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:08:34.886 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:08:34.886 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:08:34.887 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:08:34.887 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:08:34.888 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:08:34.888 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:08:34.889 | DEBUG    | __main__:get_article_links:386 - Found article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:08:34.889 | INFO     | __main__:get_article_links:388 - Found 39 unique articles so far
+2025-01-12 02:08:36.353 | INFO     | __main__:main:413 - Found 39 unique articles to scrape
+2025-01-12 02:08:37.116 | INFO     | __main__:main:421 - Article 373785078 already exists in database, skipping
+2025-01-12 02:08:37.288 | INFO     | __main__:main:421 - Article 373790337 already exists in database, skipping
+2025-01-12 02:08:37.504 | INFO     | __main__:main:421 - Article 373791749 already exists in database, skipping
+2025-01-12 02:08:37.678 | INFO     | __main__:main:421 - Article 373786836 already exists in database, skipping
+2025-01-12 02:08:37.819 | INFO     | __main__:main:421 - Article 373789365 already exists in database, skipping
+2025-01-12 02:08:38.077 | INFO     | __main__:main:421 - Article 373785257 already exists in database, skipping
+2025-01-12 02:08:38.210 | INFO     | __main__:main:421 - Article 373789535 already exists in database, skipping
+2025-01-12 02:08:38.419 | INFO     | __main__:main:421 - Article 373788931 already exists in database, skipping
+2025-01-12 02:08:38.554 | INFO     | __main__:main:421 - Article 373784505 already exists in database, skipping
+2025-01-12 02:08:38.728 | INFO     | __main__:main:421 - Article 373784744 already exists in database, skipping
+2025-01-12 02:08:38.907 | INFO     | __main__:main:421 - Article 373790997 already exists in database, skipping
+2025-01-12 02:08:39.117 | INFO     | __main__:main:421 - Article 373787494 already exists in database, skipping
+2025-01-12 02:08:39.257 | INFO     | __main__:main:421 - Article 373784237 already exists in database, skipping
+2025-01-12 02:08:39.437 | INFO     | __main__:main:421 - Article 373784179 already exists in database, skipping
+2025-01-12 02:08:39.648 | INFO     | __main__:main:421 - Article 373784716 already exists in database, skipping
+2025-01-12 02:08:39.781 | INFO     | __main__:main:421 - Article 373789572 already exists in database, skipping
+2025-01-12 02:08:39.959 | INFO     | __main__:main:421 - Article 373785086 already exists in database, skipping
+2025-01-12 02:08:40.138 | INFO     | __main__:main:421 - Article 373791543 already exists in database, skipping
+2025-01-12 02:08:40.320 | INFO     | __main__:main:421 - Article 373788926 already exists in database, skipping
+2025-01-12 02:08:40.528 | INFO     | __main__:main:421 - Article 373785039 already exists in database, skipping
+2025-01-12 02:08:40.669 | INFO     | __main__:main:421 - Article 373790565 already exists in database, skipping
+2025-01-12 02:08:40.860 | INFO     | __main__:main:421 - Article 373789013 already exists in database, skipping
+2025-01-12 02:08:40.999 | INFO     | __main__:main:421 - Article 373790206 already exists in database, skipping
+2025-01-12 02:08:41.183 | INFO     | __main__:main:421 - Article 373787170 already exists in database, skipping
+2025-01-12 02:08:41.356 | INFO     | __main__:main:424 - Starting to scrape article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:08:43.792 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:08:43.823 | DEBUG    | __main__:parse_article:216 - HTML content length: 73154
+2025-01-12 02:08:43.825 | ERROR    | __main__:parse_article:244 - Could not find essential elements
+2025-01-12 02:08:43.826 | ERROR    | __main__:parse_article:245 - Title found: False
+2025-01-12 02:08:43.827 | ERROR    | __main__:parse_article:246 - Content found: True
+2025-01-12 02:08:43.827 | ERROR    | __main__:main:448 - Failed to parse article
+2025-01-12 02:08:44.015 | INFO     | __main__:main:421 - Article 373787146 already exists in database, skipping
+2025-01-12 02:08:44.190 | INFO     | __main__:main:421 - Article 373789571 already exists in database, skipping
+2025-01-12 02:08:44.398 | INFO     | __main__:main:421 - Article 373790003 already exists in database, skipping
+2025-01-12 02:08:44.581 | INFO     | __main__:main:421 - Article 373786025 already exists in database, skipping
+2025-01-12 02:08:44.719 | INFO     | __main__:main:421 - Article 373785506 already exists in database, skipping
+2025-01-12 02:08:44.896 | INFO     | __main__:main:421 - Article 373792144 already exists in database, skipping
+2025-01-12 02:08:45.077 | INFO     | __main__:main:421 - Article 373788945 already exists in database, skipping
+2025-01-12 02:08:45.229 | INFO     | __main__:main:421 - Article 373789311 already exists in database, skipping
+2025-01-12 02:08:45.385 | INFO     | __main__:main:421 - Article 373789431 already exists in database, skipping
+2025-01-12 02:08:45.525 | INFO     | __main__:main:421 - Article 373788839 already exists in database, skipping
+2025-01-12 02:08:45.714 | INFO     | __main__:main:421 - Article 373789471 already exists in database, skipping
+2025-01-12 02:08:45.900 | INFO     | __main__:main:421 - Article 373789036 already exists in database, skipping
+2025-01-12 02:08:46.040 | INFO     | __main__:main:421 - Article 373785156 already exists in database, skipping
+2025-01-12 02:08:46.233 | INFO     | __main__:main:421 - Article 373786894 already exists in database, skipping
+2025-01-12 02:09:35.029 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 02:09:35.962 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:09:35.977 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:09:35.977 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:09:35.977 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:09:35.978 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:09:35.978 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:09:35.979 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785506
+2025-01-12 02:09:35.979 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:09:35.979 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:09:35.980 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:09:35.980 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:09:35.980 | INFO     | __main__:get_article_links:360 - Found 10 unique articles so far
+2025-01-12 02:09:37.848 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 02:09:38.258 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:09:38.271 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:09:38.272 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:09:38.272 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:09:38.272 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:09:38.273 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:09:38.273 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:09:38.274 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:09:38.274 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:09:38.274 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:09:38.275 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:09:38.275 | INFO     | __main__:get_article_links:360 - Found 20 unique articles so far
+2025-01-12 02:09:39.842 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 02:09:40.229 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:09:40.249 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:09:40.250 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:09:40.250 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:09:40.251 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:09:40.251 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:09:40.251 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:09:40.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:09:40.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:09:40.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:09:40.253 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:09:40.254 | INFO     | __main__:get_article_links:360 - Found 23 unique articles so far
+2025-01-12 02:09:41.989 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 02:09:42.226 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:09:42.244 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:09:42.246 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:09:42.246 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:09:42.246 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:09:42.247 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:09:42.247 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:09:42.248 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:09:42.248 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:09:42.248 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:09:42.248 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:09:42.249 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:09:42.249 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:09:42.249 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:09:42.250 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:09:42.250 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:09:42.250 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:09:42.251 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:09:42.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:09:42.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:09:42.252 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:09:42.253 | INFO     | __main__:get_article_links:360 - Found 39 unique articles so far
+2025-01-12 02:09:44.009 | INFO     | __main__:main:385 - Found 39 unique articles to scrape
+2025-01-12 02:09:44.641 | INFO     | __main__:main:393 - Article 373789535 already exists in database, skipping
+2025-01-12 02:09:44.817 | INFO     | __main__:main:393 - Article 373790997 already exists in database, skipping
+2025-01-12 02:09:44.993 | INFO     | __main__:main:393 - Article 373784179 already exists in database, skipping
+2025-01-12 02:09:45.175 | INFO     | __main__:main:393 - Article 373788926 already exists in database, skipping
+2025-01-12 02:09:45.291 | INFO     | __main__:main:393 - Article 373790337 already exists in database, skipping
+2025-01-12 02:09:45.505 | INFO     | __main__:main:393 - Article 373784505 already exists in database, skipping
+2025-01-12 02:09:45.625 | INFO     | __main__:main:393 - Article 373785078 already exists in database, skipping
+2025-01-12 02:09:45.796 | INFO     | __main__:main:393 - Article 373784237 already exists in database, skipping
+2025-01-12 02:09:45.957 | INFO     | __main__:main:393 - Article 373784744 already exists in database, skipping
+2025-01-12 02:09:46.076 | INFO     | __main__:main:393 - Article 373789431 already exists in database, skipping
+2025-01-12 02:09:46.245 | INFO     | __main__:main:393 - Article 373788839 already exists in database, skipping
+2025-01-12 02:09:46.362 | INFO     | __main__:main:393 - Article 373789572 already exists in database, skipping
+2025-01-12 02:09:46.527 | INFO     | __main__:main:393 - Article 373789571 already exists in database, skipping
+2025-01-12 02:09:46.649 | INFO     | __main__:main:393 - Article 373791543 already exists in database, skipping
+2025-01-12 02:09:46.812 | INFO     | __main__:main:393 - Article 373787146 already exists in database, skipping
+2025-01-12 02:09:46.929 | INFO     | __main__:main:393 - Article 373785086 already exists in database, skipping
+2025-01-12 02:09:47.091 | INFO     | __main__:main:393 - Article 373789036 already exists in database, skipping
+2025-01-12 02:09:47.208 | INFO     | __main__:main:393 - Article 373791749 already exists in database, skipping
+2025-01-12 02:09:47.365 | INFO     | __main__:main:393 - Article 373785156 already exists in database, skipping
+2025-01-12 02:09:47.482 | INFO     | __main__:main:393 - Article 373784716 already exists in database, skipping
+2025-01-12 02:09:47.640 | INFO     | __main__:main:393 - Article 373786025 already exists in database, skipping
+2025-01-12 02:09:47.768 | INFO     | __main__:main:393 - Article 373785506 already exists in database, skipping
+2025-01-12 02:09:47.932 | INFO     | __main__:main:393 - Article 373786836 already exists in database, skipping
+2025-01-12 02:09:48.061 | INFO     | __main__:main:393 - Article 373789365 already exists in database, skipping
+2025-01-12 02:09:48.225 | INFO     | __main__:main:393 - Article 373790565 already exists in database, skipping
+2025-01-12 02:09:48.348 | INFO     | __main__:main:393 - Article 373785039 already exists in database, skipping
+2025-01-12 02:09:48.507 | INFO     | __main__:main:393 - Article 373788945 already exists in database, skipping
+2025-01-12 02:09:48.635 | INFO     | __main__:main:393 - Article 373789013 already exists in database, skipping
+2025-01-12 02:09:48.794 | INFO     | __main__:main:393 - Article 373787494 already exists in database, skipping
+2025-01-12 02:09:48.913 | INFO     | __main__:main:393 - Article 373788931 already exists in database, skipping
+2025-01-12 02:09:49.139 | INFO     | __main__:main:393 - Article 373787170 already exists in database, skipping
+2025-01-12 02:09:49.263 | INFO     | __main__:main:396 - Starting to scrape article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:09:51.944 | DEBUG    | __main__:parse_article:211 - HTML content length: 38
+2025-01-12 02:09:51.945 | ERROR    | __main__:parse_article:216 - Could not find essential elements
+2025-01-12 02:09:51.947 | ERROR    | __main__:parse_article:217 - Title found: False
+2025-01-12 02:09:51.947 | ERROR    | __main__:parse_article:218 - Content found: False
+2025-01-12 02:09:51.948 | ERROR    | __main__:main:420 - Failed to parse article
+2025-01-12 02:09:52.118 | INFO     | __main__:main:393 - Article 373786894 already exists in database, skipping
+2025-01-12 02:09:52.238 | INFO     | __main__:main:393 - Article 373789311 already exists in database, skipping
+2025-01-12 02:09:52.400 | INFO     | __main__:main:393 - Article 373789471 already exists in database, skipping
+2025-01-12 02:09:52.521 | INFO     | __main__:main:393 - Article 373790206 already exists in database, skipping
+2025-01-12 02:09:52.683 | INFO     | __main__:main:393 - Article 373785257 already exists in database, skipping
+2025-01-12 02:09:52.801 | INFO     | __main__:main:393 - Article 373790003 already exists in database, skipping
+2025-01-12 02:09:52.969 | INFO     | __main__:main:393 - Article 373792144 already exists in database, skipping
+2025-01-12 02:10:27.070 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 02:10:28.045 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:10:28.060 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:10:28.061 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:10:28.061 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:10:28.062 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:10:28.062 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:10:28.062 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785506
+2025-01-12 02:10:28.063 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:10:28.063 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:10:28.063 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:10:28.063 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:10:28.064 | INFO     | __main__:get_article_links:360 - Found 10 unique articles so far
+2025-01-12 02:10:29.187 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 02:10:29.420 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:10:29.432 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:10:29.432 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:10:29.433 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:10:29.433 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:10:29.433 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:10:29.433 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:10:29.434 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:10:29.434 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:10:29.434 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:10:29.435 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:10:29.435 | INFO     | __main__:get_article_links:360 - Found 20 unique articles so far
+2025-01-12 02:10:31.254 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 02:10:31.559 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:10:31.573 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:10:31.574 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:10:31.574 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:10:31.575 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:10:31.575 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:10:31.576 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:10:31.576 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:10:31.576 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:10:31.577 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:10:31.577 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:10:31.577 | INFO     | __main__:get_article_links:360 - Found 23 unique articles so far
+2025-01-12 02:10:32.736 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 02:10:33.002 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:10:33.022 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:10:33.023 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:10:33.024 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:10:33.024 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:10:33.025 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:10:33.025 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:10:33.025 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:10:33.026 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:10:33.026 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:10:33.026 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:10:33.027 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:10:33.027 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:10:33.027 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:10:33.027 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:10:33.028 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:10:33.028 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:10:33.028 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:10:33.029 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:10:33.029 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:10:33.029 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:10:33.030 | INFO     | __main__:get_article_links:360 - Found 39 unique articles so far
+2025-01-12 02:10:34.314 | INFO     | __main__:main:385 - Found 39 unique articles to scrape
+2025-01-12 02:10:34.740 | INFO     | __main__:main:393 - Article 373785086 already exists in database, skipping
+2025-01-12 02:10:34.962 | INFO     | __main__:main:393 - Article 373789571 already exists in database, skipping
+2025-01-12 02:10:35.081 | INFO     | __main__:main:393 - Article 373788931 already exists in database, skipping
+2025-01-12 02:10:35.242 | INFO     | __main__:main:393 - Article 373790003 already exists in database, skipping
+2025-01-12 02:10:35.403 | INFO     | __main__:main:393 - Article 373789572 already exists in database, skipping
+2025-01-12 02:10:35.517 | INFO     | __main__:main:393 - Article 373789311 already exists in database, skipping
+2025-01-12 02:10:35.680 | INFO     | __main__:main:393 - Article 373785039 already exists in database, skipping
+2025-01-12 02:10:35.797 | INFO     | __main__:main:393 - Article 373788945 already exists in database, skipping
+2025-01-12 02:10:35.965 | INFO     | __main__:main:393 - Article 373786894 already exists in database, skipping
+2025-01-12 02:10:36.093 | INFO     | __main__:main:393 - Article 373789013 already exists in database, skipping
+2025-01-12 02:10:36.219 | INFO     | __main__:main:393 - Article 373788839 already exists in database, skipping
+2025-01-12 02:10:36.340 | INFO     | __main__:main:393 - Article 373787494 already exists in database, skipping
+2025-01-12 02:10:36.500 | INFO     | __main__:main:393 - Article 373787170 already exists in database, skipping
+2025-01-12 02:10:36.614 | INFO     | __main__:main:393 - Article 373784744 already exists in database, skipping
+2025-01-12 02:10:36.784 | INFO     | __main__:main:393 - Article 373785506 already exists in database, skipping
+2025-01-12 02:10:36.898 | INFO     | __main__:main:393 - Article 373792144 already exists in database, skipping
+2025-01-12 02:10:37.055 | INFO     | __main__:main:393 - Article 373791543 already exists in database, skipping
+2025-01-12 02:10:37.179 | INFO     | __main__:main:393 - Article 373784237 already exists in database, skipping
+2025-01-12 02:10:37.336 | INFO     | __main__:main:393 - Article 373789365 already exists in database, skipping
+2025-01-12 02:10:37.460 | INFO     | __main__:main:393 - Article 373791749 already exists in database, skipping
+2025-01-12 02:10:37.612 | INFO     | __main__:main:393 - Article 373789535 already exists in database, skipping
+2025-01-12 02:10:37.769 | INFO     | __main__:main:393 - Article 373785257 already exists in database, skipping
+2025-01-12 02:10:37.896 | INFO     | __main__:main:393 - Article 373785156 already exists in database, skipping
+2025-01-12 02:10:38.062 | INFO     | __main__:main:393 - Article 373790997 already exists in database, skipping
+2025-01-12 02:10:38.179 | INFO     | __main__:main:393 - Article 373785078 already exists in database, skipping
+2025-01-12 02:10:38.360 | INFO     | __main__:main:393 - Article 373789431 already exists in database, skipping
+2025-01-12 02:10:38.475 | INFO     | __main__:main:393 - Article 373788926 already exists in database, skipping
+2025-01-12 02:10:38.653 | INFO     | __main__:main:393 - Article 373790565 already exists in database, skipping
+2025-01-12 02:10:38.777 | INFO     | __main__:main:393 - Article 373790206 already exists in database, skipping
+2025-01-12 02:10:38.971 | INFO     | __main__:main:393 - Article 373790337 already exists in database, skipping
+2025-01-12 02:10:39.099 | INFO     | __main__:main:393 - Article 373789036 already exists in database, skipping
+2025-01-12 02:10:39.257 | INFO     | __main__:main:393 - Article 373784716 already exists in database, skipping
+2025-01-12 02:10:39.378 | INFO     | __main__:main:393 - Article 373789471 already exists in database, skipping
+2025-01-12 02:10:39.572 | INFO     | __main__:main:393 - Article 373784179 already exists in database, skipping
+2025-01-12 02:10:39.687 | INFO     | __main__:main:393 - Article 373784505 already exists in database, skipping
+2025-01-12 02:10:39.851 | INFO     | __main__:main:396 - Starting to scrape article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:10:43.030 | ERROR    | __main__:fetch_page:99 - Error fetching https://m.pann.nate.com/talk/373784915: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-01-12 02:10:43.031 | ERROR    | __main__:main:404 - Failed to fetch article HTML
+2025-01-12 02:10:43.146 | INFO     | __main__:main:393 - Article 373787146 already exists in database, skipping
+2025-01-12 02:10:43.318 | INFO     | __main__:main:393 - Article 373786836 already exists in database, skipping
+2025-01-12 02:10:43.430 | INFO     | __main__:main:393 - Article 373786025 already exists in database, skipping
+2025-01-12 02:12:38.928 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 02:12:40.093 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:12:40.107 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:12:40.108 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:12:40.109 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:12:40.110 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:12:40.110 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785078
+2025-01-12 02:12:40.111 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785506
+2025-01-12 02:12:40.111 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784505
+2025-01-12 02:12:40.111 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784744
+2025-01-12 02:12:40.111 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 02:12:40.112 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:12:40.112 | INFO     | __main__:get_article_links:360 - Found 10 unique articles so far
+2025-01-12 02:12:41.394 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 02:12:41.724 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:12:41.739 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:12:41.740 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:12:41.741 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784716
+2025-01-12 02:12:41.741 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:12:41.742 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:12:41.742 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785039
+2025-01-12 02:12:41.742 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784237
+2025-01-12 02:12:41.743 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 02:12:41.743 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 02:12:41.743 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:12:41.744 | INFO     | __main__:get_article_links:360 - Found 20 unique articles so far
+2025-01-12 02:12:43.469 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 02:12:43.851 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:12:43.863 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373784179
+2025-01-12 02:12:43.863 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 02:12:43.864 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 02:12:43.864 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 02:12:43.864 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785156
+2025-01-12 02:12:43.865 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:12:43.865 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:12:43.866 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785257
+2025-01-12 02:12:43.866 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 02:12:43.866 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373785086
+2025-01-12 02:12:43.867 | INFO     | __main__:get_article_links:360 - Found 23 unique articles so far
+2025-01-12 02:12:45.460 | INFO     | __main__:get_article_links:335 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 02:12:45.709 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:12:45.730 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 02:12:45.731 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 02:12:45.732 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 02:12:45.732 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 02:12:45.733 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789365
+2025-01-12 02:12:45.733 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 02:12:45.734 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 02:12:45.734 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 02:12:45.734 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789036
+2025-01-12 02:12:45.734 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789471
+2025-01-12 02:12:45.735 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 02:12:45.735 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 02:12:45.735 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 02:12:45.736 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 02:12:45.736 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788945
+2025-01-12 02:12:45.736 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789431
+2025-01-12 02:12:45.737 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 02:12:45.737 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 02:12:45.738 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373788839
+2025-01-12 02:12:45.738 | DEBUG    | __main__:get_article_links:358 - Found article: https://m.pann.nate.com/talk/373789535
+2025-01-12 02:12:45.738 | INFO     | __main__:get_article_links:360 - Found 39 unique articles so far
+2025-01-12 02:12:46.819 | INFO     | __main__:main:385 - Found 39 unique articles to scrape
+2025-01-12 02:12:47.250 | INFO     | __main__:main:393 - Article 373789571 already exists in database, skipping
+2025-01-12 02:12:47.370 | INFO     | __main__:main:393 - Article 373789036 already exists in database, skipping
+2025-01-12 02:12:47.538 | INFO     | __main__:main:393 - Article 373785086 already exists in database, skipping
+2025-01-12 02:12:47.656 | INFO     | __main__:main:393 - Article 373785257 already exists in database, skipping
+2025-01-12 02:12:47.821 | INFO     | __main__:main:393 - Article 373789471 already exists in database, skipping
+2025-01-12 02:12:47.942 | INFO     | __main__:main:393 - Article 373790565 already exists in database, skipping
+2025-01-12 02:12:48.099 | INFO     | __main__:main:393 - Article 373789431 already exists in database, skipping
+2025-01-12 02:12:48.226 | INFO     | __main__:main:393 - Article 373790337 already exists in database, skipping
+2025-01-12 02:12:48.346 | INFO     | __main__:main:393 - Article 373784716 already exists in database, skipping
+2025-01-12 02:12:48.502 | INFO     | __main__:main:393 - Article 373788926 already exists in database, skipping
+2025-01-12 02:12:48.617 | INFO     | __main__:main:393 - Article 373789013 already exists in database, skipping
+2025-01-12 02:12:48.777 | INFO     | __main__:main:393 - Article 373792144 already exists in database, skipping
+2025-01-12 02:12:48.894 | INFO     | __main__:main:393 - Article 373785039 already exists in database, skipping
+2025-01-12 02:12:49.050 | INFO     | __main__:main:393 - Article 373788945 already exists in database, skipping
+2025-01-12 02:12:49.167 | INFO     | __main__:main:393 - Article 373785506 already exists in database, skipping
+2025-01-12 02:12:49.326 | INFO     | __main__:main:393 - Article 373788839 already exists in database, skipping
+2025-01-12 02:12:49.444 | INFO     | __main__:main:393 - Article 373784505 already exists in database, skipping
+2025-01-12 02:12:49.606 | INFO     | __main__:main:393 - Article 373787146 already exists in database, skipping
+2025-01-12 02:12:49.718 | INFO     | __main__:main:396 - Starting to scrape article: https://m.pann.nate.com/talk/373784915
+2025-01-12 02:12:51.514 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 02:12:51.547 | DEBUG    | __main__:parse_article:211 - HTML content length: 73154
+2025-01-12 02:12:51.549 | INFO     | __main__:main:409 - Successfully parsed article:
+2025-01-12 02:12:51.549 | INFO     | __main__:main:410 - Title: 전체목록
+2025-01-12 02:12:51.550 | INFO     | __main__:main:411 - Views: 13901
+2025-01-12 02:12:51.550 | INFO     | __main__:main:412 - Likes: 0
+2025-01-12 02:12:51.551 | INFO     | __main__:main:413 - Dislikes: 215
+2025-01-12 02:12:51.551 | INFO     | __main__:main:414 - Comments: 0
+2025-01-12 02:12:51.553 | INFO     | __main__:main:418 - Saved article data to article_data.json
+2025-01-12 02:12:51.716 | INFO     | __main__:main:422 - Successfully saved article to Supabase
+2025-01-12 02:12:51.848 | INFO     | __main__:main:393 - Article 373784179 already exists in database, skipping
+2025-01-12 02:12:52.005 | INFO     | __main__:main:393 - Article 373787494 already exists in database, skipping
+2025-01-12 02:12:52.123 | INFO     | __main__:main:393 - Article 373785156 already exists in database, skipping
+2025-01-12 02:12:52.288 | INFO     | __main__:main:393 - Article 373789365 already exists in database, skipping
+2025-01-12 02:12:52.405 | INFO     | __main__:main:393 - Article 373789535 already exists in database, skipping
+2025-01-12 02:12:52.565 | INFO     | __main__:main:393 - Article 373789572 already exists in database, skipping
+2025-01-12 02:12:52.680 | INFO     | __main__:main:393 - Article 373785078 already exists in database, skipping
+2025-01-12 02:12:52.842 | INFO     | __main__:main:393 - Article 373788931 already exists in database, skipping
+2025-01-12 02:12:52.962 | INFO     | __main__:main:393 - Article 373790997 already exists in database, skipping
+2025-01-12 02:12:53.116 | INFO     | __main__:main:393 - Article 373791543 already exists in database, skipping
+2025-01-12 02:12:53.234 | INFO     | __main__:main:393 - Article 373791749 already exists in database, skipping
+2025-01-12 02:12:53.390 | INFO     | __main__:main:393 - Article 373786025 already exists in database, skipping
+2025-01-12 02:12:53.511 | INFO     | __main__:main:393 - Article 373789311 already exists in database, skipping
+2025-01-12 02:12:53.669 | INFO     | __main__:main:393 - Article 373787170 already exists in database, skipping
+2025-01-12 02:12:53.786 | INFO     | __main__:main:393 - Article 373784237 already exists in database, skipping
+2025-01-12 02:12:53.943 | INFO     | __main__:main:393 - Article 373790003 already exists in database, skipping
+2025-01-12 02:12:54.059 | INFO     | __main__:main:393 - Article 373790206 already exists in database, skipping
+2025-01-12 02:12:54.218 | INFO     | __main__:main:393 - Article 373786836 already exists in database, skipping
+2025-01-12 02:12:54.344 | INFO     | __main__:main:393 - Article 373784744 already exists in database, skipping
+2025-01-12 02:12:54.499 | INFO     | __main__:main:393 - Article 373786894 already exists in database, skipping
+2025-01-12 11:59:37.481 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 11:59:38.730 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:38.742 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 11:59:38.743 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 11:59:38.743 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 11:59:38.744 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 11:59:38.744 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 11:59:38.745 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 11:59:38.746 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 11:59:38.746 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 11:59:38.747 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792971
+2025-01-12 11:59:38.747 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 11:59:38.748 | INFO     | __main__:get_article_links:362 - Found 10 unique articles so far
+2025-01-12 11:59:39.808 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 11:59:40.106 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:40.118 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 11:59:40.119 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 11:59:40.120 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790518
+2025-01-12 11:59:40.120 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 11:59:40.121 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 11:59:40.121 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 11:59:40.121 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 11:59:40.122 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 11:59:40.122 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 11:59:40.122 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786240
+2025-01-12 11:59:40.123 | INFO     | __main__:get_article_links:362 - Found 20 unique articles so far
+2025-01-12 11:59:42.108 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 11:59:42.752 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:42.764 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 11:59:42.765 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 11:59:42.766 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 11:59:42.766 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 11:59:42.766 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 11:59:42.767 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 11:59:42.767 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 11:59:42.768 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 11:59:42.768 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 11:59:42.768 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 11:59:42.769 | INFO     | __main__:get_article_links:362 - Found 21 unique articles so far
+2025-01-12 11:59:44.308 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 11:59:44.548 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:44.565 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792967
+2025-01-12 11:59:44.566 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792971
+2025-01-12 11:59:44.567 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 11:59:44.567 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 11:59:44.568 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 11:59:44.568 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 11:59:44.568 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 11:59:44.569 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790677
+2025-01-12 11:59:44.569 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373793779
+2025-01-12 11:59:44.570 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792526
+2025-01-12 11:59:44.570 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 11:59:44.570 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791415
+2025-01-12 11:59:44.571 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790903
+2025-01-12 11:59:44.571 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791219
+2025-01-12 11:59:44.571 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792539
+2025-01-12 11:59:44.572 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373793890
+2025-01-12 11:59:44.572 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792163
+2025-01-12 11:59:44.572 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 11:59:44.573 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791048
+2025-01-12 11:59:44.573 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790469
+2025-01-12 11:59:44.573 | INFO     | __main__:get_article_links:362 - Found 36 unique articles so far
+2025-01-12 11:59:45.741 | INFO     | __main__:main:387 - Found 36 unique articles to scrape
+2025-01-12 11:59:46.590 | INFO     | __main__:main:395 - Article 373790337 already exists in database, skipping
+2025-01-12 11:59:46.796 | INFO     | __main__:main:395 - Article 373788931 already exists in database, skipping
+2025-01-12 11:59:46.968 | INFO     | __main__:main:395 - Article 373789571 already exists in database, skipping
+2025-01-12 11:59:47.098 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792526
+2025-01-12 11:59:50.254 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:50.254 | DEBUG    | __main__:parse_article:209 - HTML content length: 72626
+2025-01-12 11:59:50.283 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466289
+2025-01-12 11:59:50.285 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 11:59:50.285 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 11:59:50.286 | INFO     | __main__:main:413 - Views: 37827
+2025-01-12 11:59:50.286 | INFO     | __main__:main:414 - Likes: 170
+2025-01-12 11:59:50.286 | INFO     | __main__:main:415 - Dislikes: 5
+2025-01-12 11:59:50.287 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 11:59:50.289 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 11:59:50.523 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 11:59:50.655 | INFO     | __main__:main:395 - Article 373787170 already exists in database, skipping
+2025-01-12 11:59:50.832 | INFO     | __main__:main:395 - Article 373791749 already exists in database, skipping
+2025-01-12 11:59:50.961 | INFO     | __main__:main:395 - Article 373789572 already exists in database, skipping
+2025-01-12 11:59:51.149 | INFO     | __main__:main:395 - Article 373789013 already exists in database, skipping
+2025-01-12 11:59:51.314 | INFO     | __main__:main:395 - Article 373787494 already exists in database, skipping
+2025-01-12 11:59:51.453 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373790469
+2025-01-12 11:59:54.446 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:54.447 | DEBUG    | __main__:parse_article:209 - HTML content length: 72518
+2025-01-12 11:59:54.476 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 11:59:54.477 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 11:59:54.478 | INFO     | __main__:main:413 - Views: 26111
+2025-01-12 11:59:54.479 | INFO     | __main__:main:414 - Likes: 76
+2025-01-12 11:59:54.479 | INFO     | __main__:main:415 - Dislikes: 3
+2025-01-12 11:59:54.479 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 11:59:54.480 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 11:59:54.613 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 11:59:54.837 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373791415
+2025-01-12 11:59:56.732 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:56.733 | DEBUG    | __main__:parse_article:209 - HTML content length: 73019
+2025-01-12 11:59:56.765 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465831
+2025-01-12 11:59:56.765 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465841
+2025-01-12 11:59:56.766 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 11:59:56.766 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 11:59:56.766 | INFO     | __main__:main:413 - Views: 58744
+2025-01-12 11:59:56.766 | INFO     | __main__:main:414 - Likes: 102
+2025-01-12 11:59:56.767 | INFO     | __main__:main:415 - Dislikes: 33
+2025-01-12 11:59:56.767 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 11:59:56.768 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 11:59:56.944 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 11:59:57.118 | INFO     | __main__:main:395 - Article 373790206 already exists in database, skipping
+2025-01-12 11:59:57.292 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373790677
+2025-01-12 11:59:59.678 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 11:59:59.679 | DEBUG    | __main__:parse_article:209 - HTML content length: 74049
+2025-01-12 11:59:59.710 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/http://fimg6.pann.com/new/download.jsp?FileID=68465496
+2025-01-12 11:59:59.711 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/http://fimg6.pann.com/new/download.jsp?FileID=68465497
+2025-01-12 11:59:59.711 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/http://fimg6.pann.com/new/download.jsp?FileID=68465498
+2025-01-12 11:59:59.712 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 11:59:59.712 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 11:59:59.712 | INFO     | __main__:main:413 - Views: 39693
+2025-01-12 11:59:59.713 | INFO     | __main__:main:414 - Likes: 160
+2025-01-12 11:59:59.713 | INFO     | __main__:main:415 - Dislikes: 37
+2025-01-12 11:59:59.714 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 11:59:59.715 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 11:59:59.855 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:00.027 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792971
+2025-01-12 12:00:01.712 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:01.713 | DEBUG    | __main__:parse_article:209 - HTML content length: 75321
+2025-01-12 12:00:01.745 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:01.746 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:01.747 | INFO     | __main__:main:413 - Views: 64245
+2025-01-12 12:00:01.747 | INFO     | __main__:main:414 - Likes: 582
+2025-01-12 12:00:01.747 | INFO     | __main__:main:415 - Dislikes: 34
+2025-01-12 12:00:01.748 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:01.749 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:01.869 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:02.010 | INFO     | __main__:main:395 - Article 373786836 already exists in database, skipping
+2025-01-12 12:00:02.145 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792539
+2025-01-12 12:00:04.198 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:04.198 | DEBUG    | __main__:parse_article:209 - HTML content length: 73593
+2025-01-12 12:00:04.234 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:04.235 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:04.236 | INFO     | __main__:main:413 - Views: 17626
+2025-01-12 12:00:04.236 | INFO     | __main__:main:414 - Likes: 124
+2025-01-12 12:00:04.236 | INFO     | __main__:main:415 - Dislikes: 135
+2025-01-12 12:00:04.237 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:04.238 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:04.430 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:04.560 | INFO     | __main__:main:395 - Article 373787146 already exists in database, skipping
+2025-01-12 12:00:04.754 | INFO     | __main__:main:395 - Article 373788926 already exists in database, skipping
+2025-01-12 12:00:04.889 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373790518
+2025-01-12 12:00:08.084 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:08.085 | DEBUG    | __main__:parse_article:209 - HTML content length: 73549
+2025-01-12 12:00:08.117 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:08.118 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:08.119 | INFO     | __main__:main:413 - Views: 22473
+2025-01-12 12:00:08.120 | INFO     | __main__:main:414 - Likes: 0
+2025-01-12 12:00:08.120 | INFO     | __main__:main:415 - Dislikes: 320
+2025-01-12 12:00:08.120 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:08.122 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:08.209 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:08.390 | INFO     | __main__:main:395 - Article 373790003 already exists in database, skipping
+2025-01-12 12:00:08.532 | INFO     | __main__:main:395 - Article 373786894 already exists in database, skipping
+2025-01-12 12:00:08.675 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373786240
+2025-01-12 12:00:11.479 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:11.480 | DEBUG    | __main__:parse_article:209 - HTML content length: 73693
+2025-01-12 12:00:11.511 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:11.511 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:11.512 | INFO     | __main__:main:413 - Views: 13678
+2025-01-12 12:00:11.512 | INFO     | __main__:main:414 - Likes: 1
+2025-01-12 12:00:11.513 | INFO     | __main__:main:415 - Dislikes: 155
+2025-01-12 12:00:11.513 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:11.514 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:11.632 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:11.764 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373791219
+2025-01-12 12:00:13.408 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:13.409 | DEBUG    | __main__:parse_article:209 - HTML content length: 74960
+2025-01-12 12:00:13.441 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465759
+2025-01-12 12:00:13.442 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465760
+2025-01-12 12:00:13.442 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465761
+2025-01-12 12:00:13.443 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465762
+2025-01-12 12:00:13.443 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68465764
+2025-01-12 12:00:13.443 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466712
+2025-01-12 12:00:13.444 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:13.444 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:13.444 | INFO     | __main__:main:413 - Views: 66681
+2025-01-12 12:00:13.444 | INFO     | __main__:main:414 - Likes: 122
+2025-01-12 12:00:13.445 | INFO     | __main__:main:415 - Dislikes: 22
+2025-01-12 12:00:13.445 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:13.446 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:13.548 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:13.736 | INFO     | __main__:main:395 - Article 373792144 already exists in database, skipping
+2025-01-12 12:00:13.869 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373793890
+2025-01-12 12:00:15.934 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:15.936 | DEBUG    | __main__:parse_article:209 - HTML content length: 73487
+2025-01-12 12:00:15.965 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466861
+2025-01-12 12:00:15.965 | DEBUG    | __main__:parse_article:276 - Found image: https://pann3.link/VYvi6d
+2025-01-12 12:00:15.966 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:15.966 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:15.967 | INFO     | __main__:main:413 - Views: 42452
+2025-01-12 12:00:15.967 | INFO     | __main__:main:414 - Likes: 141
+2025-01-12 12:00:15.967 | INFO     | __main__:main:415 - Dislikes: 1
+2025-01-12 12:00:15.968 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:15.969 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:16.179 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:16.324 | INFO     | __main__:main:395 - Article 373786025 already exists in database, skipping
+2025-01-12 12:00:16.477 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373793779
+2025-01-12 12:00:18.232 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:18.233 | DEBUG    | __main__:parse_article:209 - HTML content length: 75361
+2025-01-12 12:00:18.265 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466790
+2025-01-12 12:00:18.266 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466791
+2025-01-12 12:00:18.266 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466792
+2025-01-12 12:00:18.267 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:18.267 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:18.267 | INFO     | __main__:main:413 - Views: 34904
+2025-01-12 12:00:18.267 | INFO     | __main__:main:414 - Likes: 257
+2025-01-12 12:00:18.268 | INFO     | __main__:main:415 - Dislikes: 26
+2025-01-12 12:00:18.268 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:18.269 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:18.362 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:18.494 | INFO     | __main__:main:395 - Article 373791543 already exists in database, skipping
+2025-01-12 12:00:18.858 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373790903
+2025-01-12 12:00:21.409 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:21.410 | DEBUG    | __main__:parse_article:209 - HTML content length: 73028
+2025-01-12 12:00:21.464 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:21.464 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:21.464 | INFO     | __main__:main:413 - Views: 34277
+2025-01-12 12:00:21.465 | INFO     | __main__:main:414 - Likes: 167
+2025-01-12 12:00:21.465 | INFO     | __main__:main:415 - Dislikes: 19
+2025-01-12 12:00:21.466 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:21.467 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:21.643 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:21.817 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373791048
+2025-01-12 12:00:24.561 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:24.563 | DEBUG    | __main__:parse_article:209 - HTML content length: 73070
+2025-01-12 12:00:24.595 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:24.596 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:24.596 | INFO     | __main__:main:413 - Views: 23971
+2025-01-12 12:00:24.597 | INFO     | __main__:main:414 - Likes: 66
+2025-01-12 12:00:24.597 | INFO     | __main__:main:415 - Dislikes: 1
+2025-01-12 12:00:24.598 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:24.599 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:24.804 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:25.043 | INFO     | __main__:main:395 - Article 373789311 already exists in database, skipping
+2025-01-12 12:00:25.265 | INFO     | __main__:main:395 - Article 373790997 already exists in database, skipping
+2025-01-12 12:00:25.466 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792967
+2025-01-12 12:00:27.671 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:27.671 | DEBUG    | __main__:parse_article:209 - HTML content length: 73122
+2025-01-12 12:00:27.704 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:27.705 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:27.705 | INFO     | __main__:main:413 - Views: 58059
+2025-01-12 12:00:27.705 | INFO     | __main__:main:414 - Likes: 292
+2025-01-12 12:00:27.705 | INFO     | __main__:main:415 - Dislikes: 18
+2025-01-12 12:00:27.706 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:27.707 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:27.805 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:27.950 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792163
+2025-01-12 12:00:31.058 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:31.059 | DEBUG    | __main__:parse_article:209 - HTML content length: 71728
+2025-01-12 12:00:31.090 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:31.091 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:31.091 | INFO     | __main__:main:413 - Views: 32813
+2025-01-12 12:00:31.092 | INFO     | __main__:main:414 - Likes: 97
+2025-01-12 12:00:31.092 | INFO     | __main__:main:415 - Dislikes: 5
+2025-01-12 12:00:31.092 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:31.093 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:31.306 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:31.473 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373792425
+2025-01-12 12:00:34.201 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:00:34.202 | DEBUG    | __main__:parse_article:209 - HTML content length: 73075
+2025-01-12 12:00:34.234 | DEBUG    | __main__:parse_article:276 - Found image: https://thumb.pann.com/tc_480/https://fimg6.pann.com/new/download.jsp?FileID=68466214
+2025-01-12 12:00:34.235 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:00:34.235 | INFO     | __main__:main:412 - Title: 전체목록
+2025-01-12 12:00:34.236 | INFO     | __main__:main:413 - Views: 146514
+2025-01-12 12:00:34.236 | INFO     | __main__:main:414 - Likes: 179
+2025-01-12 12:00:34.237 | INFO     | __main__:main:415 - Dislikes: 273
+2025-01-12 12:00:34.237 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:00:34.238 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:00:34.378 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:00:34.513 | INFO     | __main__:main:395 - Article 373790565 already exists in database, skipping
+2025-01-12 12:02:42.380 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=REC
+2025-01-12 12:02:43.336 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:02:43.351 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789013
+2025-01-12 12:02:43.352 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 12:02:43.353 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 12:02:43.353 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 12:02:43.354 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 12:02:43.355 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790003
+2025-01-12 12:02:43.355 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786025
+2025-01-12 12:02:43.356 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 12:02:43.356 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792971
+2025-01-12 12:02:43.356 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790206
+2025-01-12 12:02:43.357 | INFO     | __main__:get_article_links:362 - Found 10 unique articles so far
+2025-01-12 12:02:44.757 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=DIS
+2025-01-12 12:02:45.180 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:02:45.193 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 12:02:45.193 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 12:02:45.195 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790518
+2025-01-12 12:02:45.195 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 12:02:45.196 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 12:02:45.196 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 12:02:45.197 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373788926
+2025-01-12 12:02:45.197 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787494
+2025-01-12 12:02:45.197 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373788931
+2025-01-12 12:02:45.198 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786240
+2025-01-12 12:02:45.198 | INFO     | __main__:get_article_links:362 - Found 20 unique articles so far
+2025-01-12 12:02:46.769 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker?order=PRO
+2025-01-12 12:02:47.160 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:02:47.173 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786836
+2025-01-12 12:02:47.174 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789571
+2025-01-12 12:02:47.175 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787146
+2025-01-12 12:02:47.175 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789311
+2025-01-12 12:02:47.175 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373786894
+2025-01-12 12:02:47.176 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373789572
+2025-01-12 12:02:47.176 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373787170
+2025-01-12 12:02:47.177 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790337
+2025-01-12 12:02:47.177 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 12:02:47.177 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 12:02:47.177 | INFO     | __main__:get_article_links:362 - Found 21 unique articles so far
+2025-01-12 12:02:48.851 | INFO     | __main__:get_article_links:337 - Fetching articles from https://m.pann.nate.com/talk/talker
+2025-01-12 12:02:49.126 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:02:49.143 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792967
+2025-01-12 12:02:49.144 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792971
+2025-01-12 12:02:49.145 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792144
+2025-01-12 12:02:49.145 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791543
+2025-01-12 12:02:49.145 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790565
+2025-01-12 12:02:49.146 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790997
+2025-01-12 12:02:49.146 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792425
+2025-01-12 12:02:49.146 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373793779
+2025-01-12 12:02:49.147 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790677
+2025-01-12 12:02:49.147 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792526
+2025-01-12 12:02:49.147 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791749
+2025-01-12 12:02:49.148 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791415
+2025-01-12 12:02:49.148 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790903
+2025-01-12 12:02:49.148 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791219
+2025-01-12 12:02:49.149 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792163
+2025-01-12 12:02:49.149 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373792539
+2025-01-12 12:02:49.149 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373793890
+2025-01-12 12:02:49.150 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373790469
+2025-01-12 12:02:49.150 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791048
+2025-01-12 12:02:49.150 | DEBUG    | __main__:get_article_links:360 - Found article: https://m.pann.nate.com/talk/373791551
+2025-01-12 12:02:49.150 | INFO     | __main__:get_article_links:362 - Found 37 unique articles so far
+2025-01-12 12:02:50.399 | INFO     | __main__:main:387 - Found 37 unique articles to scrape
+2025-01-12 12:02:51.063 | INFO     | __main__:main:395 - Article 373792967 already exists in database, skipping
+2025-01-12 12:02:51.377 | INFO     | __main__:main:395 - Article 373790565 already exists in database, skipping
+2025-01-12 12:02:51.679 | INFO     | __main__:main:395 - Article 373788931 already exists in database, skipping
+2025-01-12 12:02:51.945 | INFO     | __main__:main:395 - Article 373786894 already exists in database, skipping
+2025-01-12 12:02:52.045 | INFO     | __main__:main:395 - Article 373789013 already exists in database, skipping
+2025-01-12 12:02:52.148 | INFO     | __main__:main:395 - Article 373790206 already exists in database, skipping
+2025-01-12 12:02:52.365 | INFO     | __main__:main:395 - Article 373792539 already exists in database, skipping
+2025-01-12 12:02:52.580 | INFO     | __main__:main:395 - Article 373787146 already exists in database, skipping
+2025-01-12 12:02:52.691 | INFO     | __main__:main:395 - Article 373792425 already exists in database, skipping
+2025-01-12 12:02:52.798 | INFO     | __main__:main:395 - Article 373787494 already exists in database, skipping
+2025-01-12 12:02:52.895 | INFO     | __main__:main:395 - Article 373791415 already exists in database, skipping
+2025-01-12 12:02:52.991 | INFO     | __main__:main:395 - Article 373791219 already exists in database, skipping
+2025-01-12 12:02:53.201 | INFO     | __main__:main:395 - Article 373790903 already exists in database, skipping
+2025-01-12 12:02:53.306 | INFO     | __main__:main:395 - Article 373788926 already exists in database, skipping
+2025-01-12 12:02:53.523 | INFO     | __main__:main:395 - Article 373792163 already exists in database, skipping
+2025-01-12 12:02:53.631 | INFO     | __main__:main:395 - Article 373792144 already exists in database, skipping
+2025-01-12 12:02:53.765 | INFO     | __main__:main:395 - Article 373790518 already exists in database, skipping
+2025-01-12 12:02:53.915 | INFO     | __main__:main:395 - Article 373789311 already exists in database, skipping
+2025-01-12 12:02:54.238 | INFO     | __main__:main:395 - Article 373792971 already exists in database, skipping
+2025-01-12 12:02:54.330 | INFO     | __main__:main:395 - Article 373786240 already exists in database, skipping
+2025-01-12 12:02:54.546 | INFO     | __main__:main:395 - Article 373786025 already exists in database, skipping
+2025-01-12 12:02:54.641 | INFO     | __main__:main:395 - Article 373793779 already exists in database, skipping
+2025-01-12 12:02:54.749 | INFO     | __main__:main:395 - Article 373790469 already exists in database, skipping
+2025-01-12 12:02:54.842 | INFO     | __main__:main:395 - Article 373790337 already exists in database, skipping
+2025-01-12 12:02:55.063 | INFO     | __main__:main:395 - Article 373790677 already exists in database, skipping
+2025-01-12 12:02:55.365 | INFO     | __main__:main:395 - Article 373791749 already exists in database, skipping
+2025-01-12 12:02:55.670 | INFO     | __main__:main:395 - Article 373790997 already exists in database, skipping
+2025-01-12 12:02:55.763 | INFO     | __main__:main:398 - Starting to scrape article: https://m.pann.nate.com/talk/373791551
+2025-01-12 12:02:58.036 | INFO     | __main__:fetch_page:95 - Saved raw HTML to page.html
+2025-01-12 12:02:58.037 | DEBUG    | __main__:parse_article:209 - HTML content length: 72496
+2025-01-12 12:02:58.073 | INFO     | __main__:main:411 - Successfully parsed article:
+2025-01-12 12:02:58.073 | INFO     | __main__:main:412 - Title: 슴콘 라이즈
+2025-01-12 12:02:58.073 | INFO     | __main__:main:413 - Views: 8981
+2025-01-12 12:02:58.075 | INFO     | __main__:main:414 - Likes: 58
+2025-01-12 12:02:58.075 | INFO     | __main__:main:415 - Dislikes: 16
+2025-01-12 12:02:58.075 | INFO     | __main__:main:416 - Comments: 0
+2025-01-12 12:02:58.077 | INFO     | __main__:main:420 - Saved article data to article_data.json
+2025-01-12 12:02:58.181 | INFO     | __main__:main:424 - Successfully saved article to Supabase
+2025-01-12 12:02:58.391 | INFO     | __main__:main:395 - Article 373789572 already exists in database, skipping
+2025-01-12 12:02:58.619 | INFO     | __main__:main:395 - Article 373787170 already exists in database, skipping
+2025-01-12 12:02:58.722 | INFO     | __main__:main:395 - Article 373792526 already exists in database, skipping
+2025-01-12 12:02:58.828 | INFO     | __main__:main:395 - Article 373791048 already exists in database, skipping
+2025-01-12 12:02:58.924 | INFO     | __main__:main:395 - Article 373791543 already exists in database, skipping
+2025-01-12 12:02:59.159 | INFO     | __main__:main:395 - Article 373790003 already exists in database, skipping
+2025-01-12 12:02:59.255 | INFO     | __main__:main:395 - Article 373789571 already exists in database, skipping
+2025-01-12 12:02:59.351 | INFO     | __main__:main:395 - Article 373793890 already exists in database, skipping
+2025-01-12 12:02:59.452 | INFO     | __main__:main:395 - Article 373786836 already exists in database, skipping
