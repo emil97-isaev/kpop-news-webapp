@@ -19,9 +19,31 @@ serve(async (req) => {
   }
 
   try {
+    console.log('Request method:', req.method);
+    console.log('Request headers:', Object.fromEntries(req.headers.entries()));
+    
+    // Проверяем тело запроса
+    const bodyText = await req.text();
+    console.log('Raw request body:', bodyText);
+    
+    if (!bodyText) {
+      throw new Error('Request body is empty');
+    }
+
+    // Парсим JSON
+    let body;
+    try {
+      body = JSON.parse(bodyText);
+    } catch (e) {
+      console.error('Failed to parse JSON:', e);
+      throw new Error('Invalid JSON in request body');
+    }
+
     // Получаем параметры из тела запроса
-    const { page = 1, limit = 10, tags = [] } = await req.json()
-    const offset = (page - 1) * limit
+    const { page = 1, limit = 10, tags = [] } = body;
+    console.log('Parsed parameters:', { page, limit, tags });
+
+    const offset = (page - 1) * limit;
 
     const supabaseClient = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',

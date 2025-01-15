@@ -450,7 +450,12 @@
             }
 
             try {
+                console.log('Sending request with params:', { page, limit, tags });
                 const { data, error } = await this.supabase.functions.invoke('get-feed', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
                     body: { 
                         page,
                         limit,
@@ -459,9 +464,15 @@
                     }
                 });
                 
-                if (error) throw error;
+                if (error) {
+                    console.error('Supabase error:', error);
+                    throw error;
+                }
+
+                console.log('Received response:', data);
                 return data;
             } catch (error) {
+                console.error('Error in getFeed:', error);
                 this.tg.showPopup({
                     title: 'Ошибка',
                     message: 'Не удалось загрузить ленту: ' + error.message,
