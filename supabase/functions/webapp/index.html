@@ -458,26 +458,50 @@
                 };
                 console.log('Sending request with body:', requestBody);
                 
-                const { data: response, error } = await this.supabase.functions.invoke('get-feed', {
+                const { data: responseWrapper, error } = await this.supabase.functions.invoke('get-feed', {
                     body: requestBody
                 });
                 
-                console.log('Supabase raw response:', { data: response, error });
+                console.log('Supabase raw response:', { responseWrapper, error });
                 
                 if (error) {
                     console.error('Supabase error:', error);
                     throw new Error(error.message || 'Ошибка при получении данных');
                 }
 
-                if (!response) {
-                    console.error('No response data');
+                if (!responseWrapper) {
+                    console.error('No response wrapper');
                     throw new Error('Нет данных в ответе сервера');
                 }
 
-                // Проверяем структуру ответа
-                if (!response.data || !Array.isArray(response.data)) {
-                    console.error('Invalid response format:', response);
+                // Пробуем распарсить данные из обертки
+                let response;
+                try {
+                    response = typeof responseWrapper === 'string' 
+                        ? JSON.parse(responseWrapper) 
+                        : responseWrapper;
+                    console.log('Parsed response:', response);
+                } catch (e) {
+                    console.error('Failed to parse response:', e);
                     throw new Error('Неверный формат данных от сервера');
+                }
+
+                // Проверяем структуру распарсенного ответа
+                if (!response || typeof response !== 'object') {
+                    console.error('Invalid parsed response:', response);
+                    throw new Error('Неверный формат ответа от сервера');
+                }
+
+                // Проверяем наличие data в ответе
+                if (!response.data) {
+                    console.error('No data in parsed response:', response);
+                    throw new Error('Нет данных в ответе сервера');
+                }
+
+                // Проверяем, что response.data является массивом
+                if (!Array.isArray(response.data)) {
+                    console.error('Response data is not an array:', response.data);
+                    throw new Error('Данные от сервера не являются массивом');
                 }
 
                 return {
@@ -735,11 +759,24 @@
                     Array.from(this.selectedTags)
                 );
                 
-                console.log('Raw response:', response);
+                console.log('Raw response from getFeed:', response);
                 
-                if (!response || !response.data || !Array.isArray(response.data)) {
-                    console.error('Invalid response format:', response);
-                    throw new Error('Неверный формат данных от сервера');
+                // Проверяем структуру ответа
+                if (!response || typeof response !== 'object') {
+                    console.error('Invalid response:', response);
+                    throw new Error('Неверный формат ответа от сервера');
+                }
+
+                // Проверяем наличие data в ответе
+                if (!response.data) {
+                    console.error('No data in response:', response);
+                    throw new Error('Нет данных в ответе сервера');
+                }
+
+                // Проверяем, что response.data является массивом
+                if (!Array.isArray(response.data)) {
+                    console.error('Response data is not an array:', response.data);
+                    throw new Error('Данные от сервера не являются массивом');
                 }
                 
                 this.hasMore = response.hasMore;
