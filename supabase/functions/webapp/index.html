@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>K-pop News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop News</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
@@ -325,25 +325,18 @@
                 throw new Error('No Telegram user ID available');
             }
 
-            this.headers = {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYxNjg2OTcsImV4cCI6MjA1MTc0NDY5N30.UJ6L73nUg7U4pgULc57clsY4OygSYeeJk8mv_DekZtw'
-            };
+            this.supabase = supabase.createClient(
+                'https://bsivriajgsginlnuyxny.supabase.co',
+                'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYxNjg2OTcsImV4cCI6MjA1MTc0NDY5N30.UJ6L73nUg7U4pgULc57clsY4OygSYeeJk8mv_DekZtw'
+            );
         }
 
         async getTags() {
             try {
-                const response = await fetch('https://bsivriajgsginlnuyxny.supabase.co/functions/v1/get-tags', {
-                    method: 'GET',
-                    headers: this.headers
-                });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.message || 'Failed to fetch tags');
-                }
-
-                return await response.json();
+                const { data, error } = await this.supabase.functions.invoke('get-tags');
+                
+                if (error) throw error;
+                return data;
             } catch (error) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -365,21 +358,15 @@
             }
 
             try {
-                const response = await fetch('https://bsivriajgsginlnuyxny.supabase.co/functions/v1/manage-subscriptions', {
-                    method: 'POST',
-                    headers: this.headers,
-                    body: JSON.stringify({
+                const { data, error } = await this.supabase.functions.invoke('manage-subscriptions', {
+                    body: { 
                         action: 'list',
                         userId: this.userId
-                    })
+                    }
                 });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.message || 'Failed to fetch subscriptions');
-                }
-
-                return await response.json();
+                
+                if (error) throw error;
+                return data;
             } catch (error) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -390,7 +377,7 @@
             }
         }
 
-        async subscribeToTag(tagId) {
+        async subscribeToTag(tag) {
             if (!this.userId) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -401,22 +388,16 @@
             }
 
             try {
-                const response = await fetch('https://bsivriajgsginlnuyxny.supabase.co/functions/v1/manage-subscriptions', {
-                    method: 'POST',
-                    headers: this.headers,
-                    body: JSON.stringify({
+                const { data, error } = await this.supabase.functions.invoke('manage-subscriptions', {
+                    body: { 
                         action: 'subscribe',
-                        tagId,
-                        userId: this.userId
-                    })
+                        userId: this.userId,
+                        tag
+                    }
                 });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.message || 'Failed to subscribe');
-                }
-
-                return await response.json();
+                
+                if (error) throw error;
+                return data;
             } catch (error) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -427,7 +408,7 @@
             }
         }
 
-        async unsubscribeFromTag(tagId) {
+        async unsubscribeFromTag(tag) {
             if (!this.userId) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -438,22 +419,16 @@
             }
 
             try {
-                const response = await fetch('https://bsivriajgsginlnuyxny.supabase.co/functions/v1/manage-subscriptions', {
-                    method: 'POST',
-                    headers: this.headers,
-                    body: JSON.stringify({
+                const { data, error } = await this.supabase.functions.invoke('manage-subscriptions', {
+                    body: { 
                         action: 'unsubscribe',
-                        tagId,
-                        userId: this.userId
-                    })
+                        userId: this.userId,
+                        tag
+                    }
                 });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.message || 'Failed to unsubscribe');
-                }
-
-                return await response.json();
+                
+                if (error) throw error;
+                return data;
             } catch (error) {
                 this.tg.showPopup({
                     title: 'Ошибка',
@@ -475,23 +450,17 @@
             }
 
             try {
-                const response = await fetch('https://bsivriajgsginlnuyxny.supabase.co/functions/v1/get-feed', {
-                    method: 'POST',
-                    headers: this.headers,
-                    body: JSON.stringify({
+                const { data, error } = await this.supabase.functions.invoke('get-feed', {
+                    body: { 
                         page,
                         limit,
                         tags,
                         userId: this.userId
-                    })
+                    }
                 });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    throw new Error(error.message || 'Failed to get feed');
-                }
-
-                return await response.json();
+                
+                if (error) throw error;
+                return data;
             } catch (error) {
                 this.tg.showPopup({
                     title: 'Ошибка',
