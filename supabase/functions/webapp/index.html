@@ -450,27 +450,41 @@
             }
 
             try {
-                console.log('Sending request with params:', { page, limit, tags });
-                const { data, error } = await this.supabase.functions.invoke('get-feed', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: { 
-                        page,
-                        limit,
-                        tags,
-                        userId: this.userId
-                    }
+                const requestBody = {
+                    page,
+                    limit,
+                    tags,
+                    userId: this.userId
+                };
+                console.log('Sending request with body:', requestBody);
+                
+                const { data: response, error } = await this.supabase.functions.invoke('get-feed', {
+                    body: requestBody
                 });
+                
+                console.log('Supabase raw response:', { data: response, error });
                 
                 if (error) {
                     console.error('Supabase error:', error);
-                    throw error;
+                    throw new Error(error.message || 'Ошибка при получении данных');
                 }
 
-                console.log('Received response:', data);
-                return data;
+                if (!response) {
+                    console.error('No response data');
+                    throw new Error('Нет данных в ответе сервера');
+                }
+
+                // Проверяем структуру ответа
+                if (!response.data || !Array.isArray(response.data)) {
+                    console.error('Invalid response format:', response);
+                    throw new Error('Неверный формат данных от сервера');
+                }
+
+                return {
+                    data: response.data,
+                    hasMore: response.hasMore,
+                    total: response.total
+                };
             } catch (error) {
                 console.error('Error in getFeed:', error);
                 this.tg.showPopup({
@@ -722,12 +736,11 @@
                 );
                 
                 console.log('Raw response:', response);
-                console.log('Posts data structure:', {
-                    totalPosts: response.data.length,
-                    firstPost: response.data[0],
-                    hasMore: response.hasMore
-                });
-                console.log('First post fields:', Object.keys(response.data[0]));
+                
+                if (!response || !response.data || !Array.isArray(response.data)) {
+                    console.error('Invalid response format:', response);
+                    throw new Error('Неверный формат данных от сервера');
+                }
                 
                 this.hasMore = response.hasMore;
                 this.renderPosts(response.data);
@@ -745,8 +758,19 @@
 
         renderPosts(posts) {
             console.log('Rendering posts:', posts);
+            if (!Array.isArray(posts)) {
+                console.error('Posts is not an array:', posts);
+                return;
+            }
+            
             const html = posts.map(post => {
                 console.log('Processing post:', post);
+                
+                // Проверяем наличие обязательных полей
+                if (!post || typeof post !== 'object') {
+                    console.error('Invalid post object:', post);
+                    return '';
+                }
                 
                 // Обработка фото-ссылок
                 const photoLinks = post.photo_links 
@@ -810,6 +834,11 @@
                     '</div>' +
                 '</div>';
             }).join('');
+            
+            if (!html) {
+                console.log('No posts to render');
+                return;
+            }
             
             this.feedContent.insertAdjacentHTML('beforeend', html);
 
