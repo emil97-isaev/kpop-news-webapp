@@ -800,13 +800,14 @@
                 return;
             }
             
-            const html = posts.map(post => {
+            let html = '';
+            for (const post of posts) {
                 console.log('Processing post:', post);
                 
                 // Проверяем наличие обязательных полей
                 if (!post || typeof post !== 'object') {
                     console.error('Invalid post object:', post);
-                    return '';
+                    continue;
                 }
                 
                 // Обработка фото-ссылок
@@ -825,7 +826,7 @@
                     .map(line => `<p>${line}</p>`)
                     .join('');
                 
-                return '<div class="post-card">' +
+                html += '<div class="post-card">' +
                     '<div class="post-author">' +
                         '<div class="post-author-info">' +
                             '<div class="author-name">K-pop News</div>' +
@@ -870,7 +871,7 @@
                         '</div>' +
                     '</div>' +
                 '</div>';
-            }).join('');
+            }
             
             if (!html) {
                 console.log('No posts to render');
