@@ -21,13 +21,20 @@ serve(async (req) => {
   try {
     console.log('Request method:', req.method);
     console.log('Request headers:', Object.fromEntries(req.headers.entries()));
+    console.log('Request body type:', typeof req.body);
     
-    // Проверяем тело запроса
-    const bodyText = await req.text();
-    console.log('Raw request body:', bodyText);
+    let bodyText;
+    try {
+      bodyText = await req.text();
+      console.log('Raw request body:', bodyText);
+    } catch (e) {
+      console.error('Error reading request body:', e);
+      throw new Error('Failed to read request body');
+    }
     
-    if (!bodyText) {
-      throw new Error('Request body is empty');
+    if (!bodyText || bodyText === '') {
+      console.log('Empty body detected, using default values');
+      bodyText = JSON.stringify({ page: 1, limit: 10, tags: [] });
     }
 
     // Парсим JSON
@@ -69,17 +76,28 @@ serve(async (req) => {
       throw error
     }
 
-    console.log(`Found ${posts?.length} posts, total: ${count}`)
+    console.log('Raw posts from database:', posts)
+    console.log('Posts type:', typeof posts)
+    console.log('Is array:', Array.isArray(posts))
+
+    // Проверяем и форматируем данные
+    const formattedPosts = Array.isArray(posts) ? posts : [];
+    
+    console.log(`Found ${formattedPosts.length} posts, total: ${count}`)
 
     // Определяем, есть ли еще посты
     const hasMore = count ? offset + limit < count : false
 
+    const response = {
+      data: formattedPosts,
+      hasMore,
+      total: count
+    };
+
+    console.log('Sending response:', response);
+
     return new Response(
-      JSON.stringify({
-        data: posts || [],
-        hasMore,
-        total: count
-      }),
+      JSON.stringify(response),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
 
