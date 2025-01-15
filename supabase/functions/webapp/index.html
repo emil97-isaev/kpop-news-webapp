@@ -664,14 +664,31 @@
         }
 
         renderTags(tags) {
-            this.tagsGrid.innerHTML = tags.map(tag => 
-                '<div class="tag-card ' + (this.selectedTags.has(tag.id) ? 'subscribed' : '') + '" data-tag-id="' + tag.id + '">' +
+            console.log('Rendering tags:', tags);
+            
+            if (!Array.isArray(tags)) {
+                console.error('Tags is not an array:', tags);
+                return;
+            }
+
+            let html = '';
+            for (const tag of tags) {
+                if (!tag || typeof tag !== 'object') {
+                    console.error('Invalid tag object:', tag);
+                    continue;
+                }
+
+                html += '<div class="tag-card ' + 
+                    (this.selectedTags.has(tag.id) ? 'subscribed' : '') + 
+                    '" data-tag-id="' + tag.id + '">' +
                     '<span class="tag-name">' + tag.name + '</span>' +
                     '<button class="subscribe-btn" onclick="app.toggleSubscription(' + tag.id + ')">' +
-                        (this.selectedTags.has(tag.id) ? 'Отписаться' : 'Подписаться') +
+                    (this.selectedTags.has(tag.id) ? 'Отписаться' : 'Подписаться') +
                     '</button>' +
-                '</div>'
-            ).join('');
+                '</div>';
+            }
+            
+            this.tagsGrid.innerHTML = html;
         }
 
         async toggleSubscription(tagId) {
