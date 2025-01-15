@@ -19,36 +19,45 @@ serve(async (req) => {
   }
 
   try {
-    const url = new URL(req.url)
-    const tag = url.searchParams.get('tag')
+    // Получаем параметры из тела запроса
+    const { page = 1, limit = 10, tags = [] } = await req.json()
+    const offset = (page - 1) * limit
 
     const supabaseClient = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
       Deno.env.get('SUPABASE_ANON_KEY') ?? ''
     )
 
-    console.log('Fetching posts', tag ? `for tag: ${tag}` : 'without tag')
     let query = supabaseClient
       .from('posts')
-      .select('*')
+      .select('*', { count: 'exact' })
       .order('post_datetime', { ascending: false })
-      .limit(20)
+      .range(offset, offset + limit - 1)
 
-    // Применяем фильтр по тегу только если он указан
-    if (tag) {
-      query = query.ilike('main_entity_group', `%${tag}%`)
+    // Применяем фильтр по тегам если они указаны
+    if (tags && tags.length > 0) {
+      const tagFilters = tags.map(tag => `main_entity_group.ilike.%${tag}%`)
+      query = query.or(tagFilters.join(','))
     }
 
-    const { data: posts, error } = await query
+    const { data: posts, error, count } = await query
 
     if (error) {
       console.error('Error fetching posts:', error)
       throw error
     }
 
-    console.log(`Found ${posts.length} posts`)
+    console.log(`Found ${posts?.length} posts, total: ${count}`)
+
+    // Определяем, есть ли еще посты
+    const hasMore = count ? offset + limit < count : false
+
     return new Response(
-      JSON.stringify(posts),
+      JSON.stringify({
+        data: posts || [],
+        hasMore,
+        total: count
+      }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
 

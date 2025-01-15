@@ -167,12 +167,11 @@ body {
 }
 
 .post-card {
-    background: var(--tg-theme-bg-color);
-    border: 1px solid var(--tg-theme-hint-color);
-    border-radius: var(--radius-medium);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-    transition: all 0.2s ease;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post-card:hover {
@@ -183,7 +182,7 @@ body {
 .post-author {
     display: flex;
     align-items: center;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 12px;
 }
 
 .post-author-info {
@@ -192,45 +191,59 @@ body {
 
 .author-name {
     font-weight: 600;
-    margin-bottom: var(--spacing-xs);
+    color: #333;
 }
 
 .post-timestamp {
-    font-size: 12px;
-    color: var(--tg-theme-hint-color);
+    font-size: 0.9em;
+    color: #666;
 }
 
 .post-content {
-    margin-bottom: var(--spacing-md);
-    white-space: pre-wrap;
+    margin-bottom: 12px;
+}
+
+.post-text {
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.post-text p {
+    margin: 0 0 8px 0;
+}
+
+.post-text p:last-child {
+    margin-bottom: 0;
 }
 
 .post-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .post-images img {
     width: 100%;
-    height: 200px;
+    height: auto;
+    border-radius: 8px;
     object-fit: cover;
-    border-radius: var(--radius-small);
 }
 
 .post-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .post-tag {
-    background: rgba(36, 129, 204, 0.1);
-    color: var(--tg-theme-button-color);
-    padding: 4px 8px;
-    border-radius: var(--radius-small);
-    font-size: 12px;
+    background: #f0f2f5;
+    color: #1a73e8;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.9em;
 }
 
 /* Утилиты */

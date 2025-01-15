@@ -166,29 +166,52 @@ class KpopNewsApp {
     }
 
     renderPosts(posts) {
-        const html = posts.map(post => `
-            <div class="post-card">
-                <div class="post-author">
-                    <div class="post-author-info">
-                        <div class="author-name">${post.author}</div>
-                        <div class="post-timestamp">${this.api.formatDate(post.published_at)}</div>
+        const html = posts.map(post => {
+            // Форматирование текста
+            const formattedText = post.text 
+                ? post.text
+                    .split('\n')
+                    .filter(line => line.trim())
+                    .map(line => `<p>${line}</p>`)
+                    .join('')
+                : '';
+
+            // Обработка фото-ссылок
+            const photoLinks = post.photo_links 
+                ? post.photo_links
+                    .split('https://')
+                    .filter(Boolean)
+                    .map(url => 'https://' + url.replace(/,\s*$/, '').trim())
+                : [];
+
+            return `
+                <div class="post-card">
+                    <div class="post-author">
+                        <div class="post-author-info">
+                            <div class="author-name">K-pop News</div>
+                            <div class="post-timestamp">${this.api.formatDate(post.post_datetime)}</div>
+                        </div>
                     </div>
-                </div>
-                <div class="post-content">${post.content}</div>
-                ${post.images && post.images.length > 0 ? `
-                    <div class="post-images">
-                        ${post.images.map(img => `
-                            <img src="${img}" alt="Изображение к посту" loading="lazy">
-                        `).join('')}
+                    <div class="post-content">
+                        <div class="post-text">${formattedText}</div>
+                        ${photoLinks.length > 0 ? `
+                            <div class="post-images">
+                                ${photoLinks.map(url => `
+                                    <img src="${url}" alt="Post image" loading="lazy">
+                                `).join('')}
+                            </div>
+                        ` : ''}
                     </div>
-                ` : ''}
-                <div class="post-tags">
-                    ${post.article_tags.map(tag => `
-                        <span class="post-tag">${tag.tags.name}</span>
-                    `).join('')}
+                    ${post.main_entity_group ? `
+                        <div class="post-tags">
+                            ${post.main_entity_group.split(',').map(tag => `
+                                <span class="post-tag">${tag.trim()}</span>
+                            `).join('')}
+                        </div>
+                    ` : ''}
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
         
         this.feedContent.insertAdjacentHTML('beforeend', html);
     }
