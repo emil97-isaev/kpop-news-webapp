@@ -441,12 +441,13 @@
 
         async getFeed(page = 1, limit = 10, tags = []) {
             if (!this.userId) {
+                console.error('getFeed: No user ID available');
                 this.tg.showPopup({
                     title: 'Ошибка',
                     message: 'Не удалось получить ID пользователя',
                     buttons: [{ type: 'ok' }]
                 });
-                return { data: [], hasMore: false };
+                return { data: [], hasMore: false, total: 0 };
             }
 
             try {
@@ -456,66 +457,40 @@
                     tags,
                     userId: this.userId
                 };
-                console.log('Sending request with body:', requestBody);
+                console.log('getFeed: Sending request with body:', requestBody);
                 
-                const { data: responseWrapper, error } = await this.supabase.functions.invoke('get-feed', {
+                const response = await this.supabase.functions.invoke('get-feed', {
                     body: requestBody
                 });
                 
-                console.log('Supabase raw response:', { responseWrapper, error });
+                console.log('getFeed: Raw Supabase response:', response);
                 
-                if (error) {
-                    console.error('Supabase error:', error);
-                    throw new Error(error.message || 'Ошибка при получении данных');
+                // Проверяем наличие ошибки
+                if (response.error) {
+                    console.error('getFeed: Supabase error:', response.error);
+                    throw new Error(response.error.message || 'Ошибка при получении данных');
                 }
 
-                if (!responseWrapper) {
-                    console.error('No response wrapper');
-                    throw new Error('Нет данных в ответе сервера');
-                }
-
-                // Пробуем распарсить данные из обертки
-                let response;
-                try {
-                    response = typeof responseWrapper === 'string' 
-                        ? JSON.parse(responseWrapper) 
-                        : responseWrapper;
-                    console.log('Parsed response:', response);
-                } catch (e) {
-                    console.error('Failed to parse response:', e);
-                    throw new Error('Неверный формат данных от сервера');
-                }
-
-                // Проверяем структуру распарсенного ответа
-                if (!response || typeof response !== 'object') {
-                    console.error('Invalid parsed response:', response);
-                    throw new Error('Неверный формат ответа от сервера');
-                }
-
-                // Проверяем наличие data в ответе
+                // Проверяем наличие данных
                 if (!response.data) {
-                    console.error('No data in parsed response:', response);
-                    throw new Error('Нет данных в ответе сервера');
+                    console.error('getFeed: No data in response');
+                    return { data: [], hasMore: false, total: 0 };
                 }
 
-                // Проверяем, что response.data является массивом
-                if (!Array.isArray(response.data)) {
-                    console.error('Response data is not an array:', response.data);
-                    throw new Error('Данные от сервера не являются массивом');
+                // Извлекаем данные из ответа
+                const { data = [], hasMore = false, total = 0 } = response.data;
+                
+                console.log('getFeed: Extracted data:', { data, hasMore, total });
+
+                // Проверяем, что data является массивом
+                if (!Array.isArray(data)) {
+                    console.error('getFeed: Data is not an array:', data);
+                    return { data: [], hasMore: false, total: 0 };
                 }
 
-                return {
-                    data: response.data,
-                    hasMore: response.hasMore,
-                    total: response.total
-                };
+                return { data, hasMore, total };
             } catch (error) {
-                console.error('Error in getFeed:', error);
-                this.tg.showPopup({
-                    title: 'Ошибка',
-                    message: 'Не удалось загрузить ленту: ' + error.message,
-                    buttons: [{ type: 'ok' }]
-                });
+                console.error('getFeed: Error:', error);
                 throw error;
             }
         }
