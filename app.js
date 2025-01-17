@@ -83,6 +83,8 @@ function parsePhotoLinks(photoLinksStr) {
     return parts
         .filter(part => part.trim()) // убираем пустые части
         .map(part => {
+            // Удаляем запятые в конце строки
+            part = part.replace(/,\s*$/, '');
             // Ищем следующее вхождение "https://"
             const nextHttpsIndex = part.indexOf('https://');
             if (nextHttpsIndex !== -1) {
@@ -91,6 +93,13 @@ function parsePhotoLinks(photoLinksStr) {
             }
             return 'https://' + part.trim();
         });
+}
+
+// Функция для форматирования текста
+function formatText(text) {
+    if (!text) return '';
+    // Заменяем \n на <br> для HTML
+    return text.split('\n').map(line => line.trim()).join('<br>');
 }
 
 // Загрузка трендовых постов для карусели
@@ -168,6 +177,8 @@ async function loadPosts() {
 
         posts.forEach(post => {
             const photoLinks = parsePhotoLinks(post.photo_links);
+            console.log('Photo links:', photoLinks); // Для отладки
+
             const postElement = document.createElement('div');
             postElement.className = 'post-card';
             
@@ -178,12 +189,12 @@ async function loadPosts() {
             postElement.innerHTML = `
                 <div class="post-header">
                     <h2 class="post-title">${title}</h2>
-                    <div class="post-text">${text}</div>
+                    <div class="post-text">${formatText(text)}</div>
                 </div>
                 ${photoLinks.length > 0 ? `
                     <div class="post-photos ${photoLinks.length === 1 ? 'single' : 'multiple'}">
                         ${photoLinks.map(url => `
-                            <img src="${url}" class="post-photo" alt="Post image" loading="lazy">
+                            <img src="${url}" class="post-photo" alt="Post image" loading="lazy" onerror="this.style.display='none'">
                         `).join('')}
                     </div>
                 ` : ''}
