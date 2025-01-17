@@ -213,14 +213,9 @@ async function loadPosts() {
 
             postElement.innerHTML = `
                 <div class="post-header">
-                    <img src="https://via.placeholder.com/40" class="post-avatar" alt="Avatar">
-                    <div class="post-meta">
-                        <h3 class="post-author">K-POP News</h3>
-                        <p class="post-date">${new Date(post.post_datetime).toLocaleDateString('ru-RU')}</p>
-                    </div>
+                    <h2 class="post-title">${title}</h2>
+                    <div class="post-text">${formatText(text)}</div>
                 </div>
-                <h2 class="post-title">${title}</h2>
-                <div class="post-text">${formatText(text)}</div>
                 ${photoLinks.length > 0 ? `
                     <div class="post-photos">
                         ${photoLinks.map(url => `
