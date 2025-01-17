@@ -183,11 +183,12 @@ async function loadPosts() {
     loadMoreBtn.textContent = 'Загрузка...';
 
     try {
+        // Загружаем на один пост больше, чтобы проверить, есть ли еще посты
         const { data: posts, error } = await supabase
             .from('posts')
             .select('*')
             .order('post_datetime', { ascending: false })
-            .range((currentPage - 1) * postsPerPage, currentPage * postsPerPage - 1);
+            .range((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
 
         if (error) {
             console.error('Supabase error:', error);
@@ -203,7 +204,12 @@ async function loadPosts() {
             return;
         }
 
-        posts.forEach(post => {
+        // Проверяем, есть ли еще посты
+        const hasMorePosts = posts.length > postsPerPage;
+        // Если есть лишний пост, удаляем его из массива
+        const displayPosts = hasMorePosts ? posts.slice(0, -1) : posts;
+
+        displayPosts.forEach(post => {
             const photoLinks = parsePhotoLinks(post.photo_links);
             console.log('Photo links:', photoLinks); // Для отладки
 
@@ -247,9 +253,8 @@ async function loadPosts() {
 
         currentPage++;
         
-        if (posts.length < postsPerPage) {
-            loadMoreBtn.style.display = 'none';
-        }
+        // Показываем кнопку "Загрузить еще" только если есть еще посты
+        loadMoreBtn.style.display = hasMorePosts ? 'block' : 'none';
 
     } catch (error) {
         console.error('Error loading posts:', error);
