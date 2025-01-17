@@ -205,7 +205,7 @@ async function loadPosts() {
             console.log('Photo links:', photoLinks); // Для отладки
 
             const postElement = document.createElement('div');
-            postElement.className = 'post-card';
+            postElement.className = 'post';
             
             const lines = post.text?.split('\n') || [];
             const title = lines[0] || '';
@@ -213,17 +213,21 @@ async function loadPosts() {
 
             postElement.innerHTML = `
                 <div class="post-header">
-                    <h2 class="post-title">${title}</h2>
-                    <div class="post-text">${formatText(text)}</div>
+                    <img src="https://via.placeholder.com/40" class="post-avatar" alt="Avatar">
+                    <div class="post-meta">
+                        <h3 class="post-author">K-POP News</h3>
+                        <p class="post-date">${new Date(post.post_datetime).toLocaleDateString('ru-RU')}</p>
+                    </div>
                 </div>
+                <div class="post-text">${formatText(text)}</div>
                 ${photoLinks.length > 0 ? `
-                    <div class="post-photos ${photoLinks.length === 1 ? 'single' : 'multiple'}">
+                    <div class="post-photos">
                         ${photoLinks.map(url => `
                             <img src="${url}" class="post-photo" alt="Post image" loading="lazy" onerror="this.style.display='none'">
                         `).join('')}
                     </div>
                 ` : ''}
-                <div class="post-stats">
+                <div class="post-footer">
                     <span class="post-stat">👁 ${post.views || 0}</span>
                     <span class="post-stat">❤️ ${post.likes || 0}</span>
                     <span class="post-stat">💬 ${post.comments || 0}</span>
