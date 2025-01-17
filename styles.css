@@ -178,6 +178,17 @@ body {
 }
 
 /* Кнопка загрузки */
+.load-more-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: var(--tg-theme-bg-color);
+    text-align: center;
+    z-index: 100;
+}
+
 #load-more {
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
@@ -185,6 +196,13 @@ body {
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Добавляем отступ для контента, чтобы он не перекрывался кнопкой */
+.container {
+    padding-bottom: 70px;
 }
 
 /* Модальное окно для фото */
