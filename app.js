@@ -180,15 +180,21 @@ async function loadTrendingPosts() {
 async function loadPosts() {
     if (isLoading) return;
     isLoading = true;
+    loadMoreBtn.style.display = 'none';
     loadMoreBtn.textContent = 'Загрузка...';
 
     try {
-        // Загружаем на один пост больше, чтобы проверить, есть ли еще посты
+        // Сначала проверяем общее количество постов
+        const { count } = await supabase
+            .from('posts')
+            .select('*', { count: 'exact', head: true });
+
+        // Загружаем текущую страницу постов
         const { data: posts, error } = await supabase
             .from('posts')
             .select('*')
             .order('post_datetime', { ascending: false })
-            .range((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
+            .range((currentPage - 1) * postsPerPage, (currentPage * postsPerPage) - 1);
 
         if (error) {
             console.error('Supabase error:', error);
@@ -197,19 +203,13 @@ async function loadPosts() {
         }
 
         if (!posts || posts.length === 0) {
-            loadMoreBtn.style.display = 'none';
             if (currentPage === 1) {
                 postsContainer.innerHTML = '<div class="text-center mt-4">Нет доступных постов</div>';
             }
             return;
         }
 
-        // Проверяем, есть ли еще посты
-        const hasMorePosts = posts.length > postsPerPage;
-        // Если есть лишний пост, удаляем его из массива
-        const displayPosts = hasMorePosts ? posts.slice(0, -1) : posts;
-
-        displayPosts.forEach(post => {
+        posts.forEach(post => {
             const photoLinks = parsePhotoLinks(post.photo_links);
             console.log('Photo links:', photoLinks); // Для отладки
 
@@ -254,6 +254,7 @@ async function loadPosts() {
         currentPage++;
         
         // Показываем кнопку "Загрузить еще" только если есть еще посты
+        const hasMorePosts = count > currentPage * postsPerPage;
         loadMoreBtn.style.display = hasMorePosts ? 'block' : 'none';
 
     } catch (error) {
