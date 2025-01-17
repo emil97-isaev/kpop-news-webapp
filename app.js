@@ -10,8 +10,13 @@ document.documentElement.style.setProperty('--tg-theme-button-text-color', tg.bu
 
 // Инициализация Supabase клиента
 const supabaseUrl = 'https://bsivriajgsginlnuyxny.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg2ODk5NDcsImV4cCI6MjAyNDI2NTk0N30.9YDEN41_K8JjFnhq2wE2KBGqizoKxwQs_gwLH_55t-Q';
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYxNjg2OTcsImV4cCI6MjA1MTc0NDY5N30.UJ6L73nUg7U4pgULc57clsY4OygSYeeJk8mv_DekZtw';
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey, {
+    auth: {
+        autoRefreshToken: true,
+        persistSession: true
+    }
+});
 
 // Состояние приложения
 let currentPage = 1;
@@ -52,7 +57,16 @@ async function loadTrendingPosts() {
             .order('views', { ascending: false })
             .limit(3);
 
-        if (error) throw error;
+        if (error) {
+            console.error('Supabase error:', error);
+            tg.showAlert(`Ошибка при загрузке трендовых постов: ${error.message}`);
+            return;
+        }
+
+        if (!posts || posts.length === 0) {
+            console.log('No trending posts found');
+            return;
+        }
 
         const carouselInner = document.querySelector('.carousel-inner');
         carouselInner.innerHTML = posts.map((post, index) => {
@@ -75,7 +89,7 @@ async function loadTrendingPosts() {
 
     } catch (error) {
         console.error('Error loading trending posts:', error);
-        tg.showAlert('Ошибка при загрузке трендовых постов');
+        tg.showAlert(`Ошибка при загрузке трендовых постов: ${error.message}`);
     }
 }
 
@@ -92,7 +106,19 @@ async function loadPosts() {
             .order('post_datetime', { ascending: false })
             .range((currentPage - 1) * postsPerPage, currentPage * postsPerPage - 1);
 
-        if (error) throw error;
+        if (error) {
+            console.error('Supabase error:', error);
+            tg.showAlert(`Ошибка при загрузке постов: ${error.message}`);
+            return;
+        }
+
+        if (!posts || posts.length === 0) {
+            loadMoreBtn.style.display = 'none';
+            if (currentPage === 1) {
+                postsContainer.innerHTML = '<div class="text-center mt-4">Нет доступных постов</div>';
+            }
+            return;
+        }
 
         posts.forEach(post => {
             const photoLinks = post.photo_links 
@@ -143,14 +169,13 @@ async function loadPosts() {
 
         currentPage++;
         
-        // Скрываем кнопку, если постов больше нет
         if (posts.length < postsPerPage) {
             loadMoreBtn.style.display = 'none';
         }
 
     } catch (error) {
         console.error('Error loading posts:', error);
-        tg.showAlert('Ошибка при загрузке постов');
+        tg.showAlert(`Ошибка при загрузке постов: ${error.message}`);
     } finally {
         isLoading = false;
         loadMoreBtn.textContent = 'Загрузить еще';
