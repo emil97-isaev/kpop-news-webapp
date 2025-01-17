@@ -219,6 +219,7 @@ async function loadPosts() {
                         <p class="post-date">${new Date(post.post_datetime).toLocaleDateString('ru-RU')}</p>
                     </div>
                 </div>
+                <h2 class="post-title">${title}</h2>
                 <div class="post-text">${formatText(text)}</div>
                 ${photoLinks.length > 0 ? `
                     <div class="post-photos">
