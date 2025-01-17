@@ -74,9 +74,12 @@ function closePhotoModal() {
 // Обработчики событий для модального окна
 photoModalClose.addEventListener('click', closePhotoModal);
 photoModal.addEventListener('click', (e) => {
-    if (e.target === photoModal) {
+    if (e.target === photoModal || e.target === photoModal.querySelector('.photo-modal-content')) {
         closePhotoModal();
     }
+});
+photoModalImage.addEventListener('click', (e) => {
+    e.stopPropagation();
 });
 
 // Переключение экранов
