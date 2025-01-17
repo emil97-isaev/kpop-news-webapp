@@ -43,12 +43,54 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-item img {
-    width: 100%;
+.carousel-item {
     height: 200px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+.carousel-caption h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 10px;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
 }
 
 /* Посты */

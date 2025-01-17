@@ -147,6 +147,7 @@ async function loadTrendingPosts() {
 
         if (!posts || posts.length === 0) {
             console.log('No trending posts found');
+            document.querySelector('.banner-carousel').style.display = 'none';
             return;
         }
 
@@ -154,7 +155,8 @@ async function loadTrendingPosts() {
         carouselInner.innerHTML = posts.map((post, index) => {
             const photoLinks = parsePhotoLinks(post.photo_links);
             const photoUrl = photoLinks[0] || '';
-            const title = post.text?.split('\n')[0] || 'Trending post';
+            const lines = post.text?.split('\n') || [];
+            const title = lines[0] || 'Trending post';
             
             return `
                 <div class="carousel-item ${index === 0 ? 'active' : ''}" 
@@ -170,9 +172,13 @@ async function loadTrendingPosts() {
             `;
         }).join('');
 
+        // Показываем карусель
+        document.querySelector('.banner-carousel').style.display = 'block';
+
     } catch (error) {
         console.error('Error loading trending posts:', error);
         tg.showAlert(`Ошибка при загрузке трендовых постов: ${error.message}`);
+        document.querySelector('.banner-carousel').style.display = 'none';
     }
 }
 
