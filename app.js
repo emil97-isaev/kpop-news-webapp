@@ -217,7 +217,7 @@ async function loadPosts() {
                     <div class="post-text">${formatText(text)}</div>
                 </div>
                 ${photoLinks.length > 0 ? `
-                    <div class="post-photos">
+                    <div class="post-photos ${photoLinks.length === 1 ? 'single' : 'multiple'}">
                         ${photoLinks.map(url => `
                             <img src="${url}" class="post-photo" alt="Post image" loading="lazy" onerror="this.style.display='none'">
                         `).join('')}

@@ -79,10 +79,17 @@ body {
 }
 
 .post-photos {
+    margin-bottom: 10px;
+}
+
+.post-photos.multiple {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
-    margin-bottom: 10px;
+}
+
+.post-photos.single {
+    display: block;
 }
 
 .post-photo {
