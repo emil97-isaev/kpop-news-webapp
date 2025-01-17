@@ -8,15 +8,39 @@ document.documentElement.style.setProperty('--tg-theme-text-color', tg.textColor
 document.documentElement.style.setProperty('--tg-theme-button-color', tg.buttonColor);
 document.documentElement.style.setProperty('--tg-theme-button-text-color', tg.buttonTextColor);
 
+// Проверяем доступность Supabase
+if (!window.supabase) {
+    console.error('Supabase is not loaded');
+    tg.showAlert('Ошибка: Supabase не загружен');
+    throw new Error('Supabase is not loaded');
+}
+
 // Инициализация Supabase клиента
 const supabaseUrl = 'https://bsivriajgsginlnuyxny.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYxNjg2OTcsImV4cCI6MjA1MTc0NDY5N30.UJ6L73nUg7U4pgULc57clsY4OygSYeeJk8mv_DekZtw';
+
+console.log('Initializing Supabase client...');
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey, {
     auth: {
         autoRefreshToken: true,
         persistSession: true
     }
 });
+console.log('Supabase client initialized:', supabase);
+
+// Проверяем соединение с Supabase
+async function checkSupabaseConnection() {
+    try {
+        const { data, error } = await supabase.from('posts').select('count').limit(1);
+        if (error) throw error;
+        console.log('Supabase connection successful');
+        return true;
+    } catch (error) {
+        console.error('Supabase connection error:', error);
+        tg.showAlert(`Ошибка подключения к Supabase: ${error.message}`);
+        return false;
+    }
+}
 
 // Состояние приложения
 let currentPage = 1;
@@ -189,10 +213,17 @@ loadMoreBtn.addEventListener('click', () => {
 });
 
 // Инициализация
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Настраиваем внешний вид под Telegram
     document.body.style.backgroundColor = tg.backgroundColor;
     document.body.style.color = tg.textColor;
+    
+    // Проверяем подключение к Supabase
+    const isConnected = await checkSupabaseConnection();
+    if (!isConnected) {
+        tg.showAlert('Не удалось подключиться к базе данных');
+        return;
+    }
     
     // Загружаем данные
     loadTrendingPosts();
