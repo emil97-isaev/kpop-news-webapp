@@ -94,10 +94,12 @@ body {
 
 .post-photo {
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.post-photos.multiple .post-photo {
+    aspect-ratio: 1;
 }
 
 .post-footer {
