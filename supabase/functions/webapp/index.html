@@ -751,30 +751,31 @@
                     Array.from(this.selectedTags)
                 );
                 
-                console.log('Raw response from getFeed:', response);
+                console.log('loadPosts: Response type:', typeof response);
+                console.log('loadPosts: Response structure:', {
+                    hasOwnData: 'data' in response,
+                    dataType: typeof response.data,
+                    isDataArray: Array.isArray(response.data),
+                    data: response.data
+                });
                 
-                // Проверяем структуру ответа
                 if (!response || typeof response !== 'object') {
-                    console.error('Invalid response:', response);
+                    console.error('loadPosts: Invalid response:', response);
                     throw new Error('Неверный формат ответа от сервера');
                 }
 
-                // Проверяем наличие data в ответе
                 if (!response.data) {
-                    console.error('No data in response:', response);
+                    console.error('loadPosts: No data in response:', response);
                     throw new Error('Нет данных в ответе сервера');
                 }
 
-                // Проверяем, что response.data является массивом
-                if (!Array.isArray(response.data)) {
-                    console.error('Response data is not an array:', response.data);
-                    throw new Error('Данные от сервера не являются массивом');
-                }
+                const posts = Array.isArray(response.data) ? response.data : [];
+                console.log('loadPosts: Posts to render:', posts);
                 
                 this.hasMore = response.hasMore;
-                this.renderPosts(response.data);
+                this.renderPosts(posts);
             } catch (error) {
-                console.error('Error loading posts:', error);
+                console.error('loadPosts: Error:', error);
                 this.api.tg.showPopup({
                     title: 'Ошибка',
                     message: 'Не удалось загрузить посты: ' + error.message,
