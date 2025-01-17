@@ -72,6 +72,27 @@ navLinks.forEach(link => {
     });
 });
 
+// Функция для разбора строки с фотографиями
+function parsePhotoLinks(photoLinksStr) {
+    if (!photoLinksStr) return [];
+    
+    // Разбиваем строку на части по "https://"
+    const parts = photoLinksStr.split('https://');
+    
+    // Фильтруем и обрабатываем части
+    return parts
+        .filter(part => part.trim()) // убираем пустые части
+        .map(part => {
+            // Ищем следующее вхождение "https://"
+            const nextHttpsIndex = part.indexOf('https://');
+            if (nextHttpsIndex !== -1) {
+                // Если нашли, берем только до него
+                part = part.substring(0, nextHttpsIndex);
+            }
+            return 'https://' + part.trim();
+        });
+}
+
 // Загрузка трендовых постов для карусели
 async function loadTrendingPosts() {
     try {
@@ -94,7 +115,8 @@ async function loadTrendingPosts() {
 
         const carouselInner = document.querySelector('.carousel-inner');
         carouselInner.innerHTML = posts.map((post, index) => {
-            const photoUrl = post.photo_links?.split(',')[0]?.trim() || '';
+            const photoLinks = parsePhotoLinks(post.photo_links);
+            const photoUrl = photoLinks[0] || '';
             const title = post.text?.split('\n')[0] || 'Trending post';
             
             return `
@@ -145,13 +167,7 @@ async function loadPosts() {
         }
 
         posts.forEach(post => {
-            const photoLinks = post.photo_links 
-                ? post.photo_links
-                    .split(',')
-                    .map(url => url.trim())
-                    .filter(url => url)
-                : [];
-
+            const photoLinks = parsePhotoLinks(post.photo_links);
             const postElement = document.createElement('div');
             postElement.className = 'post-card';
             
