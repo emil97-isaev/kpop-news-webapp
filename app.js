@@ -53,6 +53,31 @@ const trendsScreen = document.getElementById('trends-screen');
 const postsContainer = document.getElementById('posts-feed');
 const loadMoreBtn = document.getElementById('load-more');
 const navLinks = document.querySelectorAll('.nav-link');
+const photoModal = document.querySelector('.photo-modal');
+const photoModalImage = document.querySelector('.photo-modal-image');
+const photoModalClose = document.querySelector('.photo-modal-close');
+
+// Функции для работы с модальным окном
+function openPhotoModal(imageUrl) {
+    photoModalImage.src = imageUrl;
+    photoModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    tg.HapticFeedback.impactOccurred('light');
+}
+
+function closePhotoModal() {
+    photoModal.classList.remove('active');
+    document.body.style.overflow = '';
+    tg.HapticFeedback.impactOccurred('light');
+}
+
+// Обработчики событий для модального окна
+photoModalClose.addEventListener('click', closePhotoModal);
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) {
+        closePhotoModal();
+    }
+});
 
 // Переключение экранов
 navLinks.forEach(link => {
@@ -210,15 +235,7 @@ async function loadPosts() {
             const photos = postElement.querySelectorAll('.post-photo');
             photos.forEach((photo, index) => {
                 photo.addEventListener('click', () => {
-                    // Используем нативный функционал Telegram для просмотра фото
-                    if (tg.platform === 'web') {
-                        // Для веб-версии открываем фото в новой вкладке
-                        window.open(photo.src, '_blank');
-                    } else {
-                        // Для мобильной версии используем Telegram API
-                        tg.showImage(photo.src);
-                    }
-                    tg.HapticFeedback.impactOccurred('light');
+                    openPhotoModal(photo.src);
                 });
             });
 
