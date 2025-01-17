@@ -206,22 +206,19 @@ async function loadPosts() {
                 </div>
             `;
 
-            // Инициализация модального окна
-            const photoModal = new bootstrap.Modal(document.getElementById('photoModal'));
-            const modalImage = document.getElementById('modalImage');
-
-            // Функция для открытия фото в модальном окне
-            function openPhotoModal(url) {
-                modalImage.src = url;
-                photoModal.show();
-                tg.HapticFeedback.impactOccurred('light');
-            }
-
             // Добавляем обработчик клика для просмотра фото
             const photos = postElement.querySelectorAll('.post-photo');
             photos.forEach((photo, index) => {
                 photo.addEventListener('click', () => {
-                    openPhotoModal(photo.src);
+                    // Используем нативный функционал Telegram для просмотра фото
+                    if (tg.platform === 'web') {
+                        // Для веб-версии открываем фото в новой вкладке
+                        window.open(photo.src, '_blank');
+                    } else {
+                        // Для мобильной версии используем Telegram API
+                        tg.showImage(photo.src);
+                    }
+                    tg.HapticFeedback.impactOccurred('light');
                 });
             });
 
