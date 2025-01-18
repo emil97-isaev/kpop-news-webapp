@@ -382,7 +382,11 @@ async function loadPosts() {
     try {
         // Вызываем Edge Function
         const { data: response, error } = await supabase.functions.invoke('get-feed', {
-            body: { page: currentPage, limit: postsPerPage }
+            body: { page: currentPage, limit: postsPerPage },
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${supabase.auth.session()?.access_token}`
+            }
         });
 
         if (error) {
