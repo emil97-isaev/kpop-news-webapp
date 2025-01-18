@@ -131,7 +131,7 @@ body {
 }
 
 .show-more {
-    color: var(--tg-theme-button-color);
+    color: var(--tg-theme-link-color);
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
