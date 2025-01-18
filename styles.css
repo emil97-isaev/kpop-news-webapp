@@ -200,28 +200,6 @@ body {
     display: block;
 }
 
-/* Кнопка загрузки */
-.load-more-container {
-    padding: 15px;
-    text-align: center;
-}
-
-#load-more {
-    background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 200px;
-}
-
-/* Удаляем лишний отступ для контейнера */
-.container {
-    padding: 10px;
-}
-
 /* Модальное окно для фото */
 .photo-modal {
     display: none;
@@ -448,4 +426,11 @@ body {
     to {
         opacity: 1;
     }
+} 
+
+#observer-target {
+    width: 100%;
+    height: 20px;
+    margin-top: -20px;
+    pointer-events: none;
 } 

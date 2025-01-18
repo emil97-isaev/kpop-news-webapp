@@ -357,12 +357,27 @@ async function loadCommentsForPost(postId, groupId) {
     }
 }
 
-// Загрузка постов для ленты
+// Добавляем Intersection Observer для отслеживания прокрутки
+const observerTarget = document.createElement('div');
+observerTarget.id = 'observer-target';
+postsContainer.after(observerTarget);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !isLoading) {
+            loadPosts();
+        }
+    });
+}, {
+    rootMargin: '100px'
+});
+
+observer.observe(observerTarget);
+
+// Модифицируем функцию loadPosts
 async function loadPosts() {
     if (isLoading) return;
     isLoading = true;
-    loadMoreBtn.style.display = 'none';
-    loadMoreBtn.textContent = 'Загрузка...';
 
     try {
         // Сначала проверяем общее количество постов
@@ -387,6 +402,7 @@ async function loadPosts() {
             if (currentPage === 1) {
                 postsContainer.innerHTML = '<div class="text-center mt-4">Нет доступных постов</div>';
             }
+            observer.unobserve(observerTarget); // Прекращаем наблюдение, если постов больше нет
             return;
         }
 
@@ -525,24 +541,18 @@ async function loadPosts() {
 
         currentPage++;
         
-        // Показываем кнопку "Загрузить еще" только если есть еще посты
-        const hasMorePosts = count > currentPage * postsPerPage;
-        loadMoreBtn.style.display = hasMorePosts ? 'block' : 'none';
+        // Если больше нет постов, прекращаем наблюдение
+        if (count <= currentPage * postsPerPage) {
+            observer.unobserve(observerTarget);
+        }
 
     } catch (error) {
         console.error('Error loading posts:', error);
         tg.showAlert(`Ошибка при загрузке постов: ${error.message}`);
     } finally {
         isLoading = false;
-        loadMoreBtn.textContent = 'Загрузить еще';
     }
 }
-
-// Обработчик кнопки "Загрузить еще"
-loadMoreBtn.addEventListener('click', () => {
-    loadPosts();
-    tg.HapticFeedback.impactOccurred('light');
-});
 
 // Инициализация
 document.addEventListener('DOMContentLoaded', async () => {
