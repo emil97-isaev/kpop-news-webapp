@@ -67,6 +67,9 @@ function openPhotoModal(imageUrl) {
 
 function closePhotoModal() {
     photoModal.classList.remove('active');
+    photoModal.classList.remove('zoomed');
+    photoModalImage.classList.remove('zoomed');
+    photoModalImage.style.transform = '';
     document.body.style.overflow = '';
     tg.HapticFeedback.impactOccurred('light');
 }
@@ -78,8 +81,76 @@ photoModal.addEventListener('click', (e) => {
         closePhotoModal();
     }
 });
-photoModalImage.addEventListener('click', (e) => {
+
+// Добавляем обработчик двойного клика для увеличения
+photoModalImage.addEventListener('dblclick', (e) => {
     e.stopPropagation();
+    const isZoomed = photoModalImage.classList.contains('zoomed');
+    
+    if (!isZoomed) {
+        photoModalImage.classList.add('zoomed');
+        photoModal.classList.add('zoomed');
+        photoModalImage.style.transform = 'scale(2)';
+    } else {
+        photoModalImage.classList.remove('zoomed');
+        photoModal.classList.remove('zoomed');
+        photoModalImage.style.transform = '';
+    }
+    
+    tg.HapticFeedback.impactOccurred('medium');
+});
+
+// Добавляем поддержку жестов масштабирования
+let initialDistance = 0;
+let currentScale = 1;
+const MIN_SCALE = 1;
+const MAX_SCALE = 3;
+
+photoModalImage.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 2) {
+        e.preventDefault();
+        initialDistance = Math.hypot(
+            e.touches[0].pageX - e.touches[1].pageX,
+            e.touches[0].pageY - e.touches[1].pageY
+        );
+    }
+});
+
+photoModalImage.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2) {
+        e.preventDefault();
+        const currentDistance = Math.hypot(
+            e.touches[0].pageX - e.touches[1].pageX,
+            e.touches[0].pageY - e.touches[1].pageY
+        );
+        
+        if (initialDistance > 0) {
+            const newScale = (currentScale * currentDistance) / initialDistance;
+            
+            if (newScale >= MIN_SCALE && newScale <= MAX_SCALE) {
+                currentScale = newScale;
+                photoModalImage.style.transform = `scale(${newScale})`;
+                
+                if (newScale > 1) {
+                    photoModalImage.classList.add('zoomed');
+                    photoModal.classList.add('zoomed');
+                } else {
+                    photoModalImage.classList.remove('zoomed');
+                    photoModal.classList.remove('zoomed');
+                }
+            }
+        }
+    }
+});
+
+photoModalImage.addEventListener('touchend', () => {
+    initialDistance = 0;
+    if (currentScale <= 1) {
+        currentScale = 1;
+        photoModalImage.style.transform = '';
+        photoModalImage.classList.remove('zoomed');
+        photoModal.classList.remove('zoomed');
+    }
 });
 
 // Переключение экранов
