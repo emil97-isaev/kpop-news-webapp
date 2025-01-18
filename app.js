@@ -139,11 +139,13 @@ function formatText(text, maxLength = 100) {
         visibleText = visibleText.substr(0, lastSpace);
     }
     
+    const lines = text.split('\n');
+    const firstLine = lines[0] || '';
+    const restLines = lines.slice(1).join('\n');
+    
     return `
         <div class="post-text truncated">
-            ${visibleText}
-            <span class="text-dots">...</span>
-            <span class="text-expand">Показать ещё</span>
+            ${visibleText}<span class="text-dots">...</span><span class="text-expand">Показать ещё</span>
             <span class="full-text" style="display: none;">${text.substr(visibleText.length)}</span>
         </div>
     `;

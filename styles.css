@@ -376,18 +376,20 @@ body {
     white-space: pre-line;
 }
 
+.text-dots {
+    color: var(--tg-theme-text-color);
+    white-space: nowrap;
+    display: inline;
+}
+
 .text-expand {
     color: var(--tg-theme-button-color);
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    white-space: nowrap;
     display: inline;
     margin-left: 4px;
-}
-
-.text-dots {
-    display: inline;
-    color: var(--tg-theme-text-color);
 }
 
 .text-expand:hover {
@@ -400,6 +402,10 @@ body {
 
 .text-dots.expanded {
     display: none;
+}
+
+.full-text {
+    white-space: pre-line;
 }
 
 .hidden-text {
