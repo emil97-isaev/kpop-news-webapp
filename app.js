@@ -124,10 +124,29 @@ function parsePhotoLinks(photoLinksStr) {
 }
 
 // Функция для форматирования текста
-function formatText(text) {
+function formatText(text, maxLength = 100) {
     if (!text) return '';
-    // Заменяем \n на <br> для HTML
-    return text.split('\n').map(line => line.trim()).join('<br>');
+    
+    // Если текст короче максимальной длины, возвращаем как есть
+    if (text.length <= maxLength) {
+        return `<div class="post-text">${text.split('\n').map(line => line.trim()).join('<br>')}</div>`;
+    }
+    
+    // Обрезаем текст до последнего полного слова в пределах maxLength
+    let visibleText = text.substr(0, maxLength);
+    let lastSpace = visibleText.lastIndexOf(' ');
+    if (lastSpace > 0) {
+        visibleText = visibleText.substr(0, lastSpace);
+    }
+    
+    return `
+        <div class="post-text truncated">
+            ${visibleText}
+            <span class="text-dots">...</span>
+            <span class="text-expand">Показать ещё</span>
+            <span class="full-text" style="display: none;">${text.substr(visibleText.length)}</span>
+        </div>
+    `;
 }
 
 // Загрузка трендовых постов для карусели
@@ -313,7 +332,7 @@ async function loadPosts() {
             postElement.innerHTML = `
                 <div class="post-header">
                     <h2 class="post-title">${title}</h2>
-                    <div class="post-text">${formatText(text)}</div>
+                    ${formatText(text)}
                 </div>
                 ${photoLinks.length > 0 ? `
                     <div class="post-photos ${photoLinks.length === 1 ? 'single' : 'multiple'}">
@@ -369,19 +388,19 @@ async function loadPosts() {
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
                 const postText = textExpand.parentElement;
+                const fullText = postElement.querySelector('.full-text');
+                const textDots = postElement.querySelector('.text-dots');
                 let isExpanded = false;
 
                 textExpand.addEventListener('click', () => {
                     if (!isExpanded) {
-                        postText.style.maxHeight = 'none';
-                        postText.classList.remove('truncated');
-                        textExpand.textContent = 'Скрыть';
+                        fullText.style.display = 'inline';
                         textExpand.classList.add('expanded');
+                        textDots.classList.add('expanded');
                     } else {
-                        postText.style.maxHeight = '4.5em';
-                        postText.classList.add('truncated');
-                        textExpand.textContent = 'Показать ещё';
+                        fullText.style.display = 'none';
                         textExpand.classList.remove('expanded');
+                        textDots.classList.remove('expanded');
                     }
                     isExpanded = !isExpanded;
                     tg.HapticFeedback.impactOccurred('light');
