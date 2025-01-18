@@ -124,28 +124,17 @@ function parsePhotoLinks(photoLinksStr) {
 }
 
 // Функция для форматирования текста
-function formatText(text, maxLength = 300) {
+function formatText(text, maxLength = 150) {
     if (!text) return '';
     
-    // Разбиваем текст на строки
-    const lines = text.split('\n').map(line => line.trim());
-    
+    // Если текст короче максимальной длины, возвращаем как есть
     if (text.length <= maxLength) {
-        return lines.join('<br>');
+        return text.split('\n').map(line => line.trim()).join('<br>');
     }
-    
-    // Получаем видимую часть текста
-    const visibleText = text.substring(0, maxLength);
-    const hiddenText = text.substring(maxLength);
-    
-    // Форматируем обе части
-    const visibleHtml = visibleText.split('\n').map(line => line.trim()).join('<br>');
-    const hiddenHtml = hiddenText.split('\n').map(line => line.trim()).join('<br>');
     
     return `
         <div class="post-text-content">
-            <div class="visible-text">${visibleHtml}</div>
-            <div class="hidden-text" style="display: none;">${hiddenHtml}</div>
+            ${text.split('\n').map(line => line.trim()).join('<br>')}
             <div class="text-expand" style="color: var(--tg-theme-link-color); cursor: pointer; padding: 8px 0;">
                 Показать ещё
             </div>
@@ -391,18 +380,21 @@ async function loadPosts() {
             // Добавляем обработчик для разворачивания текста
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
+                const textContent = postElement.querySelector('.post-text-content');
+                const fullText = text;
+                let isExpanded = false;
+
                 textExpand.addEventListener('click', () => {
-                    const visibleText = postElement.querySelector('.visible-text');
-                    const hiddenText = postElement.querySelector('.hidden-text');
-                    
-                    if (hiddenText.style.display === 'none') {
-                        hiddenText.style.display = 'block';
+                    if (!isExpanded) {
+                        textContent.style.maxHeight = 'none';
+                        textContent.style.webkitLineClamp = 'unset';
                         textExpand.textContent = 'Скрыть';
                     } else {
-                        hiddenText.style.display = 'none';
+                        textContent.style.maxHeight = '4.5em';
+                        textContent.style.webkitLineClamp = '3';
                         textExpand.textContent = 'Показать ещё';
                     }
-                    
+                    isExpanded = !isExpanded;
                     tg.HapticFeedback.impactOccurred('light');
                 });
             }

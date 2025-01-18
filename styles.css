@@ -365,6 +365,12 @@ body {
 
 .post-text-content {
     position: relative;
+    max-height: 4.5em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: max-height 0.3s ease;
 }
 
 .text-expand {
