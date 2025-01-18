@@ -221,20 +221,23 @@ async function loadPosts() {
             .from('comments_vk')
             .select('*')
             .in('post_id', postIds)
-            .order('likes', { ascending: false });
+            .order('likes', { ascending: false })
+            .limit(5); // Ограничиваем до 5 комментариев
 
         if (commentsError) {
             console.error('Error loading comments:', commentsError);
         }
 
-        // Группируем комментарии по post_id
+        // Группируем комментарии по post_id и берем только топ-5 для каждого поста
         const commentsByPost = {};
         if (comments) {
             comments.forEach(comment => {
                 if (!commentsByPost[comment.post_id]) {
                     commentsByPost[comment.post_id] = [];
                 }
-                commentsByPost[comment.post_id].push(comment);
+                if (commentsByPost[comment.post_id].length < 5) {
+                    commentsByPost[comment.post_id].push(comment);
+                }
             });
         }
 
@@ -262,7 +265,7 @@ async function loadPosts() {
                             <div class="comment">
                                 <div class="comment-avatar">👤</div>
                                 <div class="comment-content">
-                                    <div class="comment-text">${comment.text}</div>
+                                    <div class="comment-text">${comment.text || ''}</div>
                                     <div class="comment-likes">❤️ ${comment.likes || 0}</div>
                                 </div>
                             </div>

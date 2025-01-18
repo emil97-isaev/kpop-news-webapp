@@ -179,14 +179,8 @@ body {
 
 /* Кнопка загрузки */
 .load-more-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 15px;
-    background: var(--tg-theme-bg-color);
     text-align: center;
-    z-index: 100;
 }
 
 #load-more {
@@ -200,9 +194,9 @@ body {
     max-width: 200px;
 }
 
-/* Добавляем отступ для контента, чтобы он не перекрывался кнопкой */
+/* Удаляем лишний отступ для контейнера */
 .container {
-    padding-bottom: 70px;
+    padding: 10px;
 }
 
 /* Модальное окно для фото */
