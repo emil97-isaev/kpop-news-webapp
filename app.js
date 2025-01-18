@@ -130,10 +130,12 @@ function formatText(text) {
         return `<div class="post-text">${text}</div>`;
     }
 
+    const visibleText = text.slice(0, maxLength).trim();
+    const hiddenText = text.slice(maxLength).trim();
+
     return `
         <div class="post-text">
-            <span class="text-short">${text.slice(0, maxLength).trim()}</span>
-            <span class="text-full" style="display: none;">${text.slice(maxLength).trim()}</span>
+            ${visibleText}<span class="text-full" style="display: none;">${hiddenText}</span>
             <button class="show-more">Показать ещё</button>
         </div>
     `;
@@ -379,10 +381,8 @@ async function loadPosts() {
             if (showMoreBtn) {
                 showMoreBtn.addEventListener('click', () => {
                     const postText = showMoreBtn.closest('.post-text');
-                    const shortText = postText.querySelector('.text-short');
                     const fullText = postText.querySelector('.text-full');
-
-                    shortText.style.display = 'none';
+                    
                     fullText.style.display = 'inline';
                     showMoreBtn.style.display = 'none';
                     
