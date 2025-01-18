@@ -127,16 +127,16 @@ function parsePhotoLinks(photoLinksStr) {
 function formatText(text) {
     const maxLength = 100;
     if (text.length <= maxLength) {
-        return `<div class="post-text">${text}</div>`;
+        return `<p class="post-text">${text}</p>`;
     }
 
     return `
-        <div class="post-text">
+        <p class="post-text">
             ${text.slice(0, maxLength).trim()}
+            <span class="more-text" style="display: none;">${text.slice(maxLength).trim()}</span>
             <span class="text-dots">...</span>
             <span class="text-expand">Показать ещё</span>
-            <span class="full-text" style="display: none;">${text.slice(maxLength).trim()}</span>
-        </div>
+        </p>
     `;
 }
 
@@ -379,12 +379,12 @@ async function loadPosts() {
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
                 const postText = textExpand.closest('.post-text');
-                const fullText = postText.querySelector('.full-text');
+                const moreText = postText.querySelector('.more-text');
                 const textDots = postText.querySelector('.text-dots');
 
                 textExpand.addEventListener('click', () => {
-                    if (fullText.style.display === 'none') {
-                        fullText.style.display = 'inline';
+                    if (moreText.style.display === 'none') {
+                        moreText.style.display = 'inline';
                         textDots.style.display = 'none';
                         textExpand.style.display = 'none';
                     }

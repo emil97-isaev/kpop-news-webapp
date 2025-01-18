@@ -122,6 +122,10 @@ body {
     white-space: pre-line;
 }
 
+.more-text {
+    display: none;
+}
+
 .post-text.truncated {
     display: inline;
 }
@@ -378,7 +382,6 @@ body {
 
 .text-dots {
     color: var(--tg-theme-text-color);
-    display: inline;
 }
 
 .text-expand {
@@ -386,8 +389,10 @@ body {
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
-    display: inline;
     margin-left: 4px;
+    border: none;
+    background: none;
+    padding: 0;
 }
 
 .text-expand:hover {
