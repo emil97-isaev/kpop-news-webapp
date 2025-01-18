@@ -135,9 +135,7 @@ function formatText(text, maxLength = 150) {
     return `
         <div class="post-text-content">
             ${text.split('\n').map(line => line.trim()).join('<br>')}
-            <div class="text-expand" style="color: var(--tg-theme-link-color); cursor: pointer; padding: 8px 0;">
-                Показать ещё
-            </div>
+            <div class="text-expand">Показать ещё</div>
         </div>
     `;
 }
@@ -381,7 +379,6 @@ async function loadPosts() {
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
                 const textContent = postElement.querySelector('.post-text-content');
-                const fullText = text;
                 let isExpanded = false;
 
                 textExpand.addEventListener('click', () => {
@@ -389,10 +386,12 @@ async function loadPosts() {
                         textContent.style.maxHeight = 'none';
                         textContent.style.webkitLineClamp = 'unset';
                         textExpand.textContent = 'Скрыть';
+                        textExpand.classList.add('expanded');
                     } else {
                         textContent.style.maxHeight = '4.5em';
                         textContent.style.webkitLineClamp = '3';
                         textExpand.textContent = 'Показать ещё';
+                        textExpand.classList.remove('expanded');
                     }
                     isExpanded = !isExpanded;
                     tg.HapticFeedback.impactOccurred('light');

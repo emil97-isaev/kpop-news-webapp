@@ -374,15 +374,22 @@ body {
 }
 
 .text-expand {
-    color: var(--tg-theme-link-color);
+    color: var(--tg-theme-button-color);
     cursor: pointer;
     padding: 8px 0;
     font-size: 0.9rem;
-    transition: opacity 0.2s ease;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
 
 .text-expand:hover {
     opacity: 0.8;
+}
+
+.text-expand.expanded {
+    color: var(--tg-theme-hint-color);
+    font-weight: normal;
 }
 
 .hidden-text {
