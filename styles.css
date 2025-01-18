@@ -122,6 +122,21 @@ body {
     white-space: pre-line;
 }
 
+.post-text.truncated {
+    position: relative;
+    overflow: hidden;
+    max-height: 4.5em;
+}
+
+.post-text.truncated::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--tg-theme-bg-color);
+    padding-left: 4px;
+}
+
 .post-photos {
     margin-bottom: 10px;
 }
@@ -378,7 +393,7 @@ body {
     padding: 4px 0;
     font-size: 0.9rem;
     font-weight: 500;
-    display: inline-block;
+    display: block;
 }
 
 .text-expand:hover {
@@ -387,7 +402,6 @@ body {
 
 .text-expand.expanded {
     color: var(--tg-theme-hint-color);
-    font-weight: normal;
 }
 
 .hidden-text {

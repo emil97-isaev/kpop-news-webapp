@@ -129,19 +129,12 @@ function formatText(text, maxLength = 150) {
     
     // Если текст короче максимальной длины, возвращаем как есть
     if (text.length <= maxLength) {
-        return text.split('\n').map(line => line.trim()).join('<br>');
+        return `<div class="post-text">${text}</div>`;
     }
     
-    // Получаем видимую часть текста и оставшуюся часть
-    const visibleText = text.substring(0, maxLength);
-    const hiddenText = text.substring(maxLength);
-    
     return `
-        <div class="post-text-content">
-            <span class="visible-text">${visibleText}</span>
-            <span class="hidden-text" style="display: none;">${hiddenText}</span>
-            <div class="text-expand">Показать ещё</div>
-        </div>
+        <div class="post-text truncated">${text}</div>
+        <div class="text-expand">Показать ещё</div>
     `;
 }
 
@@ -383,17 +376,16 @@ async function loadPosts() {
             // Добавляем обработчик для разворачивания текста
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
-                const visibleText = postElement.querySelector('.visible-text');
-                const hiddenText = postElement.querySelector('.hidden-text');
+                const postText = postElement.querySelector('.post-text');
                 let isExpanded = false;
 
                 textExpand.addEventListener('click', () => {
                     if (!isExpanded) {
-                        hiddenText.style.display = 'inline';
+                        postText.classList.remove('truncated');
                         textExpand.textContent = 'Скрыть';
                         textExpand.classList.add('expanded');
                     } else {
-                        hiddenText.style.display = 'none';
+                        postText.classList.add('truncated');
                         textExpand.textContent = 'Показать ещё';
                         textExpand.classList.remove('expanded');
                     }
