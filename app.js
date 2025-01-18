@@ -384,8 +384,7 @@ async function loadPosts() {
         const { data: response, error } = await supabase.functions.invoke('get-feed', {
             body: { page: currentPage, limit: postsPerPage },
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${supabase.auth.session()?.access_token}`
+                'Content-Type': 'application/json'
             }
         });
 
