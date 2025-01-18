@@ -365,21 +365,19 @@ body {
 
 .post-text-content {
     position: relative;
-    max-height: 4.5em;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    transition: max-height 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.visible-text, .hidden-text {
+    white-space: pre-line;
 }
 
 .text-expand {
     color: var(--tg-theme-button-color);
     cursor: pointer;
-    padding: 8px 0;
+    padding: 4px 0;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
     display: inline-block;
 }
 
@@ -393,7 +391,7 @@ body {
 }
 
 .hidden-text {
-    animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.2s ease;
 }
 
 @keyframes fadeIn {
