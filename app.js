@@ -182,6 +182,28 @@ async function loadTrendingPosts() {
     }
 }
 
+// Загрузка комментариев для поста
+async function loadCommentsForPost(postId) {
+    try {
+        const { data: comments, error } = await supabase
+            .from('comments_vk')
+            .select('*')
+            .eq('post_id', postId)
+            .order('likes', { ascending: false })
+            .limit(5);
+
+        if (error) {
+            console.error('Error loading comments:', error);
+            return [];
+        }
+
+        return comments || [];
+    } catch (error) {
+        console.error('Error:', error);
+        return [];
+    }
+}
+
 // Загрузка постов для ленты
 async function loadPosts() {
     if (isLoading) return;
@@ -215,36 +237,9 @@ async function loadPosts() {
             return;
         }
 
-        // Загружаем комментарии для всех постов
-        const postIds = posts.map(post => post.id);
-        const { data: comments, error: commentsError } = await supabase
-            .from('comments_vk')
-            .select('*')
-            .in('post_id', postIds)
-            .order('likes', { ascending: false })
-            .limit(5); // Ограничиваем до 5 комментариев
-
-        if (commentsError) {
-            console.error('Error loading comments:', commentsError);
-        }
-
-        // Группируем комментарии по post_id и берем только топ-5 для каждого поста
-        const commentsByPost = {};
-        if (comments) {
-            comments.forEach(comment => {
-                if (!commentsByPost[comment.post_id]) {
-                    commentsByPost[comment.post_id] = [];
-                }
-                if (commentsByPost[comment.post_id].length < 5) {
-                    commentsByPost[comment.post_id].push(comment);
-                }
-            });
-        }
-
-        posts.forEach(post => {
+        // Обрабатываем каждый пост
+        for (const post of posts) {
             const photoLinks = parsePhotoLinks(post.photo_links);
-            console.log('Photo links:', photoLinks); // Для отладки
-
             const postElement = document.createElement('div');
             postElement.className = 'post';
             
@@ -252,16 +247,18 @@ async function loadPosts() {
             const title = lines[0] || '';
             const text = lines.slice(1).join('\n') || '';
 
-            // Получаем комментарии для текущего поста
-            const postComments = commentsByPost[post.id] || [];
-            const commentsHtml = postComments.length > 0 
+            // Загружаем комментарии для текущего поста
+            const comments = await loadCommentsForPost(post.id);
+            console.log('Comments for post', post.id, ':', comments); // Для отладки
+
+            const commentsHtml = comments.length > 0 
                 ? `
                     <div class="post-comments">
                         <div class="comments-header">
                             <span class="comments-icon">💬</span>
                             <span class="comments-title">Комментарии из VK</span>
                         </div>
-                        ${postComments.map(comment => `
+                        ${comments.map(comment => `
                             <div class="comment">
                                 <div class="comment-avatar">👤</div>
                                 <div class="comment-content">
@@ -297,14 +294,14 @@ async function loadPosts() {
 
             // Добавляем обработчик клика для просмотра фото
             const photos = postElement.querySelectorAll('.post-photo');
-            photos.forEach((photo, index) => {
+            photos.forEach(photo => {
                 photo.addEventListener('click', () => {
                     openPhotoModal(photo.src);
                 });
             });
 
             postsContainer.appendChild(postElement);
-        });
+        }
 
         currentPage++;
         
