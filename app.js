@@ -215,6 +215,29 @@ async function loadPosts() {
             return;
         }
 
+        // Загружаем комментарии для всех постов
+        const postIds = posts.map(post => post.id);
+        const { data: comments, error: commentsError } = await supabase
+            .from('comments_vk')
+            .select('*')
+            .in('post_id', postIds)
+            .order('likes', { ascending: false });
+
+        if (commentsError) {
+            console.error('Error loading comments:', commentsError);
+        }
+
+        // Группируем комментарии по post_id
+        const commentsByPost = {};
+        if (comments) {
+            comments.forEach(comment => {
+                if (!commentsByPost[comment.post_id]) {
+                    commentsByPost[comment.post_id] = [];
+                }
+                commentsByPost[comment.post_id].push(comment);
+            });
+        }
+
         posts.forEach(post => {
             const photoLinks = parsePhotoLinks(post.photo_links);
             console.log('Photo links:', photoLinks); // Для отладки
@@ -225,6 +248,28 @@ async function loadPosts() {
             const lines = post.text?.split('\n') || [];
             const title = lines[0] || '';
             const text = lines.slice(1).join('\n') || '';
+
+            // Получаем комментарии для текущего поста
+            const postComments = commentsByPost[post.id] || [];
+            const commentsHtml = postComments.length > 0 
+                ? `
+                    <div class="post-comments">
+                        <div class="comments-header">
+                            <span class="comments-icon">💬</span>
+                            <span class="comments-title">Комментарии из VK</span>
+                        </div>
+                        ${postComments.map(comment => `
+                            <div class="comment">
+                                <div class="comment-avatar">👤</div>
+                                <div class="comment-content">
+                                    <div class="comment-text">${comment.text}</div>
+                                    <div class="comment-likes">❤️ ${comment.likes || 0}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `
+                : '';
 
             postElement.innerHTML = `
                 <div class="post-header">
@@ -244,6 +289,7 @@ async function loadPosts() {
                     <span class="post-stat">💬 ${post.comments || 0}</span>
                     <span class="post-stat">🔄 ${post.reposts || 0}</span>
                 </div>
+                ${commentsHtml}
             `;
 
             // Добавляем обработчик клика для просмотра фото

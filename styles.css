@@ -272,3 +272,67 @@ body {
         padding: 12px;
     }
 } 
+
+/* Комментарии */
+.post-comments {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comments-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.comments-icon {
+    font-size: 1.2rem;
+}
+
+.comments-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--tg-theme-hint-color);
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.comment:last-child {
+    margin-bottom: 0;
+}
+
+.comment-avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-text {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: var(--tg-theme-text-color);
+}
+
+.comment-likes {
+    font-size: 0.8rem;
+    color: var(--tg-theme-hint-color);
+} 
