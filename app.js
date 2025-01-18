@@ -132,12 +132,7 @@ function formatText(text, maxLength = 150) {
         return `<div class="post-text">${text}</div>`;
     }
     
-    return `
-        <div class="post-text truncated">
-            ${text}
-            <span class="text-expand">Показать ещё</span>
-        </div>
-    `;
+    return `<div class="post-text truncated">${text}<span class="text-expand">Показать ещё</span></div>`;
 }
 
 // Загрузка трендовых постов для карусели
