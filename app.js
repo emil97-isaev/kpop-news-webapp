@@ -127,16 +127,15 @@ function parsePhotoLinks(photoLinksStr) {
 function formatText(text) {
     const maxLength = 100;
     if (text.length <= maxLength) {
-        return `<p class="post-text">${text}</p>`;
+        return `<div class="post-text">${text}</div>`;
     }
 
     return `
-        <p class="post-text">
-            ${text.slice(0, maxLength).trim()}
-            <span class="more-text" style="display: none;">${text.slice(maxLength).trim()}</span>
-            <span class="text-dots">...</span>
-            <span class="text-expand">Показать ещё</span>
-        </p>
+        <div class="post-text">
+            <span class="text-short">${text.slice(0, maxLength).trim()}</span>
+            <span class="text-full" style="display: none;">${text.slice(maxLength).trim()}</span>
+            <button class="show-more">Показать ещё</button>
+        </div>
     `;
 }
 
@@ -376,18 +375,17 @@ async function loadPosts() {
             }
 
             // Обновляем обработчик для разворачивания текста
-            const textExpand = postElement.querySelector('.text-expand');
-            if (textExpand) {
-                const postText = textExpand.closest('.post-text');
-                const moreText = postText.querySelector('.more-text');
-                const textDots = postText.querySelector('.text-dots');
+            const showMoreBtn = postElement.querySelector('.show-more');
+            if (showMoreBtn) {
+                showMoreBtn.addEventListener('click', () => {
+                    const postText = showMoreBtn.closest('.post-text');
+                    const shortText = postText.querySelector('.text-short');
+                    const fullText = postText.querySelector('.text-full');
 
-                textExpand.addEventListener('click', () => {
-                    if (moreText.style.display === 'none') {
-                        moreText.style.display = 'inline';
-                        textDots.style.display = 'none';
-                        textExpand.style.display = 'none';
-                    }
+                    shortText.style.display = 'none';
+                    fullText.style.display = 'inline';
+                    showMoreBtn.style.display = 'none';
+                    
                     tg.HapticFeedback.impactOccurred('light');
                 });
             }
