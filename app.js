@@ -53,6 +53,10 @@ const feedScreen = document.getElementById('feed-screen');
 const trendsScreen = document.getElementById('trends-screen');
 const postsContainer = document.getElementById('posts-feed');
 const categoriesContainer = document.querySelector('.categories-filter');
+const navLinks = document.querySelectorAll('.nav-link');
+const photoModal = document.querySelector('.photo-modal');
+const photoModalImage = document.querySelector('.photo-modal-image');
+const photoModalClose = document.querySelector('.photo-modal-close');
 
 // Загрузка категорий
 async function loadCategories() {
@@ -147,18 +151,49 @@ const MIN_SCALE = 1;
 const MAX_SCALE = 3;
 
 // Обработчики событий для модального окна
-photoModalClose.addEventListener('click', closePhotoModal);
-photoModal.addEventListener('click', (e) => {
-    if (e.target === photoModal || e.target === photoModal.querySelector('.photo-modal-content')) {
-        closePhotoModal();
-    }
-});
+if (photoModalClose) {
+    photoModalClose.addEventListener('click', closePhotoModal);
+}
+
+if (photoModal) {
+    photoModal.addEventListener('click', (e) => {
+        if (e.target === photoModal || e.target === photoModal.querySelector('.photo-modal-content')) {
+            closePhotoModal();
+        }
+    });
+}
 
 // Обработчики для масштабирования
-photoModalImage.addEventListener('pointerdown', startGesture);
-photoModalImage.addEventListener('pointermove', moveGesture);
-photoModalImage.addEventListener('pointerup', endGesture);
-photoModalImage.addEventListener('pointercancel', endGesture);
+if (photoModalImage) {
+    photoModalImage.addEventListener('pointerdown', startGesture);
+    photoModalImage.addEventListener('pointermove', moveGesture);
+    photoModalImage.addEventListener('pointerup', endGesture);
+    photoModalImage.addEventListener('pointercancel', endGesture);
+
+    // Двойной клик для быстрого масштабирования
+    photoModalImage.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if (scale === 1) {
+            scale = 1.5;
+            // Центрируем увеличение по точке клика
+            const rect = photoModalImage.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            translateX = (x - rect.width / 2) * 0.5;
+            translateY = (y - rect.height / 2) * 0.5;
+        } else {
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+        }
+        
+        lastScale = scale;
+        updateTransform();
+        tg.HapticFeedback.impactOccurred('medium');
+    });
+}
 
 // Начало жеста
 function startGesture(e) {
@@ -235,30 +270,6 @@ function updateTransform() {
         photoModal.classList.remove('zoomed');
     }
 }
-
-// Двойной клик для быстрого масштабирования
-photoModalImage.addEventListener('dblclick', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    if (scale === 1) {
-        scale = 1.5;
-        // Центрируем увеличение по точке клика
-        const rect = photoModalImage.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        translateX = (x - rect.width / 2) * 0.5;
-        translateY = (y - rect.height / 2) * 0.5;
-    } else {
-        scale = 1;
-        translateX = 0;
-        translateY = 0;
-    }
-    
-    lastScale = scale;
-    updateTransform();
-    tg.HapticFeedback.impactOccurred('medium');
-});
 
 // Переключение экранов
 navLinks.forEach(link => {
