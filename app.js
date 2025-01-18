@@ -133,7 +133,8 @@ function formatText(text, maxLength = 150) {
     }
     
     return `
-        <div class="post-text truncated">${text}
+        <div class="post-text truncated">
+            ${text}
             <span class="text-expand">Показать ещё</span>
         </div>
     `;

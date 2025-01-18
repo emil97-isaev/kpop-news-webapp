@@ -128,7 +128,6 @@ body {
     -webkit-line-clamp: 3;
     overflow: hidden;
     position: relative;
-    padding-right: 20px;
 }
 
 .post-text.truncated::after {
@@ -395,8 +394,8 @@ body {
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
-    display: inline;
-    margin-left: 8px;
+    display: inline-block;
+    margin-left: 4px;
 }
 
 .text-expand:hover {
