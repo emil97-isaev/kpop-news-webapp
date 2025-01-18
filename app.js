@@ -133,8 +133,9 @@ function formatText(text, maxLength = 150) {
     }
     
     return `
-        <div class="post-text truncated">${text}</div>
-        <div class="text-expand">Показать ещё</div>
+        <div class="post-text truncated">${text}
+            <span class="text-expand">Показать ещё</span>
+        </div>
     `;
 }
 
@@ -376,7 +377,7 @@ async function loadPosts() {
             // Добавляем обработчик для разворачивания текста
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
-                const postText = postElement.querySelector('.post-text');
+                const postText = textExpand.parentElement;
                 let isExpanded = false;
 
                 textExpand.addEventListener('click', () => {
