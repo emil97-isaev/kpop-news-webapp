@@ -44,7 +44,7 @@ async function checkSupabaseConnection() {
 
 // Состояние приложения
 let currentPage = 1;
-const postsPerPage = 10;
+const postsPerPage = 7;
 let isLoading = false;
 
 // DOM элементы
@@ -402,20 +402,15 @@ async function loadPosts() {
             if (currentPage === 1) {
                 postsContainer.innerHTML = '<div class="text-center mt-4">Нет доступных постов</div>';
             }
-            observer.unobserve(observerTarget); // Прекращаем наблюдение, если постов больше нет
+            observer.unobserve(observerTarget);
             return;
         }
 
-        // Обрабатываем каждый пост
-        for (const post of posts) {
-            console.log('Post data:', {
-                id: post.id,
-                post_id: post.post_id,
-                group_id: post.group_id,
-                // Выводим все поля поста для проверки
-                ...post
-            });
+        // Создаем фрагмент для всех постов
+        const fragment = document.createDocumentFragment();
 
+        // Обрабатываем все посты
+        for (const post of posts) {
             const photoLinks = parsePhotoLinks(post.photo_links);
             const postElement = document.createElement('div');
             postElement.className = 'post';
@@ -426,7 +421,6 @@ async function loadPosts() {
 
             // Загружаем комментарии для текущего поста
             const comments = await loadCommentsForPost(post.post_id, post.group_id);
-            console.log('Comments loaded:', comments); // Для отладки
 
             const commentsHtml = comments.length > 0 
                 ? `
@@ -536,8 +530,12 @@ async function loadPosts() {
                 });
             }
 
-            postsContainer.appendChild(postElement);
+            // Добавляем пост во фрагмент вместо контейнера
+            fragment.appendChild(postElement);
         }
+
+        // Добавляем все посты одним действием
+        postsContainer.appendChild(fragment);
 
         currentPage++;
         
