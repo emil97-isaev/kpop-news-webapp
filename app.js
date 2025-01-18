@@ -586,6 +586,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
     
-    // Загружаем посты
+    // Загружаем трендовые посты и основные посты
+    await loadTrendingPosts();
     loadPosts();
 }); 
