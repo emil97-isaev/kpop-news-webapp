@@ -275,18 +275,23 @@ async function loadPosts() {
                 ? `
                     <div class="post-comments">
                         <div class="comments-header">
-                            <span class="comments-icon">💬</span>
-                            <span class="comments-title">Комментарии из VK</span>
-                        </div>
-                        ${comments.map(comment => `
-                            <div class="comment">
-                                <div class="comment-avatar">👤</div>
-                                <div class="comment-content">
-                                    <div class="comment-text">${comment.text || ''}</div>
-                                    <div class="comment-likes">❤️ ${comment.likes || 0}</div>
-                                </div>
+                            <div class="comments-header-left">
+                                <span class="comments-icon">💬</span>
+                                <span class="comments-title">Комментарии из VK</span>
                             </div>
-                        `).join('')}
+                            <span class="comments-toggle">▼</span>
+                        </div>
+                        <div class="comments-list">
+                            ${comments.map(comment => `
+                                <div class="comment">
+                                    <div class="comment-avatar">👤</div>
+                                    <div class="comment-content">
+                                        <div class="comment-text">${comment.text || ''}</div>
+                                        <div class="comment-likes">❤️ ${comment.likes || 0}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
                 `
                 : '';
@@ -319,6 +324,31 @@ async function loadPosts() {
                     openPhotoModal(photo.src);
                 });
             });
+
+            // Добавляем обработчики событий
+            const commentsHeader = postElement.querySelector('.comments-header');
+            const commentsList = postElement.querySelector('.comments-list');
+            const commentsToggle = postElement.querySelector('.comments-toggle');
+            
+            if (commentsHeader && commentsList && commentsToggle) {
+                commentsHeader.addEventListener('click', () => {
+                    const isExpanded = !commentsList.classList.contains('collapsed');
+                    if (isExpanded) {
+                        commentsList.style.maxHeight = '0';
+                        commentsList.classList.add('collapsed');
+                        commentsToggle.classList.remove('expanded');
+                    } else {
+                        commentsList.style.maxHeight = commentsList.scrollHeight + 'px';
+                        commentsList.classList.remove('collapsed');
+                        commentsToggle.classList.add('expanded');
+                    }
+                    tg.HapticFeedback.impactOccurred('light');
+                });
+
+                // Инициализация: показываем комментарии
+                commentsList.style.maxHeight = commentsList.scrollHeight + 'px';
+                commentsToggle.classList.add('expanded');
+            }
 
             postsContainer.appendChild(postElement);
         }

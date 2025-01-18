@@ -278,10 +278,18 @@ body {
 .comments-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
     gap: 8px;
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.comments-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .comments-icon {
@@ -292,6 +300,25 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--tg-theme-hint-color);
+}
+
+.comments-toggle {
+    font-size: 0.8rem;
+    color: var(--tg-theme-hint-color);
+    transition: transform 0.2s ease;
+}
+
+.comments-toggle.expanded {
+    transform: rotate(180deg);
+}
+
+.comments-list {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.comments-list.collapsed {
+    max-height: 0;
 }
 
 .comment {
