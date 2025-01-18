@@ -285,7 +285,7 @@ body {
     .post {
         padding: 12px;
     }
-} 
+}
 
 /* Комментарии */
 .post-comments {
@@ -433,29 +433,4 @@ body {
     height: 20px;
     margin-top: -20px;
     pointer-events: none;
-} 
-
-.categories-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 15px 0;
-    padding: 0 5px;
-}
-
-.category-btn {
-    background-color: var(--tg-theme-bg-color);
-    color: var(--tg-theme-text-color);
-    border: 1px solid var(--tg-theme-button-color);
-    border-radius: 15px;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.category-btn.active {
-    background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
 } 

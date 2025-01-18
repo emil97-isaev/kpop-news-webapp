@@ -46,68 +46,27 @@ async function checkSupabaseConnection() {
 let currentPage = 1;
 const postsPerPage = 7;
 let isLoading = false;
-let selectedCategory = null;
 
 // DOM элементы
 const feedScreen = document.getElementById('feed-screen');
 const trendsScreen = document.getElementById('trends-screen');
 const postsContainer = document.getElementById('posts-feed');
-const categoriesContainer = document.querySelector('.categories-filter');
 const navLinks = document.querySelectorAll('.nav-link');
 const photoModal = document.querySelector('.photo-modal');
 const photoModalImage = document.querySelector('.photo-modal-image');
 const photoModalClose = document.querySelector('.photo-modal-close');
 
-// Загрузка категорий
-async function loadCategories() {
-    try {
-        const { data: categories, error } = await supabase
-            .from('category_news')
-            .select('*')
-            .order('category_id');
+photoModalClose.addEventListener('click', () => {
+    photoModal.style.display = 'none';
+    photoModalImage.style.transform = 'scale(1)';
+});
 
-        if (error) {
-            console.error('Error loading categories:', error);
-            return;
-        }
-
-        // Добавляем кнопку "Все"
-        const allButton = document.createElement('button');
-        allButton.className = 'category-btn active';
-        allButton.textContent = 'Все';
-        allButton.addEventListener('click', () => filterByCategory(null, allButton));
-        categoriesContainer.appendChild(allButton);
-
-        // Добавляем кнопки для каждой категории
-        categories.forEach(category => {
-            const button = document.createElement('button');
-            button.className = 'category-btn';
-            button.textContent = category.name;
-            button.dataset.categoryId = category.category_id;
-            button.addEventListener('click', () => filterByCategory(category.category_id, button));
-            categoriesContainer.appendChild(button);
-        });
-    } catch (error) {
-        console.error('Error:', error);
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) {
+        photoModal.style.display = 'none';
+        photoModalImage.style.transform = 'scale(1)';
     }
-}
-
-// Фильтрация постов по категории
-function filterByCategory(categoryId, button) {
-    // Обновляем активную кнопку
-    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-
-    // Обновляем выбранную категорию
-    selectedCategory = categoryId;
-    
-    // Сбрасываем страницу и загружаем посты заново
-    currentPage = 1;
-    postsContainer.innerHTML = '';
-    loadPosts();
-    
-    tg.HapticFeedback.impactOccurred('light');
-}
+});
 
 // Функции для работы с модальным окном
 function openPhotoModal(imageUrl) {
@@ -442,20 +401,10 @@ async function loadPosts() {
         // Создаем базовый запрос
         let query = supabase
             .from('posts')
-            .select(`
-                *,
-                category_news (
-                    name
-                )
-            `)
+            .select('*')
             .order('post_datetime', { ascending: false });
 
-        // Добавляем фильтр по категории, если она выбрана
-        if (selectedCategory) {
-            query = query.eq('category', selectedCategory);
-        }
-
-        // Получаем общее количество постов с учетом фильтра
+        // Получаем общее количество постов
         const { count } = await query.select('*', { count: 'exact', head: true });
 
         // Загружаем текущую страницу постов
@@ -488,10 +437,6 @@ async function loadPosts() {
             const lines = post.text?.split('\n') || [];
             const title = lines[0] || '';
             const text = lines.slice(1).join('\n') || '';
-
-            // Добавляем категорию в заголовок поста
-            const categoryName = post.category_news?.name || '';
-            const categoryBadge = categoryName ? `<span class="category-badge">${categoryName}</span>` : '';
 
             // Загружаем комментарии для текущего поста
             const comments = await loadCommentsForPost(post.post_id, post.group_id);
@@ -539,7 +484,6 @@ async function loadPosts() {
                 <div class="post-header">
                     <div class="post-title-wrapper">
                         <h2 class="post-title">${title}</h2>
-                        ${categoryBadge}
                     </div>
                     ${formatText(text)}
                 </div>
@@ -607,7 +551,7 @@ async function loadPosts() {
                 });
             }
 
-            // Добавляем пост во фрагмент вместо контейнера
+            // Добавляем пост во фрагмент
             fragment.appendChild(postElement);
         }
 
@@ -629,26 +573,6 @@ async function loadPosts() {
     }
 }
 
-// Добавляем стили для бейджа категории
-const style = document.createElement('style');
-style.textContent = `
-    .post-title-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 8px;
-    }
-    .category-badge {
-        font-size: 0.8rem;
-        padding: 2px 8px;
-        border-radius: 10px;
-        background-color: var(--tg-theme-button-color);
-        color: var(--tg-theme-button-text-color);
-        white-space: nowrap;
-    }
-`;
-document.head.appendChild(style);
-
 // Модифицируем инициализацию
 document.addEventListener('DOMContentLoaded', async () => {
     // Настраиваем внешний вид под Telegram
@@ -662,7 +586,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
     
-    // Загружаем категории перед постами
-    await loadCategories();
+    // Загружаем посты
     loadPosts();
 }); 
