@@ -51,22 +51,11 @@ let isLoading = false;
 const feedScreen = document.getElementById('feed-screen');
 const trendsScreen = document.getElementById('trends-screen');
 const postsContainer = document.getElementById('posts-feed');
+const loadMoreBtn = document.getElementById('load-more');
 const navLinks = document.querySelectorAll('.nav-link');
 const photoModal = document.querySelector('.photo-modal');
 const photoModalImage = document.querySelector('.photo-modal-image');
 const photoModalClose = document.querySelector('.photo-modal-close');
-
-photoModalClose.addEventListener('click', () => {
-    photoModal.style.display = 'none';
-    photoModalImage.style.transform = 'scale(1)';
-});
-
-photoModal.addEventListener('click', (e) => {
-    if (e.target === photoModal) {
-        photoModal.style.display = 'none';
-        photoModalImage.style.transform = 'scale(1)';
-    }
-});
 
 // Функции для работы с модальным окном
 function openPhotoModal(imageUrl) {
@@ -110,49 +99,18 @@ const MIN_SCALE = 1;
 const MAX_SCALE = 3;
 
 // Обработчики событий для модального окна
-if (photoModalClose) {
-    photoModalClose.addEventListener('click', closePhotoModal);
-}
-
-if (photoModal) {
-    photoModal.addEventListener('click', (e) => {
-        if (e.target === photoModal || e.target === photoModal.querySelector('.photo-modal-content')) {
-            closePhotoModal();
-        }
-    });
-}
+photoModalClose.addEventListener('click', closePhotoModal);
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal || e.target === photoModal.querySelector('.photo-modal-content')) {
+        closePhotoModal();
+    }
+});
 
 // Обработчики для масштабирования
-if (photoModalImage) {
-    photoModalImage.addEventListener('pointerdown', startGesture);
-    photoModalImage.addEventListener('pointermove', moveGesture);
-    photoModalImage.addEventListener('pointerup', endGesture);
-    photoModalImage.addEventListener('pointercancel', endGesture);
-
-    // Двойной клик для быстрого масштабирования
-    photoModalImage.addEventListener('dblclick', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if (scale === 1) {
-            scale = 1.5;
-            // Центрируем увеличение по точке клика
-            const rect = photoModalImage.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            translateX = (x - rect.width / 2) * 0.5;
-            translateY = (y - rect.height / 2) * 0.5;
-        } else {
-            scale = 1;
-            translateX = 0;
-            translateY = 0;
-        }
-        
-        lastScale = scale;
-        updateTransform();
-        tg.HapticFeedback.impactOccurred('medium');
-    });
-}
+photoModalImage.addEventListener('pointerdown', startGesture);
+photoModalImage.addEventListener('pointermove', moveGesture);
+photoModalImage.addEventListener('pointerup', endGesture);
+photoModalImage.addEventListener('pointercancel', endGesture);
 
 // Начало жеста
 function startGesture(e) {
@@ -229,6 +187,30 @@ function updateTransform() {
         photoModal.classList.remove('zoomed');
     }
 }
+
+// Двойной клик для быстрого масштабирования
+photoModalImage.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (scale === 1) {
+        scale = 1.5;
+        // Центрируем увеличение по точке клика
+        const rect = photoModalImage.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        translateX = (x - rect.width / 2) * 0.5;
+        translateY = (y - rect.height / 2) * 0.5;
+    } else {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+    }
+    
+    lastScale = scale;
+    updateTransform();
+    tg.HapticFeedback.impactOccurred('medium');
+});
 
 // Переключение экранов
 navLinks.forEach(link => {
@@ -398,17 +380,16 @@ async function loadPosts() {
     isLoading = true;
 
     try {
-        // Создаем базовый запрос
-        let query = supabase
+        // Сначала проверяем общее количество постов
+        const { count } = await supabase
             .from('posts')
-            .select('*')
-            .order('post_datetime', { ascending: false });
-
-        // Получаем общее количество постов
-        const { count } = await query.select('*', { count: 'exact', head: true });
+            .select('*', { count: 'exact', head: true });
 
         // Загружаем текущую страницу постов
-        const { data: posts, error } = await query
+        const { data: posts, error } = await supabase
+            .from('posts')
+            .select('*')
+            .order('post_datetime', { ascending: false })
             .range((currentPage - 1) * postsPerPage, (currentPage * postsPerPage) - 1);
 
         if (error) {
@@ -482,9 +463,7 @@ async function loadPosts() {
 
             postElement.innerHTML = `
                 <div class="post-header">
-                    <div class="post-title-wrapper">
-                        <h2 class="post-title">${title}</h2>
-                    </div>
+                    <h2 class="post-title">${title}</h2>
                     ${formatText(text)}
                 </div>
                 ${photoLinks.length > 0 ? `
@@ -551,7 +530,7 @@ async function loadPosts() {
                 });
             }
 
-            // Добавляем пост во фрагмент
+            // Добавляем пост во фрагмент вместо контейнера
             fragment.appendChild(postElement);
         }
 
@@ -573,7 +552,7 @@ async function loadPosts() {
     }
 }
 
-// Модифицируем инициализацию
+// Инициализация
 document.addEventListener('DOMContentLoaded', async () => {
     // Настраиваем внешний вид под Telegram
     document.body.style.backgroundColor = tg.backgroundColor;
@@ -586,7 +565,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
     
-    // Загружаем трендовые посты и основные посты
-    await loadTrendingPosts();
+    // Загружаем данные
+    loadTrendingPosts();
     loadPosts();
 }); 
