@@ -127,19 +127,16 @@ function parsePhotoLinks(photoLinksStr) {
 function formatText(text) {
     const maxLength = 100;
     if (text.length <= maxLength) {
-        return `<span class="post-text">${text}</span>`;
+        return `<div class="post-text">${text}</div>`;
     }
 
-    const truncatedText = text.slice(0, maxLength).trim();
-    const fullText = text.slice(maxLength).trim();
-
     return `
-        <span class="post-text truncated">
-            <span class="visible-text">${truncatedText}</span>
+        <div class="post-text">
+            ${text.slice(0, maxLength).trim()}
             <span class="text-dots">...</span>
             <span class="text-expand">Показать ещё</span>
-            <span class="full-text" style="display: none;">${fullText}</span>
-        </span>
+            <span class="full-text" style="display: none;">${text.slice(maxLength).trim()}</span>
+        </div>
     `;
 }
 
@@ -378,25 +375,19 @@ async function loadPosts() {
                 });
             }
 
-            // Добавляем обработчик для разворачивания текста
+            // Обновляем обработчик для разворачивания текста
             const textExpand = postElement.querySelector('.text-expand');
             if (textExpand) {
-                const postText = textExpand.parentElement;
-                const fullText = postElement.querySelector('.full-text');
-                const textDots = postElement.querySelector('.text-dots');
-                let isExpanded = false;
+                const postText = textExpand.closest('.post-text');
+                const fullText = postText.querySelector('.full-text');
+                const textDots = postText.querySelector('.text-dots');
 
                 textExpand.addEventListener('click', () => {
-                    if (!isExpanded) {
+                    if (fullText.style.display === 'none') {
                         fullText.style.display = 'inline';
-                        textExpand.classList.add('expanded');
-                        textDots.classList.add('expanded');
-                    } else {
-                        fullText.style.display = 'none';
-                        textExpand.classList.remove('expanded');
-                        textDots.classList.remove('expanded');
+                        textDots.style.display = 'none';
+                        textExpand.style.display = 'none';
                     }
-                    isExpanded = !isExpanded;
                     tg.HapticFeedback.impactOccurred('light');
                 });
             }

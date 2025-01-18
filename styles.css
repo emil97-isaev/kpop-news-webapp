@@ -378,7 +378,6 @@ body {
 
 .text-dots {
     color: var(--tg-theme-text-color);
-    white-space: nowrap;
     display: inline;
 }
 
@@ -387,7 +386,6 @@ body {
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
-    white-space: nowrap;
     display: inline;
     margin-left: 4px;
 }
@@ -396,16 +394,7 @@ body {
     opacity: 0.8;
 }
 
-.text-expand.expanded {
-    display: none;
-}
-
-.text-dots.expanded {
-    display: none;
-}
-
 .full-text {
-    white-space: pre-line;
     display: inline;
 }
 
