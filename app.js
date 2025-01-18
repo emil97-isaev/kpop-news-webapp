@@ -132,7 +132,12 @@ function formatText(text, maxLength = 150) {
         return `<div class="post-text">${text}</div>`;
     }
     
-    return `<div class="post-text truncated">${text}<span class="text-expand">Показать ещё</span></div>`;
+    return `
+        <div class="post-text truncated">
+            ${text}
+            <div class="text-expand">Показать ещё</div>
+        </div>
+    `;
 }
 
 // Загрузка трендовых постов для карусели
@@ -378,10 +383,12 @@ async function loadPosts() {
 
                 textExpand.addEventListener('click', () => {
                     if (!isExpanded) {
+                        postText.style.maxHeight = 'none';
                         postText.classList.remove('truncated');
                         textExpand.textContent = 'Скрыть';
                         textExpand.classList.add('expanded');
                     } else {
+                        postText.style.maxHeight = '4.5em';
                         postText.classList.add('truncated');
                         textExpand.textContent = 'Показать ещё';
                         textExpand.classList.remove('expanded');
