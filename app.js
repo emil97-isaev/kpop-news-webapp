@@ -279,19 +279,33 @@ async function loadPosts() {
                                 <span class="comments-icon">💬</span>
                                 <span class="comments-title">Комментарии из VK</span>
                             </div>
-                            <span class="comments-toggle">▼</span>
                         </div>
-                        <div class="comments-list">
-                            ${comments.map(comment => `
-                                <div class="comment">
-                                    <div class="comment-avatar">👤</div>
-                                    <div class="comment-content">
-                                        <div class="comment-text">${comment.text || ''}</div>
-                                        <div class="comment-likes">❤️ ${comment.likes || 0}</div>
-                                    </div>
+                        ${comments[0] ? `
+                            <div class="comment">
+                                <div class="comment-avatar">👤</div>
+                                <div class="comment-content">
+                                    <div class="comment-text">${comments[0].text || ''}</div>
+                                    <div class="comment-likes">❤️ ${comments[0].likes || 0}</div>
                                 </div>
-                            `).join('')}
-                        </div>
+                            </div>
+                        ` : ''}
+                        ${comments.length > 1 ? `
+                            <div class="comments-expand" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 0; cursor: pointer;">
+                                <span>Показать ещё ${comments.length - 1} комментариев</span>
+                                <span class="comments-toggle">▼</span>
+                            </div>
+                            <div class="comments-list collapsed" style="max-height: 0;">
+                                ${comments.slice(1).map(comment => `
+                                    <div class="comment">
+                                        <div class="comment-avatar">👤</div>
+                                        <div class="comment-content">
+                                            <div class="comment-text">${comment.text || ''}</div>
+                                            <div class="comment-likes">❤️ ${comment.likes || 0}</div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
                     </div>
                 `
                 : '';
@@ -325,29 +339,30 @@ async function loadPosts() {
                 });
             });
 
-            // Добавляем обработчики событий
-            const commentsHeader = postElement.querySelector('.comments-header');
+            // Добавляем обработчики событий для комментариев
+            const commentsExpand = postElement.querySelector('.comments-expand');
             const commentsList = postElement.querySelector('.comments-list');
             const commentsToggle = postElement.querySelector('.comments-toggle');
             
-            if (commentsHeader && commentsList && commentsToggle) {
-                commentsHeader.addEventListener('click', () => {
+            if (commentsExpand && commentsList && commentsToggle) {
+                commentsExpand.addEventListener('click', () => {
                     const isExpanded = !commentsList.classList.contains('collapsed');
+                    
                     if (isExpanded) {
                         commentsList.style.maxHeight = '0';
                         commentsList.classList.add('collapsed');
-                        commentsToggle.classList.remove('expanded');
+                        commentsToggle.style.transform = 'rotate(0deg)';
+                        commentsExpand.querySelector('span:first-child').textContent = 
+                            `Показать ещё ${comments.length - 1} комментариев`;
                     } else {
-                        commentsList.style.maxHeight = commentsList.scrollHeight + 'px';
+                        commentsList.style.maxHeight = `${commentsList.scrollHeight}px`;
                         commentsList.classList.remove('collapsed');
-                        commentsToggle.classList.add('expanded');
+                        commentsToggle.style.transform = 'rotate(180deg)';
+                        commentsExpand.querySelector('span:first-child').textContent = 'Скрыть комментарии';
                     }
+                    
                     tg.HapticFeedback.impactOccurred('light');
                 });
-
-                // Инициализация: показываем комментарии
-                commentsList.style.maxHeight = commentsList.scrollHeight + 'px';
-                commentsToggle.classList.add('expanded');
             }
 
             postsContainer.appendChild(postElement);

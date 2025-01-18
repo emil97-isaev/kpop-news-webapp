@@ -302,14 +302,15 @@ body {
     color: var(--tg-theme-hint-color);
 }
 
-.comments-toggle {
-    font-size: 0.8rem;
+.comments-expand {
     color: var(--tg-theme-hint-color);
-    transition: transform 0.2s ease;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 8px;
 }
 
-.comments-toggle.expanded {
-    transform: rotate(180deg);
+.comments-toggle {
+    transition: transform 0.3s ease;
 }
 
 .comments-list {
