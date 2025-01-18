@@ -90,11 +90,13 @@ photoModalImage.addEventListener('dblclick', (e) => {
     if (!isZoomed) {
         photoModalImage.classList.add('zoomed');
         photoModal.classList.add('zoomed');
-        photoModalImage.style.transform = 'scale(2)';
+        photoModalImage.style.transform = 'scale(1.5)';
+        currentScale = 1.5;
     } else {
         photoModalImage.classList.remove('zoomed');
         photoModal.classList.remove('zoomed');
         photoModalImage.style.transform = '';
+        currentScale = 1;
     }
     
     tg.HapticFeedback.impactOccurred('medium');
@@ -103,8 +105,9 @@ photoModalImage.addEventListener('dblclick', (e) => {
 // Добавляем поддержку жестов масштабирования
 let initialDistance = 0;
 let currentScale = 1;
+let lastScale = 1;
 const MIN_SCALE = 1;
-const MAX_SCALE = 3;
+const MAX_SCALE = 2.5;
 
 photoModalImage.addEventListener('touchstart', (e) => {
     if (e.touches.length === 2) {
@@ -113,6 +116,7 @@ photoModalImage.addEventListener('touchstart', (e) => {
             e.touches[0].pageX - e.touches[1].pageX,
             e.touches[0].pageY - e.touches[1].pageY
         );
+        lastScale = currentScale;
     }
 });
 
@@ -125,32 +129,34 @@ photoModalImage.addEventListener('touchmove', (e) => {
         );
         
         if (initialDistance > 0) {
-            const newScale = (currentScale * currentDistance) / initialDistance;
+            const scaleDiff = currentDistance / initialDistance;
+            const newScale = Math.min(Math.max(lastScale * scaleDiff, MIN_SCALE), MAX_SCALE);
             
-            if (newScale >= MIN_SCALE && newScale <= MAX_SCALE) {
-                currentScale = newScale;
-                photoModalImage.style.transform = `scale(${newScale})`;
-                
-                if (newScale > 1) {
-                    photoModalImage.classList.add('zoomed');
-                    photoModal.classList.add('zoomed');
-                } else {
-                    photoModalImage.classList.remove('zoomed');
-                    photoModal.classList.remove('zoomed');
-                }
+            currentScale = newScale;
+            photoModalImage.style.transform = `scale(${newScale})`;
+            
+            if (newScale > 1) {
+                photoModalImage.classList.add('zoomed');
+                photoModal.classList.add('zoomed');
+            } else {
+                photoModalImage.classList.remove('zoomed');
+                photoModal.classList.remove('zoomed');
             }
         }
     }
 });
 
 photoModalImage.addEventListener('touchend', () => {
-    initialDistance = 0;
-    if (currentScale <= 1) {
+    if (currentScale <= 1.1) {
         currentScale = 1;
+        lastScale = 1;
         photoModalImage.style.transform = '';
         photoModalImage.classList.remove('zoomed');
         photoModal.classList.remove('zoomed');
+    } else {
+        lastScale = currentScale;
     }
+    initialDistance = 0;
 });
 
 // Переключение экранов
