@@ -185,6 +185,16 @@ async function loadTrendingPosts() {
 // Загрузка комментариев для поста
 async function loadCommentsForPost(postId, groupId) {
     try {
+        console.log('Loading comments for:', { postId, groupId }); // Логируем входные данные
+
+        // Сначала проверим структуру данных в таблице comments_vk
+        const { data: sampleComments, error: sampleError } = await supabase
+            .from('comments_vk')
+            .select('*')
+            .limit(1);
+        
+        console.log('Sample comment structure:', sampleComments); // Смотрим структуру комментария
+
         const { data: comments, error } = await supabase
             .from('comments_vk')
             .select('*')
@@ -241,6 +251,14 @@ async function loadPosts() {
 
         // Обрабатываем каждый пост
         for (const post of posts) {
+            console.log('Post data:', {
+                id: post.id,
+                post_id: post.post_id,
+                group_id: post.group_id,
+                // Выводим все поля поста для проверки
+                ...post
+            });
+
             const photoLinks = parsePhotoLinks(post.photo_links);
             const postElement = document.createElement('div');
             postElement.className = 'post';
