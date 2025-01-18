@@ -20,12 +20,7 @@ const supabaseUrl = 'https://bsivriajgsginlnuyxny.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXZyaWFqZ3NnaW5sbnV5eG55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYxNjg2OTcsImV4cCI6MjA1MTc0NDY5N30.UJ6L73nUg7U4pgULc57clsY4OygSYeeJk8mv_DekZtw';
 
 console.log('Initializing Supabase client...');
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey, {
-    auth: {
-        autoRefreshToken: true,
-        persistSession: true
-    }
-});
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 console.log('Supabase client initialized:', supabase);
 
 // Проверяем соединение с Supabase
