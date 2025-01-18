@@ -124,30 +124,22 @@ function parsePhotoLinks(photoLinksStr) {
 }
 
 // Функция для форматирования текста
-function formatText(text, maxLength = 100) {
-    if (!text) return '';
-    
-    // Если текст короче максимальной длины, возвращаем как есть
+function formatText(text) {
+    const maxLength = 100;
     if (text.length <= maxLength) {
-        return `<div class="post-text">${text.split('\n').map(line => line.trim()).join('<br>')}</div>`;
+        return `<span class="post-text">${text}</span>`;
     }
-    
-    // Обрезаем текст до последнего полного слова в пределах maxLength
-    let visibleText = text.substr(0, maxLength);
-    let lastSpace = visibleText.lastIndexOf(' ');
-    if (lastSpace > 0) {
-        visibleText = visibleText.substr(0, lastSpace);
-    }
-    
-    const lines = text.split('\n');
-    const firstLine = lines[0] || '';
-    const restLines = lines.slice(1).join('\n');
-    
+
+    const truncatedText = text.slice(0, maxLength).trim();
+    const fullText = text.slice(maxLength).trim();
+
     return `
-        <div class="post-text truncated">
-            ${visibleText}<span class="text-dots">...</span><span class="text-expand">Показать ещё</span>
-            <span class="full-text" style="display: none;">${text.substr(visibleText.length)}</span>
-        </div>
+        <span class="post-text truncated">
+            <span class="visible-text">${truncatedText}</span>
+            <span class="text-dots">...</span>
+            <span class="text-expand">Показать ещё</span>
+            <span class="full-text" style="display: none;">${fullText}</span>
+        </span>
     `;
 }
 

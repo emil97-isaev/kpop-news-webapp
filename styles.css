@@ -406,6 +406,7 @@ body {
 
 .full-text {
     white-space: pre-line;
+    display: inline;
 }
 
 .hidden-text {
