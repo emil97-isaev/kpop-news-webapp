@@ -124,10 +124,33 @@ function parsePhotoLinks(photoLinksStr) {
 }
 
 // Функция для форматирования текста
-function formatText(text) {
+function formatText(text, maxLength = 300) {
     if (!text) return '';
-    // Заменяем \n на <br> для HTML
-    return text.split('\n').map(line => line.trim()).join('<br>');
+    
+    // Разбиваем текст на строки
+    const lines = text.split('\n').map(line => line.trim());
+    
+    if (text.length <= maxLength) {
+        return lines.join('<br>');
+    }
+    
+    // Получаем видимую часть текста
+    const visibleText = text.substring(0, maxLength);
+    const hiddenText = text.substring(maxLength);
+    
+    // Форматируем обе части
+    const visibleHtml = visibleText.split('\n').map(line => line.trim()).join('<br>');
+    const hiddenHtml = hiddenText.split('\n').map(line => line.trim()).join('<br>');
+    
+    return `
+        <div class="post-text-content">
+            <div class="visible-text">${visibleHtml}</div>
+            <div class="hidden-text" style="display: none;">${hiddenHtml}</div>
+            <div class="text-expand" style="color: var(--tg-theme-link-color); cursor: pointer; padding: 8px 0;">
+                Показать ещё
+            </div>
+        </div>
+    `;
 }
 
 // Загрузка трендовых постов для карусели
@@ -359,6 +382,25 @@ async function loadPosts() {
                         commentsList.classList.remove('collapsed');
                         commentsToggle.style.transform = 'rotate(180deg)';
                         commentsExpand.querySelector('span:first-child').textContent = 'Скрыть комментарии';
+                    }
+                    
+                    tg.HapticFeedback.impactOccurred('light');
+                });
+            }
+
+            // Добавляем обработчик для разворачивания текста
+            const textExpand = postElement.querySelector('.text-expand');
+            if (textExpand) {
+                textExpand.addEventListener('click', () => {
+                    const visibleText = postElement.querySelector('.visible-text');
+                    const hiddenText = postElement.querySelector('.hidden-text');
+                    
+                    if (hiddenText.style.display === 'none') {
+                        hiddenText.style.display = 'block';
+                        textExpand.textContent = 'Скрыть';
+                    } else {
+                        hiddenText.style.display = 'none';
+                        textExpand.textContent = 'Показать ещё';
                     }
                     
                     tg.HapticFeedback.impactOccurred('light');

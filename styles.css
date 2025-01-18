@@ -361,4 +361,33 @@ body {
 .comment-likes {
     font-size: 0.8rem;
     color: var(--tg-theme-hint-color);
+}
+
+.post-text-content {
+    position: relative;
+}
+
+.text-expand {
+    color: var(--tg-theme-link-color);
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+}
+
+.text-expand:hover {
+    opacity: 0.8;
+}
+
+.hidden-text {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 } 
