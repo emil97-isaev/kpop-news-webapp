@@ -183,11 +183,12 @@ async function loadTrendingPosts() {
 }
 
 // Загрузка комментариев для поста
-async function loadCommentsForPost(postId) {
+async function loadCommentsForPost(postId, groupId) {
     try {
         const { data: comments, error } = await supabase
             .from('comments_vk')
             .select('*')
+            .eq('group_id', groupId)
             .eq('post_id', postId)
             .order('likes', { ascending: false })
             .limit(5);
@@ -197,6 +198,7 @@ async function loadCommentsForPost(postId) {
             return [];
         }
 
+        console.log(`Comments for post ${postId} from group ${groupId}:`, comments); // Для отладки
         return comments || [];
     } catch (error) {
         console.error('Error:', error);
@@ -248,8 +250,8 @@ async function loadPosts() {
             const text = lines.slice(1).join('\n') || '';
 
             // Загружаем комментарии для текущего поста
-            const comments = await loadCommentsForPost(post.id);
-            console.log('Comments for post', post.id, ':', comments); // Для отладки
+            const comments = await loadCommentsForPost(post.post_id, post.group_id);
+            console.log('Comments loaded:', comments); // Для отладки
 
             const commentsHtml = comments.length > 0 
                 ? `
