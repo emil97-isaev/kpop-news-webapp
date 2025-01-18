@@ -124,20 +124,10 @@ function parsePhotoLinks(photoLinksStr) {
 }
 
 // Функция для форматирования текста
-function formatText(text, maxLength = 150) {
+function formatText(text) {
     if (!text) return '';
-    
-    // Если текст короче максимальной длины, возвращаем как есть
-    if (text.length <= maxLength) {
-        return `<div class="post-text">${text}</div>`;
-    }
-    
-    return `
-        <div class="post-text truncated">
-            ${text}
-            <div class="text-expand">Показать ещё</div>
-        </div>
-    `;
+    // Заменяем \n на <br> для HTML
+    return text.split('\n').map(line => line.trim()).join('<br>');
 }
 
 // Загрузка трендовых постов для карусели
