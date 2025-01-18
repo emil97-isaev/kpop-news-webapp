@@ -62,17 +62,41 @@ function openPhotoModal(imageUrl) {
     photoModalImage.src = imageUrl;
     photoModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Сбрасываем значения при открытии
+    scale = 1;
+    lastScale = 1;
+    translateX = 0;
+    translateY = 0;
+    photoModalImage.style.transform = '';
+    
     tg.HapticFeedback.impactOccurred('light');
 }
 
 function closePhotoModal() {
     photoModal.classList.remove('active');
-    photoModal.classList.remove('zoomed');
-    photoModalImage.classList.remove('zoomed');
-    photoModalImage.style.transform = '';
     document.body.style.overflow = '';
+    
+    // Сбрасываем значения при закрытии
+    scale = 1;
+    lastScale = 1;
+    translateX = 0;
+    translateY = 0;
+    photoModalImage.style.transform = '';
+    
     tg.HapticFeedback.impactOccurred('light');
 }
+
+// Переменные для управления масштабированием
+let scale = 1;
+let lastScale = 1;
+let startX = 0;
+let startY = 0;
+let translateX = 0;
+let translateY = 0;
+let isPointerDown = false;
+const MIN_SCALE = 1;
+const MAX_SCALE = 3;
 
 // Обработчики событий для модального окна
 photoModalClose.addEventListener('click', closePhotoModal);
@@ -82,81 +106,110 @@ photoModal.addEventListener('click', (e) => {
     }
 });
 
-// Добавляем обработчик двойного клика для увеличения
-photoModalImage.addEventListener('dblclick', (e) => {
-    e.stopPropagation();
-    const isZoomed = photoModalImage.classList.contains('zoomed');
+// Обработчики для масштабирования
+photoModalImage.addEventListener('pointerdown', startGesture);
+photoModalImage.addEventListener('pointermove', moveGesture);
+photoModalImage.addEventListener('pointerup', endGesture);
+photoModalImage.addEventListener('pointercancel', endGesture);
+
+// Начало жеста
+function startGesture(e) {
+    e.preventDefault();
+    isPointerDown = true;
+    photoModalImage.setPointerCapture(e.pointerId);
+    startX = e.clientX;
+    startY = e.clientY;
+}
+
+// Перемещение и масштабирование
+function moveGesture(e) {
+    if (!isPointerDown) return;
     
-    if (!isZoomed) {
-        photoModalImage.classList.add('zoomed');
-        photoModal.classList.add('zoomed');
-        photoModalImage.style.transform = 'scale(1.5)';
-        currentScale = 1.5;
-    } else {
-        photoModalImage.classList.remove('zoomed');
-        photoModal.classList.remove('zoomed');
-        photoModalImage.style.transform = '';
-        currentScale = 1;
-    }
-    
-    tg.HapticFeedback.impactOccurred('medium');
-});
-
-// Добавляем поддержку жестов масштабирования
-let initialDistance = 0;
-let currentScale = 1;
-let lastScale = 1;
-const MIN_SCALE = 1;
-const MAX_SCALE = 2.5;
-
-photoModalImage.addEventListener('touchstart', (e) => {
-    if (e.touches.length === 2) {
-        e.preventDefault();
-        initialDistance = Math.hypot(
-            e.touches[0].pageX - e.touches[1].pageX,
-            e.touches[0].pageY - e.touches[1].pageY
-        );
-        lastScale = currentScale;
-    }
-});
-
-photoModalImage.addEventListener('touchmove', (e) => {
-    if (e.touches.length === 2) {
-        e.preventDefault();
+    if (e.pointerType === 'touch' && e.touches && e.touches.length === 2) {
+        // Масштабирование двумя пальцами
+        const touch1 = e.touches[0];
+        const touch2 = e.touches[1];
         const currentDistance = Math.hypot(
-            e.touches[0].pageX - e.touches[1].pageX,
-            e.touches[0].pageY - e.touches[1].pageY
+            touch1.clientX - touch2.clientX,
+            touch1.clientY - touch2.clientY
         );
         
-        if (initialDistance > 0) {
-            const scaleDiff = currentDistance / initialDistance;
-            const newScale = Math.min(Math.max(lastScale * scaleDiff, MIN_SCALE), MAX_SCALE);
-            
-            currentScale = newScale;
-            photoModalImage.style.transform = `scale(${newScale})`;
-            
-            if (newScale > 1) {
-                photoModalImage.classList.add('zoomed');
-                photoModal.classList.add('zoomed');
-            } else {
-                photoModalImage.classList.remove('zoomed');
-                photoModal.classList.remove('zoomed');
-            }
+        if (startDistance > 0) {
+            const newScale = Math.min(Math.max(lastScale * (currentDistance / startDistance), MIN_SCALE), MAX_SCALE);
+            scale = newScale;
+            updateTransform();
         }
+        startDistance = currentDistance;
+    } else if (scale > 1) {
+        // Перемещение при увеличенном масштабе
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+        
+        // Ограничиваем перемещение
+        const maxTranslateX = (scale - 1) * photoModalImage.width / 2;
+        const maxTranslateY = (scale - 1) * photoModalImage.height / 2;
+        
+        translateX = Math.min(Math.max(translateX + deltaX, -maxTranslateX), maxTranslateX);
+        translateY = Math.min(Math.max(translateY + deltaY, -maxTranslateY), maxTranslateY);
+        
+        startX = e.clientX;
+        startY = e.clientY;
+        
+        updateTransform();
     }
-});
+}
 
-photoModalImage.addEventListener('touchend', () => {
-    if (currentScale <= 1.1) {
-        currentScale = 1;
+// Завершение жеста
+function endGesture() {
+    isPointerDown = false;
+    startDistance = 0;
+    lastScale = scale;
+    
+    if (scale <= 1.1) {
+        // Возвращаем к исходному состоянию
+        scale = 1;
         lastScale = 1;
-        photoModalImage.style.transform = '';
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+    }
+}
+
+// Обновление трансформации
+function updateTransform() {
+    photoModalImage.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    
+    if (scale > 1) {
+        photoModalImage.classList.add('zoomed');
+        photoModal.classList.add('zoomed');
+    } else {
         photoModalImage.classList.remove('zoomed');
         photoModal.classList.remove('zoomed');
-    } else {
-        lastScale = currentScale;
     }
-    initialDistance = 0;
+}
+
+// Двойной клик для быстрого масштабирования
+photoModalImage.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (scale === 1) {
+        scale = 1.5;
+        // Центрируем увеличение по точке клика
+        const rect = photoModalImage.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        translateX = (x - rect.width / 2) * 0.5;
+        translateY = (y - rect.height / 2) * 0.5;
+    } else {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+    }
+    
+    lastScale = scale;
+    updateTransform();
+    tg.HapticFeedback.impactOccurred('medium');
 });
 
 // Переключение экранов
