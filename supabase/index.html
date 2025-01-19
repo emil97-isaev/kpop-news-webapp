@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop News</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Баннер с трендовыми постами -->
+    <div class="banner-carousel">
+        <div class="carousel-inner"></div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="nav-tabs">
+        <a href="#" class="nav-link active" data-screen="feed">Лента</a>
+        <a href="#" class="nav-link" data-screen="trends">Тренды</a>
+    </nav>
+
+    <!-- Экраны -->
+    <div id="feed-screen" class="screen active">
+        <div id="posts-feed" class="posts-container"></div>
+    </div>
+
+    <div id="trends-screen" class="screen">
+        <div class="trends-content">
+            <h2>Тренды</h2>
+            <p>Здесь будут отображаться популярные посты и темы.</p>
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра фото -->
+    <div class="photo-modal">
+        <div class="photo-modal-content">
+            <button class="photo-modal-close">&times;</button>
+            <img class="photo-modal-image" src="" alt="Full size photo">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
